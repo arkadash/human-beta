@@ -1,12 +1,11 @@
 import React from 'react';
 import StepWizard from 'react-step-wizard';
+import Scan from '../Scan';
 
 const Wizard = () => {
     return (
         <StepWizard>
-            <div>
-                Step 1
-            </div>
+            <Scan/>
             <div>
                 Step 2
             </div>

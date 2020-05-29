@@ -1,3 +1,24 @@
-.human-beta {
+html { font-family: 'Roboto', sans-serif; }
+
+.sol-e {
+    .black-background {
+        background-color: #000000;
+        min-height: 100vh;
+    }
+
+    .dark-red-base-background {
+        min-height: 100vh;
+        background: #1E2326;
+        position: relative;
+
+        .red-background {
+            width: 100%;
+            position: absolute;
+            min-height: 100vh;
+            background: #FF0000;
+            mix-blend-mode: multiply;
+        }
+    }
+
 
 }
