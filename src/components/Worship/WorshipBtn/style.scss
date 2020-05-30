@@ -1,0 +1,38 @@
+.worship-button {
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    flex-direction: column;
+
+    img {
+        padding-bottom: 76px;
+
+    }
+
+    .button-wrapper {
+        justify-content: center;
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .worship-text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+        border: 1px solid transparent;
+        padding: 8px 36px;
+    }
+
+    &:hover {
+        .worship-text {
+            border: 1px solid #FFFFFF;
+            border-radius: 50px;
+        }
+
+        cursor: pointer;
+    }
+}

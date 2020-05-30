@@ -4,6 +4,7 @@ html { font-family: 'Roboto', sans-serif; }
     .black-background {
         background-color: #000000;
         min-height: 100vh;
+        position: relative;
     }
 
     .dark-red-base-background {
@@ -11,13 +12,22 @@ html { font-family: 'Roboto', sans-serif; }
         background: #1E2326;
         position: relative;
 
-        .red-background {
-            width: 100%;
-            position: absolute;
-            min-height: 100vh;
-            background: #FF0000;
-            mix-blend-mode: multiply;
-        }
+    }
+
+    .red-background {
+        top: 0;
+        width: 100%;
+        position: absolute;
+        min-height: 100vh;
+        background: #FF0000;
+        mix-blend-mode: multiply;
+    }
+
+    .folder-background {
+        min-height: 100vh;
+        position: relative;
+        background-image: url('./localAssets/folded-paper-textures.png');
+        background-size: cover;
     }
 
 

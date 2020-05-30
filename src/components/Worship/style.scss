@@ -1,0 +1,21 @@
+.worship {
+    min-height: 100vh;
+
+    button {
+        outline: none;
+    }
+    .worship-buttons-wrapper {
+        position: absolute;
+        top: calc(50% - 120px);
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+
+        .worship-buttons {
+            .instagram-btn {
+                padding-right: 68px;
+                padding-left: 8px;
+            }
+        }
+    }
+}
