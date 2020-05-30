@@ -29,7 +29,11 @@
             border: none;
             color: #FFFFFF;
             padding: 20px;
+            outline:none;
 
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
