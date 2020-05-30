@@ -1,5 +1,6 @@
 import React from 'react';
-import 'typeface-roboto'
+import 'typeface-roboto';
+import 'typeface-roboto-mono';
 import Believe from '.';
 import '../../style.scss';
 

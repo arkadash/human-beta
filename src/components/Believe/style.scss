@@ -11,4 +11,26 @@
         color: #FFFFFF;
     }
 
+    .do-you-believe-answer {
+        margin: auto;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+
+        .answers-divider,
+        button {
+            font-family: Roboto Mono;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 64px;
+            letter-spacing: 0.05em;
+            background: transparent;
+            border: none;
+            color: #FFFFFF;
+            padding: 20px;
+
+        }
+    }
+
 }

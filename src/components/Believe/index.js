@@ -11,6 +11,15 @@ const Believe = ({ nextStep = noop}) => {
             <div className="do-you-believe">
                 Do you believe in God?
             </div>
+            <div className="do-you-believe-answer">
+                <button>
+                    Yes
+                </button>
+                <span className="answers-divider">\</span>
+                <button>
+                    No
+                </button>
+            </div>
         </div>
     );
 };
