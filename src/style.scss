@@ -13,6 +13,23 @@ html { font-family: 'Roboto', sans-serif; }
         position: relative;
 
     }
+    //
+    //.red-background {
+    //    top: 0;
+    //    width: 100%;
+    //    position: absolute;
+    //    min-height: 100vh;
+    //    background: #FF0000;
+    //    mix-blend-mode: multiply;
+    //}
+    //
+    //.folder-background {
+    //    min-height: 100vh;
+    //    position: relative;
+    //    background-image: url('./localAssets/folded-paper-textures.png');
+    //    background-size: cover;
+    //}
+
 
     .red-background {
         top: 0;
@@ -24,8 +41,11 @@ html { font-family: 'Roboto', sans-serif; }
     }
 
     .folder-background {
+        top: 0;
+        width: 100%;
+        mix-blend-mode: screen;
         min-height: 100vh;
-        position: relative;
+        position: absolute;
         background-image: url('./localAssets/folded-paper-textures.png');
         background-size: cover;
     }

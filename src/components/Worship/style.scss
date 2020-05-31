@@ -19,3 +19,73 @@
         }
     }
 }
+
+.header {
+    display: inline-flex;
+    width: 100%;
+    padding-top: 72px;
+
+    .header-logo img{
+        margin-left: 72px;
+    }
+
+    .header-user {
+        position: absolute;
+        right: 0;
+        margin-right: 72px;
+        display: inline-flex;
+
+        .header-user-name {
+            //font-family: Roboto;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            font-family: Montserrat;
+            text-align: right;
+
+            color: #FFFFFF;
+            padding-bottom: 3px;
+        }
+
+        .header-user-details {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            /* identical to box height */
+
+            text-align: right;
+
+            color: #FFFFFF;
+        }
+        .header-user-img {
+            position: relative;
+
+            .header-user-img-overlay,
+            img{
+                margin-left: 60px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            .header-user-img-overlay {
+                background-color: #ff0000;
+            }
+        }
+    }
+
+    .header-title {
+        position: absolute;
+        width: 100%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 44px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+    }
+}
