@@ -14,9 +14,9 @@ const Worship = ({ nextStep = noop}) => {
             <div className="folder-background"/>
             <div className="worship-buttons-wrapper">
                 <div className="worship-buttons">
-                    <WorshipBtn srcKey="FACEBOOK"/>
-                    <WorshipBtn srcKey="INSTAGRAM" className='instagram-btn'/>
-                    <WorshipBtn srcKey="TWITTER"/>
+                    <WorshipBtn srcKey="FACEBOOK" onClick={nextStep}/>
+                    <WorshipBtn srcKey="INSTAGRAM" className='instagram-btn'  onClick={nextStep}/>
+                    <WorshipBtn srcKey="TWITTER" onClick={nextStep}/>
                 </div>
             </div>
             <header className="header">

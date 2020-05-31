@@ -72,6 +72,8 @@
             }
             .header-user-img-overlay {
                 background-color: #ff0000;
+                position: absolute;
+                mix-blend-mode: multiply;
             }
         }
     }
