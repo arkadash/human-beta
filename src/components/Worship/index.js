@@ -1,42 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { noop } from  'lodash';
-import classNames from  'classnames';
+import FolderPageBase from '../common/FolderPageBase';
 import WorshipBtn from './WorshipBtn';
 import './style.scss';
-
-const ASSETS_BASE = 'assets';
 
 const Worship = ({ nextStep = noop}) => {
 
     return (
-        <div className={classNames('worship', 'black-background')}>
-            <div className="red-background"/>
-            <div className="folder-background"/>
+        <FolderPageBase header="Who do you worship?"
+            className="worship"
+            nextStep={nextStep}>
             <div className="worship-buttons-wrapper">
                 <div className="worship-buttons">
                     <WorshipBtn srcKey="FACEBOOK" onClick={nextStep}/>
-                    <WorshipBtn srcKey="INSTAGRAM" className='instagram-btn'  onClick={nextStep}/>
+                    <WorshipBtn srcKey="INSTAGRAM" className='instagram-btn' onClick={nextStep}/>
                     <WorshipBtn srcKey="TWITTER" onClick={nextStep}/>
                 </div>
             </div>
-            <header className="header">
-                <div className="header-logo">
-                    <img src={`${ASSETS_BASE}/logo.png`}/>
-                 </div>
-                <div className="header-title">Who do you worship?</div>
-                <div className="header-user">
-                    <div className="header-user-details">
-                        <div className="header-user-name">User</div>
-                        <div className="header-user-details">No.123456</div>
-                    </div>
-                    <div className="header-user-img">
-                        <div className="header-user-img-overlay"/>
-                        <img src={`${ASSETS_BASE}/face.jpeg`}/>
-                    </div>
-                </div>
-            </header>
-
-        </div>
+        </FolderPageBase>
     );
 };
 

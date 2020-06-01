@@ -1,0 +1,57 @@
+.swear-wrapper {
+    position: absolute;
+    top: 50vh;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+
+    .swear-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 74px;
+        line-height: 87px;
+        /* identical to box height */
+
+        letter-spacing: 0.05em;
+
+        color: #FF0000;
+        text-align: center;
+    }
+
+    .swear-buttons {
+        display: block;
+        width: 400px;
+        margin-top: -140px;
+        margin-left: 30px;
+
+        button {
+            padding: 12px 100px;
+            background: transparent;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 74px;
+            line-height: 87px;
+            /* identical to box height */
+
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+
+            box-sizing: border-box;
+            color: #FFFFFF;
+
+            margin-bottom: 20px;
+            filter: blur(2px);
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid #FFFFFF;
+                border-radius: 50px;
+                filter: blur(0)
+            }
+        }
+
+    }
+}

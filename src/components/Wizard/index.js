@@ -3,6 +3,7 @@ import StepWizard from 'react-step-wizard';
 import Scan from '../Scan';
 import Believe from '../Believe';
 import Worship from "../Worship";
+import Swear from "../Swear";
 
 const Wizard = () => {
     return (
@@ -10,6 +11,7 @@ const Wizard = () => {
             <Scan/>
             <Believe/>
             <Worship/>
+            <Swear/>
         </StepWizard>
     );
 };

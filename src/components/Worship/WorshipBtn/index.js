@@ -24,7 +24,7 @@ const WorshipBtn = ({ srcKey = 'FACEBOOK', onClick = noop, className = ''}) => {
 
     return (
         <button className={classNames('worship-button', className)}
-                onClick={() => alert('Clicked!')}>
+                onClick={onClick}>
             <img src={`${ASSETS_BASE}/${IMAGES_KEY_MAP[srcKey].img}`}
                 alt={IMAGES_KEY_MAP[srcKey].title}/>
 
