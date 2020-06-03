@@ -1,0 +1,11 @@
+.idol-wrapper {
+    position: absolute;
+    top: 25vh;
+    width: 100%;
+
+    .buttons-row {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
