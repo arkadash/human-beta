@@ -2,6 +2,7 @@ import React from 'react';
 import 'typeface-roboto';
 import 'typeface-roboto-mono';
 import 'typeface-montserrat';
+import '../../style.scss';
 import Swear from '.';
 
 export default {

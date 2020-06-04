@@ -1,0 +1,50 @@
+.scan-page {
+    header {
+        display: inline-flex;
+        width: 100%;
+        padding-top: 72px;
+
+        .header-logo img {
+            margin-left: 72px;
+        }
+    }
+
+    .scan-username {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        margin-left: 25vh;
+        margin-top: 30vh;
+
+        .scan-page-welcome {
+            font-size: 36px;
+        }
+
+        .scan-page-welcome-user {
+            font-size: 96px;
+        }
+
+    }
+}
+
+// Typist!!
+.Typist .Cursor {
+    display: inline-block; }
+.Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+    color: red;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1; }
+    50% {
+        opacity: 0; }
+    100% {
+        opacity: 1; }
+}
+

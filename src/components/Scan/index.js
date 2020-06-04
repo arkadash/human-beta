@@ -1,16 +1,47 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
+import classNames from 'classnames';
+import Typist from 'react-typist';
+import './styles.scss';
 
-const Scan = ({ nextStep }) => {
+const ASSETS_BASE = 'assets';
+const pad = "000000";
 
+const Scan = ({nextStep, userNumber = 666}) => {
     useEffect(() => {
-        setTimeout(nextStep, 5 * 1000)
+        setTimeout(nextStep, 10 * 1000)
     }, []);
 
+    const [firstTyping, setFirstTyping] = useState(false);
+
+    const paddedNumber = pad.substring(userNumber.toString().length) + userNumber;
     return (
-        <div>
-            Scanning....!
-        </div>
-    );
+        <div className={classNames('scan-page', 'black-background')}>
+            <div className="red-background"/>
+            <header>
+                <div className="header-logo">
+                    <img src={`${ASSETS_BASE}/logo.png`} alt="Sol-e"/>
+                </div>
+            </header>
+            <div className="scan-username">
+                <div className="scan-page-welcome">
+                    <Typist cursor={{ hideWhenDone: true, element: '_', hideWhenDoneDelay: 1000 }}
+                            avgTypingDelay={100}
+                            onTypingDone={() => setTimeout(() => setFirstTyping(true), 1000) }>
+                        <Typist.Delay ms={500}/>
+                        hi,<br/>
+                        and welcome user
+                    </Typist>
+                </div>
+                <div className="scan-page-welcome-user">
+                    {firstTyping &&
+                        <Typist cursor={{element: '_'}} avgTypingDelay={100}>
+                            <Typist.Delay ms={700}/>
+                            {`No.${paddedNumber}`.replace(/0/gi, "o")}
+                        </Typist>
+                    }
+                </div>
+            </div>
+    </div>);
 };
 
 export default Scan;

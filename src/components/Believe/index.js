@@ -4,7 +4,7 @@ import classNames from  'classnames';
 import 'animate.css/animate.min.css';
 import './style.scss';
 
-const ANIMATION_CLASS = classNames('animate__animated', 'animate__heartBeat');
+const ANIMATION_CLASS = classNames('animate__animated', 'animate__swing');
 
 const Believe = ({ nextStep = noop}) => {
     const [btnClassesYes, setBtnClassesYes] = useState('');
