@@ -5,10 +5,9 @@
         font-weight: 500;
         font-size: 74px;
         text-align: center;
-        letter-spacing: 0.05em;
         font-style: normal;
+        letter-spacing: 0.05em;
         padding-top: 40vh;
-        color: #FFFFFF;
     }
 
     .do-you-believe-answer {
@@ -16,7 +15,6 @@
         width: 100%;
         display: inline-flex;
         justify-content: center;
-        position: absolute;
 
         .answers-divider,
         button {
@@ -29,11 +27,6 @@
             border: none;
             color: #FFFFFF;
             padding: 20px;
-            outline:none;
-
-            &:hover {
-                cursor: pointer;
-            }
         }
     }
 

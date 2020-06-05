@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { noop } from  'lodash';
 import classNames from  'classnames';
 import 'animate.css/animate.min.css';
-import './style.scss';
+import './styles.scss';
 
 const ANIMATION_CLASS = classNames('animate__animated', 'animate__swing');
 
@@ -11,9 +11,8 @@ const Believe = ({ nextStep = noop}) => {
     const [btnClassesNo, setBtnClassesNo] = useState('');
 
     return (
-        <div className={classNames('believe', 'dark-red-base-background')}>
-            <div className="red-background"/>
-            <div className="do-you-believe">
+        <div className={classNames('believe', 'bg-color-red')}>
+            <div className="do-you-believe co-red">
                 Do you believe in God?
             </div>
             <div className="do-you-believe-answer">

@@ -4,7 +4,7 @@ import 'typeface-roboto-mono';
 import 'typeface-montserrat';
 import WorshipBtn from './WorshipBtn';
 import Worship from '.';
-import '../../style.scss';
+import '../../styles.scss';
 
 export default {
     title: 'Worship',

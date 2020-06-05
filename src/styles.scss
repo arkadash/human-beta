@@ -1,6 +1,16 @@
 html { font-family: 'Roboto', sans-serif; }
 
 .sol-e {
+    min-height: 100vh;
+    height: 100%;
+
+    button {
+	    outline: none;
+
+	    &:hover {
+	        cursor: pointer;
+	    }
+	}
     .black-background {
         background-color: #000000;
         min-height: 100vh;
@@ -11,6 +21,15 @@ html { font-family: 'Roboto', sans-serif; }
         min-height: 100vh;
         background: #1E2326;
         position: relative;
+    }
+
+    .bg-color-red {
+        height: 100%;
+        background: #1E0000;
+    }
+
+    .co-red {
+        color: #FF0000;
     }
 
     .red-background {
