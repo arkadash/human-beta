@@ -23,6 +23,12 @@ html { font-family: 'Roboto', sans-serif; }
         position: relative;
     }
 
+    .bg-color-black {
+        background-color: #000000;
+        min-height: 100vh;
+        height: 100%;
+    }
+
     .bg-color-red {
         height: 100%;
         background: #1E0000;
@@ -42,11 +48,9 @@ html { font-family: 'Roboto', sans-serif; }
     }
 
     .folder-background {
-        top: 0;
         width: 100%;
         mix-blend-mode: screen;
         min-height: 100vh;
-        position: absolute;
         background-image: url('./localAssets/folded-paper-textures.png');
         background-size: cover;
     }

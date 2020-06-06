@@ -1,20 +1,19 @@
 import React from 'react';
 import { noop } from  'lodash';
 import classNames from  'classnames';
-import './style.scss';
+import './styles.scss';
 
 const ASSETS_BASE = 'assets';
 
 const FolderPageBase = ({header ='', className, nextStep = noop, children}) => {
 
     return (
-        <div className={classNames(className, 'black-background')}>
-            <div className="red-background"/>
+        <div className={classNames(className, 'bg-color-black', 'folder-base-page')}>
             <div className="folder-background"/>
-           {children}
-            <header className="header">
+
+            <header className="base-header">
                 <div className="header-logo">
-                    <img src={`${ASSETS_BASE}/logo.png`}/>
+                    <img src={`${ASSETS_BASE}/logo.png`} alt="sol_e"/>
                  </div>
                 <div className="header-title">{header}</div>
                 <div className="header-user">
@@ -28,6 +27,7 @@ const FolderPageBase = ({header ='', className, nextStep = noop, children}) => {
                     </div>
                 </div>
             </header>
+            {children}
 
         </div>
     );
