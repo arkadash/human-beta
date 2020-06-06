@@ -1,7 +1,7 @@
 import React from 'react';
 import { noop } from  'lodash';
 import FolderPageBase from '../common/FolderPageBase';
-import './style.scss';
+import './styles.scss';
 
 const Swear = ({ nextStep = noop}) => {
 

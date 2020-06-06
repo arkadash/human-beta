@@ -38,10 +38,6 @@ $image_size: 170px;
         box-sizing: border-box;
         position: absolute;
         top: 0;
-
-        &.idol-image-overlay-alt {
-            background: lightsteelblue;
-        }
     }
 
     .idol-title {
@@ -54,10 +50,6 @@ $image_size: 170px;
         &.idol-title-two-words {
             top: calc(50% - 20px);
         }
-
-        //&:hover {
-        //    top: 63%;
-        //}
     }
 
     &.idol-button-with-image:hover {
@@ -72,7 +64,7 @@ $image_size: 170px;
             background-color: #FF0505;
 
             &.idol-image-overlay-alt {
-                background: lightsteelblue;
+                background: blue;
             }
         }
 

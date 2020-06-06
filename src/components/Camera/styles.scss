@@ -1,4 +1,11 @@
 .camera-wrapper {
+    width: 100%;
+    margin: auto;
+    padding-top: 120px;
 
+    video {
+        filter: grayscale(100%);
+        padding-left: calc(50% - 150px);
+    }
 
 }

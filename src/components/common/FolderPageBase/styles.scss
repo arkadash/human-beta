@@ -1,18 +1,20 @@
+$margin_size: 72px;
+
 .folder-base-page {
     .base-header {
         display: inline-flex;
         width: 100%;
-        padding: 72px;
+        padding-top: $margin_size;
+        justify-content: space-between;
 
-        .header-logo img{
-            margin-left: 72px;
+        .header-logo {
+            padding-left: $margin_size;
+            position: relative;
         }
 
         .header-user {
-            position: absolute;
-            right: 0;
-            margin-right: 72px;
             display: inline-flex;
+            padding-right: $margin_size;
 
             .header-user-name {
                 font-style: normal;
@@ -39,7 +41,6 @@
                 color: #FFFFFF;
             }
             .header-user-img {
-                position: relative;
 
                 .header-user-img-overlay,
                 img{
@@ -49,16 +50,14 @@
                     border-radius: 50%;
                 }
                 .header-user-img-overlay {
-                    background-color: #ff0000;
                     position: absolute;
+                    background-color: #ff0000;
                     mix-blend-mode: multiply;
                 }
             }
         }
 
         .header-title {
-            position: absolute;
-            width: 100%;
             font-family: Roboto;
             font-style: normal;
             font-weight: 500;

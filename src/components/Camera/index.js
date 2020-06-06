@@ -4,6 +4,15 @@ import Webcam from 'react-webcam';
 import FolderPageBase from '../common/FolderPageBase';
 import './styles.scss';
 
+const WIDTH = 300;
+const HEIGHT = 500;
+
+const videoConstraints = {
+    width: WIDTH,
+    height: HEIGHT,
+    facingMode: "user"
+};
+
 const Idol = ({ nextStep = noop}) => {
 
     return (
@@ -11,12 +20,8 @@ const Idol = ({ nextStep = noop}) => {
             className="idol"
             nextStep={nextStep}
             header="Take a picture">
-            <div className="camera-wrapper" style={{
-                position: 'absolute',
-                width: '400px',
-                height: '400px'}}>
-                <Webcam/>
-
+            <div className="camera-wrapper">
+                <Webcam videoConstraints={videoConstraints} height={HEIGHT} width={WIDTH}/>
             </div>
         </FolderPageBase>
     );
