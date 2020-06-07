@@ -8,14 +8,14 @@ const ASSETS_BASE = 'assets';
 const pad = "000000";
 
 const Scan = ({nextStep, userNumber = 666}) => {
-    const [displayText, setText] = useState(text);
+    const [displayText, setText] = useState(text + text);
     const [textColor, setTextColor] = useState('');
 
     const timeout = setTimeout(() => {
         if(displayText.length > 100) {
-            setText(displayText.substring(50, displayText.length));
+            setText(displayText.substring(70, displayText.length));
         }
-    }, 100);
+    }, 50);
 
     setTimeout(() => {
         setTextColor('text-white')
@@ -26,7 +26,7 @@ const Scan = ({nextStep, userNumber = 666}) => {
             clearTimeout(timeout);
         nextStep();
 
-        }, 14 * 1000);
+        }, 12 * 1000);
     }, []);
 
     const [firstTyping, setFirstTyping] = useState(false);
