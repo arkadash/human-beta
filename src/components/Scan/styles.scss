@@ -10,11 +10,12 @@
     }
 
     .scan-username {
+        position: absolute;
+        top: 10vh;
         font-family: Roboto;
         font-style: normal;
         font-weight: 300;
         letter-spacing: 0.05em;
-        color: #FFFFFF;
         margin-left: 25vh;
         margin-top: 30vh;
 
@@ -27,6 +28,29 @@
         }
 
     }
+
+    .welcome-image {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            height: 800px;
+            position: absolute;
+            mix-blend-mode: multiply;
+        }
+
+        .welcome-image-text {
+            font-family: Montserrat;
+            color: #C4C4C4;
+            width: 600px;
+            height: 800px;
+            overflow: hidden;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
 }
 
 // Typist!!
@@ -35,7 +59,7 @@
 .Typist .Cursor--blinking {
     opacity: 1;
     animation: blink 1s linear infinite;
-    color: red;
+    color: #ff0000;
 }
 
 
