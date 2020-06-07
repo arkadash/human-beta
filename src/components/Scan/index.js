@@ -8,17 +8,25 @@ const ASSETS_BASE = 'assets';
 const pad = "000000";
 
 const Scan = ({nextStep, userNumber = 666}) => {
-    const [displayText, setText] = useState(text + text + text);
+    const [displayText, setText] = useState(text);
+    const [textColor, setTextColor] = useState('');
 
     const timeout = setTimeout(() => {
-        setText(displayText.substring(50, displayText.length));
-        if(displayText.length < 10) {
-            clearTimeout(timeout);
+        if(displayText.length > 100) {
+            setText(displayText.substring(50, displayText.length));
         }
     }, 100);
 
+    setTimeout(() => {
+        setTextColor('text-white')
+    }, 700);
+
     useEffect(() => {
-        setTimeout(nextStep, 10 * 1000)
+        setTimeout(() => {
+            clearTimeout(timeout);
+        nextStep();
+
+        }, 14 * 1000);
     }, []);
 
     const [firstTyping, setFirstTyping] = useState(false);
@@ -35,7 +43,7 @@ const Scan = ({nextStep, userNumber = 666}) => {
             <div className="welcome-image">
                 <div className="welcome-image-wrapper">
                     <img src={`${ASSETS_BASE}/demoFace.png`} alt="Sol-e"/>
-                    <div className="welcome-image-text">
+                    <div className={classNames('welcome-image-text', textColor)}>
                         {displayText}
                     </div>
                 </div>

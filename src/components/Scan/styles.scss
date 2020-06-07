@@ -42,13 +42,18 @@
 
         .welcome-image-text {
             font-family: Montserrat;
-            color: #C4C4C4;
+            color: black;
             width: 600px;
             height: 800px;
             overflow: hidden;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
+
+            &.text-white {
+                color: #C4C4C4;
+                animation: fadein 2s;
+            }
         }
     }
 }
@@ -62,6 +67,10 @@
     color: #ff0000;
 }
 
+@keyframes fadein {
+    from { color: black; }
+    to   { color: #C4C4C4; }
+}
 
 @keyframes blink {
     0% {
