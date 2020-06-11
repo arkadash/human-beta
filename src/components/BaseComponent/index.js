@@ -1,21 +1,37 @@
 import React from 'react';
 import { noop } from  'lodash';
 import classNames from  'classnames';
-import 'animate.css/animate.min.css';
+import {ASSETS_BASE} from '../../constants';
+import Menu from './Menu';
+import Waves from './Waves';
 import './styles.scss';
 
 const BaseComponent = ({ nextStep = noop, children}) => {
 
     return (
         <div className={classNames('base-component', 'bg-color-black')}>
-            <header className="base-component-header">
-               I'm a header!
+            <header>
+                <div className="header-line">
+                    <div className="header-logo">
+                        <img src={`${ASSETS_BASE}/redLogo.png`} alt="sol_e"/>
+                    </div>
+                    <div className="header-btn">
+                        <button onClick={() => alert('clicked!!')}>
+                            <Menu/>
+                        </button>
+                    </div>
+                </div>
+                <div className="back-container">
+                    <button onClick={() => alert('Back')}>
+                       Back
+                    </button>
+                </div>
             </header>
             <div className="base-component-body">
-                {children}
+                {/*{children}*/}
             </div>
             <footer className="base-component-footer">
-                I'm a footer!
+                <Waves/>
             </footer>
         </div>
     );

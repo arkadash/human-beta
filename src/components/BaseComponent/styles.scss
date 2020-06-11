@@ -1,3 +1,38 @@
+//$back: 'assets/back.svg';
+
 .base-component {
+    padding: 80px 100px;
+
+    header {
+
+        .header-line {
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+
+            button {
+                border: none;
+            }
+        }
+
+        .back-container {
+            padding-top: 76px;
+
+            button {
+                font-weight: 500;
+                font-size: 36px;
+                letter-spacing: 0.02em;
+                color: #FF0000;
+                opacity: 0.5;
+                border: none;
+                border-bottom: 2px solid #FF0000;
+                padding: 0 0 8px 0;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
 
 }
