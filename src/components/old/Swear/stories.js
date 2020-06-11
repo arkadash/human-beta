@@ -2,7 +2,7 @@ import React from 'react';
 import 'typeface-roboto';
 import 'typeface-roboto-mono';
 import 'typeface-montserrat';
-import '../../styles.scss';
+import '../../../styles.scss';
 import Swear from '.';
 
 export default {
@@ -10,8 +10,8 @@ export default {
     component: Swear,
 };
 
-export const ToStorybook = () => <div className="sol-e"><Swear/></div>;
+// export const ToStorybook = () => <div className="sol-e"><Swear/></div>;
 
-ToStorybook.story = {
-    name: 'page'
-};
+// ToStorybook.story = {
+//     name: 'page'
+// };

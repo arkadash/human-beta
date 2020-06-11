@@ -21,13 +21,13 @@ const Scan = ({nextStep, userNumber = 666}) => {
         setTextColor('text-white')
     }, 700);
 
-    useEffect(() => {
-        setTimeout(() => {
-            clearTimeout(timeout);
-        nextStep();
-
-        }, 12 * 1000);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         clearTimeout(timeout);
+    //     nextStep();
+    //
+    //     }, 12 * 1000);
+    // }, []);
 
     const [firstTyping, setFirstTyping] = useState(false);
 

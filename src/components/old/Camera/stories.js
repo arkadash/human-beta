@@ -9,8 +9,8 @@ export default {
     component: Camera,
 };
 
-export const ToStorybook = () => <div className="sol-e"><Camera/></div>;
+// export const ToStorybook = () => <div className="sol-e"><Camera/></div>;
 
-ToStorybook.story = {
-    name: 'page'
-};
+// ToStorybook.story = {
+//     name: 'page'
+// };

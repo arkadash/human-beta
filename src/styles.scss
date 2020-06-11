@@ -1,8 +1,10 @@
 html { font-family: 'Roboto', sans-serif; }
 
 .sol-e {
-    min-height: 100vh;
-    height: 100%;
+    > div {
+        min-height: 100vh;
+        height: 100%;
+    }
 
     button {
 	    outline: none;
@@ -11,49 +13,10 @@ html { font-family: 'Roboto', sans-serif; }
 	        cursor: pointer;
 	    }
 	}
-    .black-background {
-        background-color: #000000;
-        min-height: 100vh;
-        position: relative;
-    }
 
-    .dark-red-base-background {
-        min-height: 100vh;
-        background: #1E2326;
-        position: relative;
-    }
 
     .bg-color-black {
         background-color: #000000;
-        min-height: 100vh;
-        height: 100%;
     }
-
-    .bg-color-red {
-        height: 100%;
-        background: #1E0000;
-    }
-
-    .co-red {
-        color: #FF0000;
-    }
-
-    .red-background {
-        top: 0;
-        width: 100%;
-        position: absolute;
-        min-height: 100vh;
-        background: #FF0000;
-        mix-blend-mode: multiply;
-    }
-
-    .folder-background {
-        width: 100%;
-        mix-blend-mode: screen;
-        min-height: 100vh;
-        background-image: url('./localAssets/folded-paper-textures.png');
-        background-size: cover;
-    }
-
 
 }
