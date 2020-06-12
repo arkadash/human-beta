@@ -4,9 +4,7 @@ import BaseComponent from '../BaseComponent';
 
 const Wizard = () => {
     return (
-        <StepWizard>
-            <BaseComponent><span>Cntent</span></BaseComponent>
-        </StepWizard>
+            <BaseComponent><span>Content</span></BaseComponent>
     );
 };
 
