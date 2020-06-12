@@ -1,3 +1,5 @@
+$bottom: 140px;
+
 @keyframes move_wave {
     0% {
         transform: translateX(0) translateZ(0) scaleY(1)
@@ -15,18 +17,19 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: $bottom;
         top: 0;
         margin: auto;
+        pointer-events: none;
     }
 
     .bgTop {
         z-index: 15;
-        opacity: 0.7;
+        opacity: 0.5;
     }
     .bgMiddle {
         z-index: 10;
-        opacity: 0.8;
+        opacity: 0.75;
     }
     .wave {
         position: absolute;
@@ -69,7 +72,7 @@
         background: red;
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: $bottom;
         mix-blend-mode: soft-light;
     }
 }
