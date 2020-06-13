@@ -1,0 +1,20 @@
+.worship {
+
+    .worship-title {
+        font-family: Roboto Mono;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 120%;
+        color: #FFFFFF;
+        padding-bottom: 80px;
+    }
+
+    .worship-buttons-wrapper {
+        opacity: 0;
+
+        &.show-buttons {
+            opacity: 1;
+        }
+    }
+}

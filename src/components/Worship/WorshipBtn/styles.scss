@@ -1,0 +1,63 @@
+.worship-btn-container {
+    position: relative;
+    display: block;
+    height: 100%;
+
+    .btn-container {
+        width: 100%;
+        margin: auto;
+        display: inline-flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        .worship-button {
+            border: 2px solid #FF0000;
+            box-sizing: border-box;
+            border-radius: 100px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            padding: 46px 82px;
+
+            &.btn-selected,
+            &:hover {
+                background-color: #FF0000;
+            }
+        }
+    }
+
+    img {
+        //position: fixed;
+        width: 100%;
+
+        &.img-next {
+            transform: scaleX(-1);
+        }
+    }
+
+    .img-selected-overlay {
+        background-color: #FF0000;
+        mix-blend-mode: multiply;
+        top: 0;
+        position: absolute;
+        height: calc(100% - 160px);
+        width: 100%;
+    }
+
+    .img-wrapper {
+        padding-bottom: 200px;
+    }
+}
+
+.worship-btn-facebook {
+    img {
+
+    }
+
+}
