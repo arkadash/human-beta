@@ -5,9 +5,9 @@ import Believe from '../Believe';
 const Wizard = () => {
     return (
         <>
-        {/*<StepWizard>*/}
-            <Believe/>
-        {/*</StepWizard>*/}
+            {/*<StepWizard>*/}
+                <Believe/>
+            {/*</StepWizard>*/}
         </>
     );
 };

@@ -1,8 +1,10 @@
+$cursor: url('./localAssets/cursorSvg.svg') 60 60, default !important;
 html { font-family: 'Roboto', sans-serif; }
 
 .sol-e {
     height: 100vmax;
     position: relative;
+    cursor: $cursor;
 
     .base-component {
         height: 100%;
@@ -13,14 +15,13 @@ html { font-family: 'Roboto', sans-serif; }
         background-color: transparent;
 
         &:hover {
-            cursor: pointer;
+            cursor: $cursor;
         }
     }
 
     .bg-color-black {
         background-color: #000000;
     }
-
 }
 
 // Typist!!
