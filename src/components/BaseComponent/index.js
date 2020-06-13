@@ -6,14 +6,14 @@ import Menu from './Menu';
 import Waves from './Waves';
 import './styles.scss';
 
-const BaseComponent = ({nextStep = noop, children}) => {
+const BaseComponent = ({nextStep = noop, children, className = ''}) => {
 
     const stageNum = '01';
     const progressWidh = "20";
 
     return (
         <>
-            <div className={classNames('base-component', 'bg-color-black')}>
+            <div className={classNames('base-component', 'bg-color-black', className)}>
                 <div className="base-component-wrapper">
                     <header>
                         <div className="header-line">
@@ -33,12 +33,14 @@ const BaseComponent = ({nextStep = noop, children}) => {
                         </div>
                     </header>
                     <div className="base-component-body">
-                        {/*{children}*/}
+                        {children}
                     </div>
                     <footer className="base-component-footer">
                         <div className="footer-progress">
                             <div className="progress-num">{stageNum}</div>
-                            <button className="footer-btn">Next</button>
+                            <button className="footer-btn">
+                                <span>Next</span><img src={`${ASSETS_BASE}/next.png`} alt="sol_e"/>
+                            </button>
                         </div>
                     </footer>
                 </div>
