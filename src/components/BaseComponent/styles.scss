@@ -77,8 +77,12 @@ $color: #FF0000;
             }
 
             .footer-btn{
+                padding: 0;
+
+                display: inline-flex;
+
                 img {
-                    margin-top: 5px;
+                    margin-top: 2px;
                     margin-left: 40px;
                 }
             }
