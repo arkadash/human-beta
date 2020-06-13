@@ -11,6 +11,8 @@
     }
 
     .worship-buttons-wrapper {
+        width: calc(100% + 160px);
+        margin-left: -80px;
         opacity: 0;
 
         &.show-buttons {
