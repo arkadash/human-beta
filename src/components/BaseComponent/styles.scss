@@ -1,38 +1,87 @@
-//$back: 'assets/back.svg';
+$color: #FF0000;
 
 .base-component {
-    padding: 80px 100px;
+    padding: 80px 100px 30px 100px;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
 
-    header {
+    .base-component-wrapper {
+        position: relative;
+        height: 100%;
 
-        .header-line {
-            width: 100%;
-            display: inline-flex;
-            justify-content: space-between;
+        button {
+            font-weight: 500;
+            font-size: 36px;
+            letter-spacing: 0.02em;
+            color: $color;
+            border: none;
+            padding: 0 0 8px 0;
 
-            button {
-                border: none;
+            &:hover {
+                opacity: 0.8;
             }
         }
 
-        .back-container {
-            padding-top: 76px;
+        header {
+            .header-line {
+                width: 100%;
+                display: inline-flex;
+                justify-content: space-between;
 
-            button {
-                font-weight: 500;
-                font-size: 36px;
-                letter-spacing: 0.02em;
-                color: #FF0000;
-                opacity: 0.5;
-                border: none;
-                border-bottom: 2px solid #FF0000;
-                padding: 0 0 8px 0;
+                .back-container button {
+                    border-bottom: 2px solid $color;
+                }
+            }
 
-                &:hover {
-                    opacity: 0.8;
+            .back-container {
+                padding-top: 76px;
+
+                button {
+                    font-weight: 500;
+                    font-size: 36px;
+                    letter-spacing: 0.02em;
+                    color: $color;
+                    opacity: 0.5;
+                    border: none;
+                    border-bottom: 2px solid $color;
+                    padding: 0 0 8px 0;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
                 }
             }
         }
-    }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
 
+            .footer-progress {
+                color: $color;
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .progress-num {
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 48px;
+
+                letter-spacing: 0.02em;
+
+                color: $color;
+            }
+        }
+    }
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: $color;
+    position: absolute;
+    bottom: 0;
 }

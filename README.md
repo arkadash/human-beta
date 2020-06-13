@@ -1,6 +1,6 @@
 # David Workeneh Design
 ### Figma
-https://www.figma.com/file/0J8piuTTMl9ySjOXcSqnYX/sol_e?node-id=112%3A305
+https://www.figma.com/file/Lc5Gdb9v9TMUBDFyj9mgtI/Untitled?node-id=66%3A1030
 
 ## Working with Github
 Open new account in **Github**

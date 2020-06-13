@@ -1,20 +1,21 @@
 html { font-family: 'Roboto', sans-serif; }
 
 .sol-e {
-    > div {
-        min-height: 100vh;
+    height: 100vmax;
+    position: relative;
+
+    .base-component {
         height: 100%;
     }
 
     button {
-	    outline: none;
+        outline: none;
         background-color: transparent;
 
-	    &:hover {
-	        cursor: pointer;
-	    }
-	}
-
+        &:hover {
+            cursor: pointer;
+        }
+    }
 
     .bg-color-black {
         background-color: #000000;
