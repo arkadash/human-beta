@@ -3,6 +3,7 @@ import StepWizard from 'react-step-wizard';
 import Believe from '../Believe';
 import Worship from '../Worship';
 import Promise from '../Promise';
+import Idol from '../Idol';
 
 const Wizard = () => {
     return (
@@ -10,7 +11,8 @@ const Wizard = () => {
             {/*<StepWizard>*/}
                 {/*<Believe/>*/}
                 {/*<Worship/>*/}
-                <Promise/>
+                {/*<Promise/>*/}
+                <Idol/>
             {/*</StepWizard>*/}
         </>
     );

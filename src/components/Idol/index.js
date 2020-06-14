@@ -68,10 +68,10 @@ const Idol = ({nextStep = noop}) => {
                         <IdolBtn name="MOTHER" alt {...baseProps}/>
                     </div>
                     <div className="buttons-row">
-                        <IdolBtn name="LEO_MESSI" {...baseProps}/>
-                        <IdolBtn name="ALBERT_EINSTEIN" alt {...baseProps}/>
-                        <IdolBtn name="ZUCK" {...baseProps}/>
-                        <IdolBtn name="DONALD_TRUMP" alt {...baseProps}/>
+                        <IdolBtn name="LEO_MESSI" alt {...baseProps}/>
+                        <IdolBtn name="ALBERT_EINSTEIN" {...baseProps}/>
+                        <IdolBtn name="ZUCK" alt {...baseProps}/>
+                        <IdolBtn name="DONALD_TRUMP" {...baseProps}/>
                     </div>
                 </div>
             </div>
