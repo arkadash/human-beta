@@ -1,0 +1,29 @@
+.idol {
+    .idol-container {
+        .idol-title {
+            font-family: Roboto Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 120%;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+
+        .idol-btn-wrapper {
+            opacity: 0;
+            transition: all 0.7s ease-in-out;
+
+            &.show-buttons {
+                opacity: 1;
+            }
+
+            .buttons-row {
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
