@@ -1,0 +1,61 @@
+.promise {
+    .promise-container {
+        display: inline-flex;
+        width: 100%;
+
+        .promise-title {
+            font-family: Roboto Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 80px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #FF0000;
+            margin: auto;
+            padding-left: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.7s ease-in-out;
+
+            &.show-buttons {
+                opacity: 1;
+            }
+
+            button {
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 80px;
+                line-height: 120%;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                text-align: start;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 46px 36px 46px 76px;
+
+                // border
+                border: 2px solid transparent;
+                box-sizing: border-box;
+                border-radius: 100px 0 0 100px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+                &.btn-selected,
+                &:hover {
+                    border: 2px solid #FF0000;
+                }
+
+                &.else-btn-selected {
+                    opacity: 0.2;
+                }
+            };
+        }
+    }
+}
