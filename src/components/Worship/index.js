@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { noop } from  'lodash';
 import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
@@ -9,7 +8,7 @@ import BaseComponent from '../BaseComponent';
 import WorshipBtn from './WorshipBtn';
 import './styles.scss';
 
-const Worship = ({ nextStep = noop}) => {
+const Worship = ({ ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelection] = useState('');
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,12 +25,12 @@ const Worship = ({ nextStep = noop}) => {
     const prev = () => currentSlide === 0 ? setCurrentSlide(2) : setCurrentSlide(currentSlide - 1);
 
     return (
-        <BaseComponent className="worship">
+        <BaseComponent className="worship" {...rest}>
             <div className="worship-title">
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}
                         onTypingDone={() => setDisplaySelection(true)}>
-                    <Typist.Delay ms={1500}/>
+                    <Typist.Delay ms={2500}/>
                     Who<br/>
                     do you worship?
                 </Typist>

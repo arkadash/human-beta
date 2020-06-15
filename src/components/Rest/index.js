@@ -6,7 +6,7 @@ import BaseComponent from '../BaseComponent';
 import RestBtn from './RestBtn';
 import './styles.scss';
 
-const Rest = ({nextStep = noop}) => {
+const Rest = ({nextStep = noop, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setIdolSelection] = useState([]);
 
@@ -28,13 +28,13 @@ const Rest = ({nextStep = noop}) => {
     };
 
     return (
-        <BaseComponent className="rest">
+        <BaseComponent className="rest" {...rest}>
             <div className="rest-container">
                 <div className="rest-title">
                     <Typist cursor={{element: '_'}}
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={1500}/>
+                        <Typist.Delay ms={2500}/>
                         Who rest<br/> on the 7th day?
                     </Typist>
                 </div>

@@ -4,17 +4,17 @@ import Believe from '../Believe';
 import Worship from '../Worship';
 import Promise from '../Promise';
 import Idol from '../Idol';
+import Rest from "../Rest";
 
 const Wizard = () => {
     return (
-        <>
-            {/*<StepWizard>*/}
-                {/*<Believe/>*/}
-                {/*<Worship/>*/}
-                {/*<Promise/>*/}
-                <Idol/>
-            {/*</StepWizard>*/}
-        </>
+        <StepWizard>
+            <Believe/>
+            <Worship/>
+            <Promise/>
+            <Idol/>
+            <Rest/>
+        </StepWizard>
     );
 };
 

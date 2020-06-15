@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import {noop} from 'lodash';
 import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
 import IdolBtn from './IdonBtn';
 import './styles.scss';
 
-const Idol = ({nextStep = noop}) => {
+const Idol = ({...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setIdolSelection] = useState([]);
 
@@ -28,13 +27,13 @@ const Idol = ({nextStep = noop}) => {
     };
 
     return (
-        <BaseComponent className="idol">
+        <BaseComponent className="idol" {...rest}>
             <div className="idol-container">
                 <div className="idol-title">
                     <Typist cursor={{element: '_'}}
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={1500}/>
+                        <Typist.Delay ms={2500}/>
                         Who<br/>is your idol
                     </Typist>
                 </div>

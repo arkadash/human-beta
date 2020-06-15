@@ -15,7 +15,7 @@ const getSelectedClasses = (selected, key) => {
     return '';
 };
 
-const Promise = ({ nextStep = noop}) => {
+const Promise = ({ ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setPronmiseSelection] = useState('');
 
@@ -28,7 +28,7 @@ const Promise = ({ nextStep = noop}) => {
     };
 
     return (
-        <BaseComponent className="promise">
+        <BaseComponent className="promise" {...rest}>
             <div className="promise-container">
                 <div className={classNames('button-container', {'show-buttons': displaySelection})}>
                     <button className={
@@ -43,7 +43,7 @@ const Promise = ({ nextStep = noop}) => {
                     <Typist cursor={{ element: '_' }}
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={1500}/>
+                        <Typist.Delay ms={2500}/>
                         Promises
                     </Typist>
                 </div>

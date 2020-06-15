@@ -1,21 +1,20 @@
 import React, {useState} from 'react';
-import { noop } from  'lodash';
 import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
 import './styles.scss';
 
-const Believe = ({ nextStep = noop}) => {
+const Believe = ({ ...rest }) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelection] = useState('');
 
     return (
-        <BaseComponent className="believe">
+        <BaseComponent className="believe" {...rest}>
             <div className="believe-title">
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}
                         onTypingDone={() => setDisplaySelection(true)}>
-                    <Typist.Delay ms={1500}/>
+                    <Typist.Delay ms={2500}/>
                     Do you believe in GOD?
                 </Typist>
             </div>
