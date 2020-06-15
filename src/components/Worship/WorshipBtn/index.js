@@ -25,7 +25,7 @@ const WorshipBtn = ({ srcKey = 'FACEBOOK', onClick = noop, next = noop, prev = n
     return (
         <div className={classNames('worship-btn-container', `worship-btn-${srcKey.toLowerCase()}`)}>
             <div className="img-wrapper">
-                <img src={`${ASSETS_BASE}/${IMAGES_KEY_MAP[srcKey].img}`}
+                <img src={`${ASSETS_BASE}/worship/${IMAGES_KEY_MAP[srcKey].img}`}
                      alt={IMAGES_KEY_MAP[srcKey].title}/>
                 { selected && <div className="img-selected-overlay"/> }
             </div>

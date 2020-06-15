@@ -6,16 +6,6 @@ import BaseComponent from '../BaseComponent';
 import IdolBtn from './IdonBtn';
 import './styles.scss';
 
-const getSelectedClasses = (selected, key) => {
-    if (selected === key) {
-        return 'btn-selected';
-    }
-    if (selected.length > 0) {
-        return 'else-btn-selected';
-    }
-    return '';
-};
-
 const Idol = ({nextStep = noop}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setIdolSelection] = useState([]);

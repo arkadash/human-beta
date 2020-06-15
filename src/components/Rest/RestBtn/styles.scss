@@ -1,0 +1,45 @@
+$image_size: 120px;
+$button_size: 197px;
+
+.rest-button {
+    border: transparent;
+    opacity: 0.5;
+    height: $button_size;
+    width: $button_size;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    img {
+        padding-top: 6px;
+        padding-bottom: 24px;
+    }
+
+    .rest-btn-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &.rest-selected {
+        opacity: 1;
+        position: relative;
+
+        .rest-btn-overlay {
+            background: #FF0000;
+            mix-blend-mode: difference;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
