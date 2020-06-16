@@ -6,10 +6,17 @@ import Menu from './Menu';
 import Waves from './Waves';
 import './styles.scss';
 
-const BaseComponent = ({nextStep = noop, children, className = '', isActive = true}) => {
+const BaseComponent = ({
+    nextStep = noop,
+    children,
+    className = '',
+    isActive = true,
+    currentStep = 1,
+    totalSteps = 1
+}) => {
 
-    const stageNum = '01';
-    const progressWidh = "20";
+    const stageNum = currentStep > 9 ? currentStep : `0${currentStep}`;
+    const progressWidth = Math.round((currentStep / totalSteps) * 100);
 
     return (
         <>
@@ -48,7 +55,7 @@ const BaseComponent = ({nextStep = noop, children, className = '', isActive = tr
                 }
             </div>
             <Waves/>
-            <div className="progress-bar" style={{width: `${progressWidh}%`}}/>
+            <div className="progress-bar" style={{width: `${progressWidth}%`}}/>
         </>
     );
 };

@@ -8,7 +8,7 @@ import Rest from "../Rest";
 
 const Wizard = () => {
     return (
-        <StepWizard>
+        <StepWizard isLazyMount>
             <Believe/>
             <Worship/>
             <Promise/>
