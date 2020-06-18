@@ -11,6 +11,19 @@ $bottom: 80px;
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
+
+@keyframes move_wave_reverse {
+    0% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+}
+
 .waves {
     .waveWrapper {
         overflow: hidden;
@@ -44,18 +57,17 @@ $bottom: 80px;
         .waveTop {
             background-size: 50% 100px;
             background-image: url('../../../localAssets/wave-bot1.png');
-            animation: move-wave 3s;
-            animation-delay: 1s;
+            animation: move_wave 17s linear infinite;
         }
         .waveMiddle {
             background-size: 50% 120px;
             background-image: url('../../../localAssets/wave-bot1.png');
-            animation: move_wave 9s linear infinite;
+            animation: move_wave_reverse 5s linear infinite;
         }
         .waveBottom {
             background-size: 50% 100px;
             background-image: url('../../../localAssets/wave-bot1.png');
-            animation: move_wave 15s linear infinite;
+            animation: move_wave 7s linear infinite;
         }
 
     }

@@ -11,11 +11,9 @@ const Waves = () => {
                 </div>
                 <div className="waveWrapperInner bgMiddle">
                     <div className="wave waveMiddle"/>
-                         {/*style={{'background-image': url('http://front-end-noobs.com/jecko/img/wave-mid.png')}}/>*/}
                 </div>
                 <div className="waveWrapperInner bgBottom">
                     <div className="wave waveBottom"/>
-                         {/*style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"/>*/}
                 </div>
             </div>
             <div className="waves-overlay"/>
