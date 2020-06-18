@@ -6,7 +6,7 @@ import BaseComponent from '../BaseComponent';
 import RestBtn from './RestBtn';
 import './styles.scss';
 
-const Rest = ({nextStep = noop, ...rest}) => {
+const Rest = ({...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setIdolSelection] = useState([]);
 

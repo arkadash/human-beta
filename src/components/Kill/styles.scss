@@ -1,0 +1,50 @@
+.kill {
+    .kill-title {
+        font-family: Roboto Mono;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+    }
+
+    .kill-buttons-wrapper {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+
+        button {
+            width: 48%;
+            height: 140px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            color: #FFFFFF;
+            padding-top: 46px;
+            padding-bottom: 46px;
+            border: 2px solid #FF0000;
+            box-sizing: border-box;
+
+            &.btn-selected,
+            &:hover {
+                background-color: #FF0000;
+            }
+
+            &.kill-button-love {
+                border-radius: 100px 0 0 100px;
+            }
+
+            &.kill-button-hate {
+                border-radius: 0 100px 100px 0;
+            }
+        }
+
+        &.show-buttons {
+            opacity: 1;
+        }
+    }
+}
