@@ -29,14 +29,6 @@ $image_size: 200px;
         opacity: 0;
     }
 
-    .idol-image-overlay {
-        background-color: transparent;
-        mix-blend-mode: difference;
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-    }
-
     .idol-btn-title {
         width: 100%;
         position: absolute;
@@ -49,34 +41,26 @@ $image_size: 200px;
         }
     }
 
-    &.idol-button-with-image {
-        &.idol-selected,
+    &.idol-selected,
+    &:hover {
+        border: 1px solid transparent;
+
+        img {
+            transition: all 0.7s ease-in-out;
+        }
+
+        img {
+            opacity: 1;
+        }
+    }
+
+    &.idol-button-no-image {
+        &.idol-selected {
+            background-color: #ff0000;
+        }
         &:hover {
-            border: 1px solid transparent;
-
-            .idol-image-overlay,
-            img {
-                transition: all 0.5s ease-in-out;
-            }
-
-            &.idol-image-alt {
-                img {
-                    filter: grayscale(100%);
-                }
-
-                .idol-image-overlay {
-                    background-color: transparent;
-                }
-
-            }
-
-            .idol-image-overlay {
-                background-color: #FF0505;
-            }
-
-            img {
-                opacity: 1;
-            }
+            background-color: white;
+            color: black;
         }
     }
 }

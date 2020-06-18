@@ -40,26 +40,26 @@ const Idol = ({...rest}) => {
                 <div className={classNames('idol-btn-wrapper', {'show-buttons': displaySelection})}>
                     <div className="buttons-row">
                         <IdolBtn name="FATHER" {...baseProps}/>
-                        <IdolBtn name="JUSTIN_BIEBER" alt {...baseProps}/>
+                        <IdolBtn name="JUSTIN_BIEBER" {...baseProps}/>
                         <IdolBtn name="BUDDHA" {...baseProps}/>
-                        <IdolBtn name="BEYONCE" alt {...baseProps}/>
+                        <IdolBtn name="BEYONCE"  {...baseProps}/>
                     </div>
                     <div className="buttons-row">
-                        <IdolBtn name="THE_ROCK" alt {...baseProps}/>
+                        <IdolBtn name="THE_ROCK"  {...baseProps}/>
                         <IdolBtn name="CRISTIANO" {...baseProps}/>
-                        <IdolBtn name="ADOLF_HITLER" alt {...baseProps}/>
-                        <IdolBtn name="KENDALL_JENNER" {...baseProps}/>
+                        <IdolBtn name="ADOLF_HITLER"  {...baseProps}/>
+                        <IdolBtn name="ARIANA_GRANDE" {...baseProps}/>
                     </div>
                     <div className="buttons-row">
                         <IdolBtn name="KIN_KARDASHIAN" {...baseProps}/>
-                        <IdolBtn name="KELLY_JENNER" alt {...baseProps}/>
+                        <IdolBtn name="KELLY_JENNER"  {...baseProps}/>
                         <IdolBtn name="KING_JAMES" {...baseProps}/>
-                        <IdolBtn name="MOTHER" alt {...baseProps}/>
+                        <IdolBtn name="MOTHER"  {...baseProps}/>
                     </div>
                     <div className="buttons-row">
-                        <IdolBtn name="LEO_MESSI" alt {...baseProps}/>
+                        <IdolBtn name="LEO_MESSI"  {...baseProps}/>
                         <IdolBtn name="ALBERT_EINSTEIN" {...baseProps}/>
-                        <IdolBtn name="ZUCK" alt {...baseProps}/>
+                        <IdolBtn name="ZUCK"  {...baseProps}/>
                         <IdolBtn name="DONALD_TRUMP" {...baseProps}/>
                     </div>
                 </div>

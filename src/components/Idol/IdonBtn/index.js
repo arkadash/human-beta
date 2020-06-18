@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import buttonsMap from './buttonsMap';
 import './styles.scss';
 
-const IdolBtn  = ({ onClick = noop, name = 'KIN_KARDASHIAN', alt = false, selectedFunc = noop}) => {
+const IdolBtn  = ({ onClick = noop, name = 'KIN_KARDASHIAN', selectedFunc = noop}) => {
     const [selected, setSelection] = useState(selectedFunc(name));
     const data = buttonsMap[name];
     const title = data.title;
@@ -15,12 +15,9 @@ const IdolBtn  = ({ onClick = noop, name = 'KIN_KARDASHIAN', alt = false, select
             onClick(name);
             setSelection(!selected);
         }} className={classNames('idol-button',
-            {'idol-button-with-image': data.img, 'idol-image-alt': alt, 'idol-selected': selected})}>
+            {'idol-button-with-image': data.img, 'idol-selected': selected, 'idol-button-no-image': !data.img})}>
             {data.img &&
-                <>
-                    <img src={data.img} alt={title}/>
-                    <div className={classNames('idol-image-overlay', {'idol-image-overlay-alt': alt})}/>
-                </>
+                <img src={selected ? data.imgClicked: data.img} alt={title}/>
             }
             <div className={classNames('idol-btn-title', {'idol-title-two-words': multipleWords})}>
                 { title }
