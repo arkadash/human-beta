@@ -61,9 +61,25 @@
         transition: all 0.7s ease-in-out;
         margin-bottom: 220px;
         justify-content: center;
+        position: relative;
 
         &.show-image {
             opacity: 1;
+        }
+
+        &.selected-back {
+            .img-selected-overlay {
+                mix-blend-mode: overlay;
+            }
+        }
+
+        .img-selected-overlay {
+            background-color: #FF0000;
+            mix-blend-mode: multiply;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
         }
     }
 }
