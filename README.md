@@ -63,3 +63,11 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Animation
+In order to change the wizard transition animation - 
+Choose from [Animate.css](https://animate.style/)
+- Copy the animation class (hover the name and click on "Copy class name to clipboard")
+- In the Project - go to `Wizard/index.js`
+- Replace the second word in `ANIMATE` constant with your choice
+so `const ANIMATE = 'animate__animated animate__zoomInDown';` 
+will become `const ANIMATE = 'animate__animated animate__MyNewAnimation';`
