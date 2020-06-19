@@ -1,0 +1,88 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.rich {
+    .rich-title {
+        font-family: Roboto Mono;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-bottom: 80px;
+    }
+
+    .rich-buttons-wrapper {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+
+        button {
+            width: 48%;
+            height: 140px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            color: #FFFFFF;
+            padding-top: 46px;
+            padding-bottom: 46px;
+            border: 2px solid #FF0000;
+            box-sizing: border-box;
+
+            &.btn-selected,
+            &:hover {
+                background-color: #FF0000;
+            }
+
+            &.rich-button-happy {
+                border-radius: 100px 0 0 100px;
+            }
+
+            &.rich-button-rich {
+                border-radius: 0 100px 100px 0;
+            }
+        }
+
+        &.show-buttons {
+            opacity: 1;
+        }
+    }
+    .main-image {
+        width: 100%;
+        display: inline-flex;
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+        margin-bottom: 220px;
+        justify-content: center;
+        position: relative;
+
+        &.show-image {
+            opacity: 1;
+        }
+
+        .img-selected-overlay {
+            background-color: #FF0000;
+            mix-blend-mode: multiply;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        svg {
+            position: absolute;
+            top: 54%;
+        }
+
+        &.selected-happy {
+            svg {
+                fill: #ff0000;
+            }
+        }
+    }
+}
