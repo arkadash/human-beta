@@ -1,0 +1,45 @@
+.loyal-button-component {
+    width: 100%;
+
+    .loyal-button-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 20px 10px;
+        border: 2px solid transparent;
+        border-radius: 20px;
+
+        .loyal-button {
+            border: none;
+            border-top: 4px solid #FF0000;
+            margin: auto;
+            width: 100%;
+            box-sizing: border-box;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .loyal-btn-selected {
+            margin-top: 2px;
+            border-top: 8px solid #FFFFFF;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+
+        &:hover {
+            border-color: #FF0000;
+        }
+    }
+
+    .loyal-btn-title {
+        margin-top: 70px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        display: flex;
+        color: #FF0000;
+        width: 100%;
+        justify-content: center;
+    }
+}
