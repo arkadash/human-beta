@@ -1,0 +1,23 @@
+.lie {
+    .lie-title {
+        font-family: Roboto Mono;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-bottom: 360px;
+    }
+
+    .lie-slider-wrapper {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+
+        &.show-buttons {
+            opacity: 1;
+        }
+    }
+}
