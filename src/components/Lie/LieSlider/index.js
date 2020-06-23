@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from '@material-ui/core/Slider';
-import { withStyles } from '@material-ui/core/styles';
 
 const LieSlider = ({ onChange = () => null }) => {
 
@@ -12,6 +11,7 @@ const LieSlider = ({ onChange = () => null }) => {
 
     return (
         <Slider
+            defaultValue={50}
             onChange={handleChange}
             aria-labelledby="continuous-slider"
         />

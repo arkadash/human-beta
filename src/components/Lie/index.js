@@ -9,22 +9,28 @@ import './styles.scss';
 const IMAGES_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Lie = ({...rest}) => {
+    const [firstMove, setFistMove] = useState(false);
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelected] = useState(0);
 
 
     const onChange = (value) => {
         setSelected(value);
-    }
+        if (Math.round(selected / 10) === 0) {
+            setFistMove(false);
+        } else if (!firstMove) {
+            setFistMove(true);
+        }
 
-    console.log('render!');
+    }
+    const num = Math.round(selected / 10);
     return (
         <BaseComponent className="lie" {...rest}>
             <div className="lie-container">
                 <div className="lie-title">
                     <Typist cursor={{element: '_'}}
-                        avgTypingDelay={100}
-                        onTypingDone={() => setDisplaySelection(true)}>
+                            avgTypingDelay={100}
+                            onTypingDone={() => setDisplaySelection(true)}>
                         <Typist.Delay ms={2500}/>
                         How<br/>loyal are you?
                     </Typist>
@@ -36,15 +42,24 @@ const Lie = ({...rest}) => {
                         {
                             IMAGES_IDS.map((id) =>
                                 <img className={classNames('lie-slider-hand-red', `lie-slider-hand-${id}`,
-                                    { 'displayHand': Math.round(selected / 10) >= id })}
+                                    {'displayHand': num >= id})}
                                      src={`${ASSETS_BASE}/lie/handRed.svg`} alt="sol_e"/>
                             )
                         }
-                        <img className="main-image-white" src={`${ASSETS_BASE}/lie/handWHITE.svg`} alt="sol_e"/>
+                        {
+                            !firstMove?
+                                <img className="main-image-white" src={`${ASSETS_BASE}/lie/handWHITE.svg`}
+                                     alt="sol_e"/> :
+                                <div className="lie-number-wrapper">
+                                    <div className="lie-number lie-number-3">{num}</div>
+                                    <div className="lie-number lie-number-2">{num}</div>
+                                    <div className="lie-number lie-number-1">{num}</div>
+                                </div>
+                        }
                     </div>
-                    <>
-                    <LieSlider onChange={onChange}/>
-                    </>
+                    <div className="slider-container">
+                        <LieSlider onChange={onChange}/>
+                    </div>
                 </div>
             </div>
         </BaseComponent>
