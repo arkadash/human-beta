@@ -10,8 +10,9 @@ import Kill from '../Kill';
 import Loyal from '../Loyal';
 import Steal from '../Steal';
 import Rich from '../Rich';
+import Lie from '../Lie';
 
-const ANIMATE = 'animate__animated animate__zoomInDown';
+const ANIMATE = 'animate__animated animate__tada';
 
 const transitions = {
     enterRight: ANIMATE,
@@ -32,6 +33,7 @@ const Wizard = () => {
             <Loyal/>
             <Steal/>
             <Rich/>
+            <Lie/>
         </StepWizard>
     );
 };
