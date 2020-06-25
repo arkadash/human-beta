@@ -1,21 +1,14 @@
 $image_size: 120px;
-$button_size: 197px;
+$button_size: 170px;
 
 .rest-button {
     border: transparent;
     opacity: 0.5;
-    height: $button_size;
-    width: $button_size;
     margin-top: 20px;
     margin-bottom: 20px;
 
     &:hover {
         opacity: 1;
-    }
-
-    img {
-        padding-top: 6px;
-        padding-bottom: 24px;
     }
 
     .rest-btn-title {
@@ -25,6 +18,30 @@ $button_size: 197px;
         font-size: 24px;
         text-align: center;
         color: #FFFFFF;
+        width: $button_size;
+    }
+
+    .rest-img-wrapper {
+        position: relative;
+        margin-bottom: 16px;
+        height: $button_size;
+        width: $button_size;
+
+        img {
+            padding: 25px;
+
+            &.res-img-gmail {
+                margin-top: 20px;
+            }
+
+            &.res-img-netflix {
+                margin-top: 10px;
+            }
+
+            &.res-img-linkdin {
+                margin-top: -10px;
+            }
+        }
     }
 
     &.rest-selected {
@@ -33,8 +50,8 @@ $button_size: 197px;
 
         .rest-btn-overlay {
             background: #FF0000;
+            border-radius: 50%;
             mix-blend-mode: difference;
-            border-radius: 10px;
             height: 100%;
             width: 100%;
             position: absolute;
