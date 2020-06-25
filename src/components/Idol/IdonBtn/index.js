@@ -8,7 +8,6 @@ const IdolBtn  = ({ onClick = noop, name = 'KIN_KARDASHIAN', selectedFunc = noop
     const [selected, setSelection] = useState(selectedFunc(name));
     const data = buttonsMap[name];
     const title = data.title;
-    const multipleWords = title.split(' ').length > 1 && title.length > 16;
 
     return (
         <button onClick={() => {
@@ -19,7 +18,7 @@ const IdolBtn  = ({ onClick = noop, name = 'KIN_KARDASHIAN', selectedFunc = noop
             {data.img &&
                 <img src={selected ? data.imgClicked: data.img} alt={title}/>
             }
-            <div className={classNames('idol-btn-title', {'idol-title-two-words': multipleWords})}>
+            <div className={classNames('idol-btn-title')}>
                 { title }
             </div>
         </button>
