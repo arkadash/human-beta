@@ -40,7 +40,7 @@ export default {
     },
     DONALD_TRUMP: {
         title: 'donaldtrump',
-        img: `${ASSETS_BASE_GS}/donaldtrump.jpg`,
+        img: `${ASSETS_BASE_GS}/donalndtrumph.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/DonaldTrump.jpg`
     },
     ARIANA_GRANDE: {
