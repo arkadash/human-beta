@@ -1,11 +1,15 @@
-$cursor: url('./localAssets/cursorSvg.svg') 40 40, default !important;
+//$cursor: url('./localAssets/cursorSvg.svg') 40 40, default !important;
+$cursor: none !important;
 html { font-family: 'Roboto', sans-serif; }
 
 body > div {
-    cursor: $cursor;
     background-color: black;
     width: 1080px;
     height: 1920px;
+}
+
+div {
+    cursor: $cursor;
 }
 
 .sol-e {

@@ -5,6 +5,7 @@ import {ASSETS_BASE} from '../../constants';
 import Menu from './Menu';
 import Waves from './Waves';
 import './styles.scss';
+import Cursor from '../Cursor';
 
 const BaseComponent = ({
     nextStep = noop,
@@ -20,6 +21,7 @@ const BaseComponent = ({
 
     return (
         <>
+            <Cursor/>
             <div className={classNames('base-component', 'bg-color-black', className)}>
                 {isActive &&
                     <div className="base-component-wrapper">
