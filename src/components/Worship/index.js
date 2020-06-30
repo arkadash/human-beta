@@ -3,15 +3,18 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import classNames from  'classnames';
 import Typist from 'react-typist';
-import BaseComponent from '../BaseComponent';
+import {ASSETS_BASE} from '../../constants';
 
-import WorshipBtn from './WorshipBtn';
+import BaseComponent from '../BaseComponent';
+import WorshipBtnName from './WorshipBtnName';
+import WorshipImg from './WorshipImg';
 import './styles.scss';
 
 const Worship = ({ ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelection] = useState('');
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const hiddenPrev = React.createRef();
+    const hiddenNext = React.createRef();
 
     const onClick = (key) => {
         if(key === selected) {
@@ -20,9 +23,6 @@ const Worship = ({ ...rest}) => {
             setSelection(key)
         }
     };
-
-    const next = () => currentSlide === 2 ? setCurrentSlide(0) : setCurrentSlide(currentSlide + 1);
-    const prev = () => currentSlide === 0 ? setCurrentSlide(2) : setCurrentSlide(currentSlide - 1);
 
     return (
         <BaseComponent className="worship" {...rest}>
@@ -36,14 +36,55 @@ const Worship = ({ ...rest}) => {
                 </Typist>
             </div>
             <div className={classNames('worship-buttons-wrapper', {'show-buttons': displaySelection})}>
-                <Carousel showArrows={false}
+                <Carousel
+                    infiniteLoop
                     showIndicators={false}
                     showStatus={false}
+                    showThumbs={false}
                     autoPlay={false}
-                    selectedItem={currentSlide}>
-                    <WorshipBtn onClick={onClick} selected={selected === "FACEBOOK"} next={next} prev={prev} srcKey="FACEBOOK"/>
-                    <WorshipBtn onClick={onClick} selected={selected === "TWITTER"} next={next} prev={prev} srcKey="TWITTER"/>
-                    <WorshipBtn onClick={onClick} selected={selected === "INSTAGRAM"} next={next} prev={prev} srcKey="INSTAGRAM"/>
+                    renderArrowNext={
+                        (onClickHandler, hasNext, label) => (
+                            <button onClick={onClickHandler} className="btn-hidden" ref={hiddenNext}/>
+                        )
+                    }
+                    renderArrowPrev={
+                        (onClickHandler, hasNext, label) => (
+                            <button onClick={onClickHandler} className="btn-hidden" ref={hiddenPrev}/>
+                        )
+                    }>
+                    <WorshipImg selected={selected === "FACEBOOK"} srcKey="FACEBOOK"/>
+                    <WorshipImg selected={selected === "TWITTER"} srcKey="TWITTER"/>
+                    <WorshipImg selected={selected === "INSTAGRAM"} srcKey="INSTAGRAM"/>
+                </Carousel>
+
+                <Carousel
+                    infiniteLoop
+                    showIndicators={false}
+                    showStatus={false}
+                    showThumbs={false}
+                    renderArrowNext={
+                        (onClickHandler, hasNext, label) => (
+                            <button onClick={(...props) => {
+                                onClickHandler(...props);
+                                hiddenNext.current.click();
+                            }} className="btn-next">
+                                <img src={`${ASSETS_BASE}/right.png`} alt="next" className="img-next"/>
+                            </button>
+                        )
+                    }
+                    renderArrowPrev={
+                        (onClickHandler, hasNext, label) => (
+                            <button onClick={(...props) => {
+                                onClickHandler(...props);
+                                hiddenPrev.current.click();
+                            }} className="btn-prev">
+                                <img src={`${ASSETS_BASE}/right.png`} alt="prev"/>
+                            </button>
+                        )
+                    }>
+                    <WorshipBtnName onClick={onClick} selected={selected === "FACEBOOK"} srcKey="FACEBOOK"/>
+                    <WorshipBtnName onClick={onClick} selected={selected === "TWITTER"} srcKey="TWITTER"/>
+                    <WorshipBtnName onClick={onClick} selected={selected === "INSTAGRAM"} srcKey="INSTAGRAM"/>
                 </Carousel>
             </div>
         </BaseComponent>

@@ -1,0 +1,24 @@
+.base-component .base-component-wrapper {
+
+    .worship-btn-name-container {
+
+        .worship-button {
+            border: 2px solid #FF0000;
+            box-sizing: border-box;
+            border-radius: 100px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            padding: 46px 82px;
+
+            &.btn-selected,
+            &:hover {
+                background-color: #FF0000;
+            }
+        }
+    }
+}
