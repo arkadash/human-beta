@@ -12,8 +12,8 @@ const LoyalBtn  = ({ onClick = noop, selectedFunc = noop, title, value = 1}) => 
 
     return (
         <div className="loyal-button-component" onClick={click}>
-            <div className="loyal-button-wrapper">
-                <button className={classNames('loyal-button', {'loyal-btn-selected': selected})}/>
+            <div className={classNames('loyal-button-wrapper', {'loyal-btn-selected': selected})}>
+                <button className={classNames('loyal-button')}/>
             </div>
             {title && <div className={classNames('loyal-btn-title')}>
                 { title }

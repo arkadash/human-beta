@@ -49,7 +49,7 @@ const Kill = ({...rest}) => {
                                 avgTypingDelay={100}
                                 onTypingDone={() => setDisplaySelection(true)}>
                             <Typist.Delay ms={2500}/>
-                            Have<br/>you killed<br/> anyone?
+                            Have<br/>you murdered anyone?
                         </Typist>
                     </div>
                     <div className={classNames('main-image', {

@@ -8,7 +8,7 @@ import Idol from '../Idol';
 import Rest from '../Rest';
 import Kill from '../Kill';
 import Loyal from '../Loyal';
-import Steal from '../Steal';
+import Steal from '../old/Steal';
 import Rich from '../Rich';
 import Lie from '../Lie';
 

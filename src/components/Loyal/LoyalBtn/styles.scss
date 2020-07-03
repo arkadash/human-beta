@@ -18,14 +18,16 @@
             padding-bottom: 2px;
         }
 
-        .loyal-btn-selected {
-            margin-top: 2px;
-            border-top: 8px solid #FFFFFF;
-            box-sizing: border-box;
-            padding: 0;
+        &.loyal-btn-selected {
+            .loyal-button {
+                margin-top: 2px;
+                border-top: 8px solid #FFFFFF;
+                box-sizing: border-box;
+                padding: 0;
+            }
         }
 
-
+        &.loyal-btn-selected,
         &:hover {
             border-color: #FF0000;
         }

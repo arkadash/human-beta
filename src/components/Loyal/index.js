@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
+import LoyalBtn from './LoyalBtn';
 import './styles.scss';
-import LoyalBtn from "./LoyalBtn";
 
 const Loyal = ({...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
