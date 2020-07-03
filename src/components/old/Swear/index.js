@@ -15,13 +15,13 @@ const Swear = ({ nextStep = noop}) => {
                 </div>
                 <div className="swear-buttons">
                     <button className="swear-button" onClick={nextStep}>
-                        Make
-                    </button>
-                    <button className="swear-button" onClick={nextStep}>
                         Break
                     </button>
                     <button className="swear-button" onClick={nextStep}>
                         Take
+                    </button>
+                    <button className="swear-button" onClick={nextStep}>
+                        Make
                     </button>
                 </div>
 

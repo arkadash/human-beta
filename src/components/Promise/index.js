@@ -4,6 +4,7 @@ import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
 import './styles.scss';
+import Answers from "./Answers";
 
 const getSelectedClasses = (selected, key) => {
     if(selected === key) {
@@ -31,13 +32,14 @@ const Promise = ({ ...rest}) => {
         <BaseComponent className="promise" {...rest}>
             <div className="promise-container">
                 <div className={classNames('button-container', {'show-buttons': displaySelection})}>
-                    <button className={
-                        classNames('promise-button-take', getSelectedClasses(selected, 'take'))}
-                            onClick={() => setSelection('take')}>take</button>
-                    <button className={classNames('promise-button-make',  getSelectedClasses(selected, 'make'))}
-                            onClick={() => setSelection('make')}>make</button>
-                    <button className={classNames('promise-button-break',  getSelectedClasses(selected, 'break'))}
-                            onClick={() => setSelection('break')}>break</button>
+                    <Answers/>
+                    {/*<button className={*/}
+                    {/*    classNames('promise-button-take', getSelectedClasses(selected, 'take'))}*/}
+                    {/*        onClick={() => setSelection('take')}>take</button>*/}
+                    {/*<button className={classNames('promise-button-make',  getSelectedClasses(selected, 'make'))}*/}
+                    {/*        onClick={() => setSelection('make')}>make</button>*/}
+                    {/*<button className={classNames('promise-button-break',  getSelectedClasses(selected, 'break'))}*/}
+                    {/*        onClick={() => setSelection('break')}>break</button>*/}
                 </div>
                 <div className="promise-title">
                     <Typist cursor={{ element: '_' }}
