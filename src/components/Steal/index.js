@@ -62,7 +62,7 @@ const Steal = ({...rest}) => {
                                   Will you<Typist cursor={{element: '_'}}
                                         avgTypingDelay={100}>
                                     return a 20$ purse?
-                                    <Typist.Backspace count={10} delay={200}/>
+                                    <Typist.Backspace count={10} delay={300}/>
                                     2000$ purse?
                                 </Typist>
                             </span>
