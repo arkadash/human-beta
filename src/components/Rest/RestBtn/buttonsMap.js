@@ -10,7 +10,7 @@ export default {
         img: `${ASSETS_BASE}/facebook.png`
     },
     INSTAGRAM: {
-        title: 'INSTAGRAM',
+        title: 'Instagram',
         img: `${ASSETS_BASE}/instagram.png`
     },
     WHATSAPP: {

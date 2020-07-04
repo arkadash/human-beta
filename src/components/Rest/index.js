@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {noop} from 'lodash';
 import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
 import RestBtn from './RestBtn';
+import RestSwitch from './RestSwitch';
 import './styles.scss';
 
 const Rest = ({...rest}) => {
@@ -49,6 +49,10 @@ const Rest = ({...rest}) => {
                     <RestBtn name="LINKDIN" {...baseProps}/>
                     <RestBtn name="BITMOJI" {...baseProps}/>
                     <RestBtn name="NETFLIX" {...baseProps}/>
+                </div>
+                <div className="rest-switch">
+                    <RestSwitch/>
+                    <div className="rest-switch-text">Clean</div>
                 </div>
             </div>
         </BaseComponent>

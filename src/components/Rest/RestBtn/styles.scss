@@ -4,8 +4,8 @@ $button_size: 170px;
 .rest-button {
     border: transparent;
     opacity: 0.5;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     &:hover {
         opacity: 1;
@@ -23,7 +23,7 @@ $button_size: 170px;
 
     .rest-img-wrapper {
         position: relative;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         height: $button_size;
         width: $button_size;
 
