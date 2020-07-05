@@ -26,7 +26,7 @@ const Rich = ({...rest}) => {
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
                         <Typist.Delay ms={2500}/>
-                        What is<br/>your choice
+                        What<br/>is your ambition?
                     </Typist>
                 </div>
                 <div className={classNames('main-image', {
@@ -36,11 +36,10 @@ const Rich = ({...rest}) => {
                 })}>
                     <img src={`${ASSETS_BASE}/rich/jewellery-white 1.png`} alt="sol_e"/>
                     <Hart/>
-                    { selected === 'rich' && <div className="img-selected-overlay"/> }
                 </div>
                 <div className={classNames('rich-buttons-wrapper', {'show-buttons': displaySelection})}>
                     <button className={classNames('rich-button-happy', {'btn-selected': selected === 'happy'})}
-                            onClick={() => setSelection('happy')}>HAPPY</button>
+                            onClick={() => setSelection('happy')}>LOVE</button>
                     <button className={classNames('rich-button-rich', {'btn-selected': selected === 'rich'})}
                             onClick={() => setSelection('rich')}>RICH</button>
                 </div>

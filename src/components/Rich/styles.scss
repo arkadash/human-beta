@@ -60,28 +60,38 @@
         margin-bottom: 220px;
         justify-content: center;
         position: relative;
+        min-height: 580px;
 
         &.show-image {
             opacity: 1;
         }
 
-        .img-selected-overlay {
-            background-color: #FF0000;
-            mix-blend-mode: multiply;
-            top: 0;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
-
         svg {
+            transition: all 0.7s ease-in-out;
             position: absolute;
             top: 54%;
+            width: 125px;
+            height: 110px;
+        }
+
+        img {
+            width: 408px;
+            height: 568px;
+            transition: all 0.7s ease-in-out;
         }
 
         &.selected-happy {
             svg {
-                fill: #ff0000;
+                width: 580px;
+                height: 500px;
+                top: 10%;
+            }
+
+            img {
+                width: 120px;
+                height: 160px;
+                margin-top: 200px;
+                position: relative;
             }
         }
     }
