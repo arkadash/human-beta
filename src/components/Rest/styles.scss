@@ -22,6 +22,14 @@
     }
 
     .rest-switch {
+        opacity: 0;
+
+        &.show-buttons {
+            opacity: 1;
+        }
+    }
+
+    .rest-switch {
         padding-left: 35px;
         padding-top: 100px;
         display: flex;

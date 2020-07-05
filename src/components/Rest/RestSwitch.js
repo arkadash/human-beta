@@ -13,6 +13,7 @@ const IOSSwitch = withStyles((theme) => ({
     },
     switchBase: {
         padding: 1,
+        transition: 'all 0.2s ease-in-out',
 
         '&$checked': {
             transform: 'translateX(32px)',
@@ -54,21 +55,16 @@ const IOSSwitch = withStyles((theme) => ({
     );
 });
 
-export default function CustomizedSwitches() {
-    const [state, setState] = React.useState({
-        checkedA: true,
-        checkedB: true,
-        checkedC: true,
-    });
+export default function CustomizedSwitches({ onChange = () => null, checked }) {
 
     const handleChange = (event) => {
-        setState({ ...state, [event.target.name]: event.target.checked });
+        onChange(event.target.checked);
     };
 
     return (
         <FormGroup>
             <FormControlLabel
-                control={<IOSSwitch checked={state.checkedB} onChange={handleChange} name="checkedB" />}
+                control={<IOSSwitch checked={checked} onChange={handleChange} name="checkedB" />}
             />
         </FormGroup>
     );
