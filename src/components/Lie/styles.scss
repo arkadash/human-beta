@@ -9,7 +9,7 @@ $size_half: 85px;
             font-family: Roboto Mono;
             font-style: normal;
             font-weight: 500;
-            font-size: 64px;
+            font-size: 62px; // TODO: Ask David
             line-height: 120%;
             color: #FFFFFF;
             margin-bottom: 200px;
@@ -69,7 +69,37 @@ $size_half: 85px;
                         margin-left: -10px;
                     }
                 }
+            }
 
+            .lie-error-wrapper {
+                width: 100%;
+                display: inline-flex;
+                justify-content: center;
+                margin-top: 60px;
+
+                .lie-error {
+                    font-family: Roboto Mono;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 144px;
+                    text-align: center;
+                    color: white;
+                    position: absolute;
+                    opacity: 0.35;
+
+                    &.lie-error-2 {
+                        mix-blend-mode: exclusion;
+                        opacity: 1;
+                        margin-top: -10px;
+                    }
+
+                    &.lie-error-3 {
+                        color: #FF0000;
+                        mix-blend-mode: exclusion;
+                        opacity: 0.15;
+                        margin-top: -20px;
+                    }
+                }
             }
 
             .lie-slider-hand-red {
@@ -176,6 +206,7 @@ $size_half: 85px;
             }
 
             .MuiSlider-thumb {
+                cursor: none;
                 height: $size;
                 width: $size;
                 background-color: black;
@@ -192,4 +223,15 @@ $size_half: 85px;
 
         }
     }
+}
+
+.lie-overlay {
+    transition: all 0.7s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #FF0000;
+    mix-blend-mode: difference;
+    pointer-events: none;
 }
