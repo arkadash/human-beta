@@ -15,7 +15,7 @@ export default {
     },
     BUDDHA: {
         title: 'Buddha',
-        img: `${ASSETS_BASE_GS}/Buddha.jpg`,
+        img: `${ASSETS_BASE_GS}/buddha.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/Buddha.jpg`
     },
     JUSTIN_BIEBER: {
@@ -50,7 +50,7 @@ export default {
     },
     ALBERT_EINSTEIN: {
         title: 'Albert Einstein',
-        img: `${ASSETS_BASE_GS}/AlbertEinstein.jpg`,
+        img: `${ASSETS_BASE_GS}/alberteinstein.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/AlbertEinstein.jpg`
     },
     THE_ROCK: {
