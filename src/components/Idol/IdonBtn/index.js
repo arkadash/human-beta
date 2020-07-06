@@ -15,7 +15,7 @@ const IdolBtn  = ({ onClick = noop, name = 'KIN_KARDASHIAN', selectedFunc = noop
             setSelection(!selected);
         }} className={classNames('idol-button',
             {'idol-button-with-image': data.img, 'idol-selected': selected, 'idol-button-no-image': !data.img})}>
-            <div className="idol-img-container">
+            <div className={classNames('idol-img-container', `idol-img-container-${name.toLowerCase().replace('_', '-')}`)}>
                 {data.img &&
                     <img src={selected ? data.imgClicked: data.img} alt={title}/>
                 }
