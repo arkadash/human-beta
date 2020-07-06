@@ -12,7 +12,7 @@ import Steal from '../Steal';
 import Rich from '../Rich';
 import Lie from '../Lie';
 
-const ANIMATE = 'animate__animated animate__tada';
+const ANIMATE = 'animate__animated animate__pulse';
 
 const transitions = {
     enterRight: ANIMATE,
