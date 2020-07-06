@@ -9,6 +9,7 @@ import Cursor from '../Cursor';
 
 const BaseComponent = ({
     nextStep = noop,
+    previousStep = noop,
     children,
     className = '',
     isActive = true,
@@ -37,7 +38,7 @@ const BaseComponent = ({
                                 </div>
                             </div>
                             <div className="back-container">
-                                <button onClick={() => alert('Back')}>
+                                <button onClick={previousStep}>
                                     Back
                                 </button>
                             </div>

@@ -29,9 +29,12 @@
             border: 2px solid #FF0000;
             box-sizing: border-box;
 
-            &.btn-selected,
+            &.btn-selected {
+                background-color: #FF0000 !important;
+            }
+
             &:hover {
-                background-color: #FF0000;
+                background-color: rgba(255, 0, 0, 0.2);
             }
 
             &.kill-button-love {
