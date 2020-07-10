@@ -17,13 +17,15 @@ const WebCamera = () => {
     }, []);
 
     return (
-        <div className="camera-test" ref={cameraRef}>
-            <Webcam  audio={false} height={videoConstraints.height}
-                 ref={webcamRef}
-                 screenshotFormat="image/jpeg"
-                 videoConstraints={videoConstraints}/>
-            {/*<video id="video" width="720" height="1920" autoPlay muted/>*/}
-        </div>
+        // <BaseComponent className="rich" hideBack hideWaves>
+            <div className="camera-test" ref={cameraRef}>
+                <Webcam  audio={false} height={videoConstraints.height}
+                     ref={webcamRef}
+                     screenshotFormat="image/jpeg"
+                     videoConstraints={videoConstraints}/>
+                {/*<video id="video" width="720" height="1920" autoPlay muted/>*/}
+            </div>
+        // </BaseComponent>
     );
 };
 

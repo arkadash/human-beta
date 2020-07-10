@@ -36,7 +36,7 @@ const canvasData = (textLines = [], canvas) => {
   ctx.fillStyle = "red";
   ctx.textAlign = "left";
   textLines.forEach((text, index) => {
-    ctx.fillText(text, canvas.width / 2 - 1080 / 2 + 80, 80 + LINES_BREAK * index);
+    ctx.fillText(text, canvas.width / 2 - 1080 / 2 + 80, 240 + LINES_BREAK * index);
   });
 }
 

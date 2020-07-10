@@ -14,7 +14,9 @@ const BaseComponent = ({
     className = '',
     isActive = true,
     currentStep = 1,
-    totalSteps = 1
+    totalSteps = 1,
+    hideBack = false,
+    hideWaves = false
 }) => {
 
     const stageNum = currentStep > 9 ? currentStep : `0${currentStep}`;
@@ -37,11 +39,13 @@ const BaseComponent = ({
                                     </button>
                                 </div>
                             </div>
-                            <div className="back-container">
-                                <button onClick={previousStep}>
-                                    Back
-                                </button>
-                            </div>
+                            {!hideBack &&
+                                <div className="back-container">
+                                    <button onClick={previousStep}>
+                                        Back
+                                    </button>
+                                </div>
+                            }
                         </header>
                         <div className="base-component-body">
                             {children}
@@ -57,7 +61,7 @@ const BaseComponent = ({
                     </div>
                 }
             </div>
-            <Waves/>
+            {!hideWaves && <Waves/> }
             <div className="progress-bar" style={{width: `${progressWidth}%`}}/>
         </>
     );
