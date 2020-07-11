@@ -1,5 +1,5 @@
 import * as faceapi from 'face-api.js';
-import { MODULES_BASE } from '../../../constants';
+import {MODULES_BASE} from '../../../constants';
 
 // const LINE_SIZE = 170;
 const LINE_WIDTH = 8;
@@ -97,8 +97,8 @@ export const init = (video, parentEl) => {
     const displaySize = { width: window.outerHeight * 16 / 9, height: window.outerHeight }
     faceapi.matchDimensions(canvas, displaySize);
 
-    setInterval(async () => {
-      // console.log('Init append canvas!');
+    const draw = async() => {
+      const start = Date.now();
       const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
           .withFaceLandmarks().withFaceExpressions().withAgeAndGender()
       const resizedDetections = faceapi.resizeResults(detections, displaySize)
@@ -108,15 +108,31 @@ export const init = (video, parentEl) => {
       if(resizedDetections.length > 0) {
         drawFaceSquare(canvas, resizedDetections);
         const expressionText = [
-            `Mode: ${nameCapitalized(getMaxKeyByValue(resizedDetections[0].expressions))}`,
-            `Age: ${Math.round(resizedDetections[0].age)}`,
-            `Gender: ${nameCapitalized(resizedDetections[0].gender)}`
+          `Mode: ${nameCapitalized(getMaxKeyByValue(resizedDetections[0].expressions))}`,
+          `Age: ${Math.round(resizedDetections[0].age)}`,
+          `Gender: ${nameCapitalized(resizedDetections[0].gender)}`
         ];
 
         canvasData(expressionText, canvas);
         faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+        // console.log('Time to render', Date.now() - start);
       }
-    }, 100);
+    };
+
+    let timeout;
+    const triggerDraw = () => {
+      timeout = setTimeout(() => {
+        draw().then(triggerDraw);
+      }, 400);
+    }
+
+    triggerDraw();
+
+    return () => {
+      console.log('cleaning camera up!');
+      clearTimeout(timeout);
+      video.removeEventListener('play', detect)
+    };
   };
 
   video.addEventListener('play', detect)

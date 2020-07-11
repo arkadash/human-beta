@@ -1,23 +1,28 @@
 import React, {useEffect} from 'react';
 import Webcam from 'react-webcam';
+import {noop} from 'lodash';
+import {ASSETS_BASE} from '../../constants';
+import HeaderLine from '../BaseComponent/HeaderLine';
+import Cursor from '../Cursor';
 import { init } from './Face-Detection-JavaScript-master/script'
 import './styles.scss';
 
 const videoConstraints = {
     width: window.outerWidth,
     height: window.outerHeight,
-    facingMode: "environment"
+    facingMode: "user"
 };
 
-const WebCamera = () => {
+const WebCamera = ({ nextStep = noop }) => {
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
     useEffect(() => {
-        init(webcamRef.current.video, cameraRef.current);
+        return init(webcamRef.current.video, cameraRef.current);
     }, []);
 
     return (
-        // <BaseComponent className="rich" hideBack hideWaves>
+        <div className="camera-container">
+            <Cursor difference={false}/>
             <div className="camera-test" ref={cameraRef}>
                 <Webcam  audio={false} height={videoConstraints.height}
                      ref={webcamRef}
@@ -25,7 +30,19 @@ const WebCamera = () => {
                      videoConstraints={videoConstraints}/>
                 {/*<video id="video" width="720" height="1920" autoPlay muted/>*/}
             </div>
-        // </BaseComponent>
+            <div className="camera-header-container">
+                <HeaderLine/>
+            </div>
+            <div className="camera-footer-container">
+                <button className="camera-next-btn" onClick={nextStep}>
+                    <img src={`${ASSETS_BASE}/camera/right.png`} alt="sol_e"/>
+                </button>
+                <p className="camera-next-text">
+                    Hold your position for a <br/>
+                    better selfie
+                </p>
+            </div>
+        </div>
     );
 };
 

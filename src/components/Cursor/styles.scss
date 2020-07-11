@@ -1,5 +1,7 @@
 .cursor {
-    mix-blend-mode: difference;
+    &.cursor-difference {
+        mix-blend-mode: difference;
+    }
     pointer-events: none;
 
     width: 0;

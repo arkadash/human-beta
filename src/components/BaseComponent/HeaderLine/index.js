@@ -6,18 +6,16 @@ import './styles.scss';
 
 const HeaderLine = () => {
     return (
-        <header>
-            <div className="header-line">
-                <div className="header-logo">
-                    <img src={`${ASSETS_BASE}/redLogo.png`} alt="sol_e"/>
-                </div>
-                <div className="header-btn">
-                    <button onClick={() => alert('clicked!!')}>
-                        <Menu/>
-                    </button>
-                </div>
+        <div className="header-line">
+            <div className="header-logo">
+                <img src={`${ASSETS_BASE}/redLogo.png`} alt="sol_e"/>
             </div>
-        </header>
+            <div className="header-btn">
+                <button onClick={() => alert('clicked!!')}>
+                    <Menu/>
+                </button>
+            </div>
+        </div>
     );
 };
 

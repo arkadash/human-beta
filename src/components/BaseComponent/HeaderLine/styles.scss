@@ -1,105 +1,21 @@
 $color: #FF0000;
 
-.base-component {
-    padding: 80px 80px 30px 80px;
-    position: relative;
-    height: 1920px;
-    min-height: 100vh;
-    min-width: 100vh;
-    box-sizing: border-box;
+.header-line {
 
-    .base-component-wrapper {
-        position: relative;
-        min-height: 94vh;
-        height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
 
-        header,
-        footer {
-            button:hover {
-                opacity: 0.8;
-            }
-        }
-
-        button {
-            font-weight: 500;
-            font-size: 36px;
-            letter-spacing: 0.02em;
-            color: $color;
-            border: none;
-            padding: 0 0 8px 0;
-        }
-
-        header {
-            padding-bottom: 80px;
-            .header-line {
-                width: 100%;
-                display: inline-flex;
-                justify-content: space-between;
-
-                .back-container button {
-                    border-bottom: 2px solid $color;
-                }
-            }
-
-            .back-container {
-                padding-top: 76px;
-
-                button {
-                    font-weight: 500;
-                    font-size: 36px;
-                    letter-spacing: 0.02em;
-                    color: $color;
-                    opacity: 0.5;
-                    border: none;
-                    border-bottom: 2px solid $color;
-                    padding: 0 0 8px 0;
-
-                    &:hover {
-                        opacity: 0.8;
-                    }
-                }
-            }
-        }
-        footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-
-            .footer-progress {
-                color: $color;
-                display: inline-flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-
-            .progress-num {
-                font-family: Roboto Mono;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 48px;
-
-                letter-spacing: 0.02em;
-
-                color: $color;
-            }
-
-            .footer-btn{
-                padding: 0;
-
-                display: inline-flex;
-
-                img {
-                    margin-top: 2px;
-                    margin-left: 40px;
-                }
-            }
-        }
+    button:hover {
+        opacity: 0.8;
     }
-}
 
-.progress-bar {
-    height: 10px;
-    background-color: $color;
-    position: absolute;
-    bottom: 0;
+    button {
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        color: $color;
+        border: none;
+        padding: 0 0 8px 0;
+    }
 }

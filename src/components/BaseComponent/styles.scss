@@ -31,15 +31,6 @@ $color: #FF0000;
 
         header {
             padding-bottom: 80px;
-            .header-line {
-                width: 100%;
-                display: inline-flex;
-                justify-content: space-between;
-
-                .back-container button {
-                    border-bottom: 2px solid $color;
-                }
-            }
 
             .back-container {
                 padding-top: 76px;

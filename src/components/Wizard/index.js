@@ -11,6 +11,7 @@ import Loyal from '../Loyal';
 import Steal from '../Steal';
 import Rich from '../Rich';
 import Lie from '../Lie';
+import WebCamera from '../WebcameTest';
 
 const ANIMATE = 'animate__animated animate__pulse';
 
@@ -24,6 +25,7 @@ const transitions = {
 const Wizard = () => {
     return (
         <StepWizard isLazyMount transitions={transitions}>
+            <WebCamera/>
             <Believe/>
             <Worship/>
             <Promise/>

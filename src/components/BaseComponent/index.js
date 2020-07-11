@@ -2,10 +2,10 @@ import React from 'react';
 import {noop} from 'lodash';
 import classNames from 'classnames';
 import {ASSETS_BASE} from '../../constants';
-import Menu from './Menu';
 import Waves from './Waves';
-import './styles.scss';
 import Cursor from '../Cursor';
+import HeaderLine from './HeaderLine';
+import './styles.scss';
 
 const BaseComponent = ({
     nextStep = noop,
@@ -29,16 +29,7 @@ const BaseComponent = ({
                 {isActive &&
                     <div className="base-component-wrapper">
                         <header>
-                            <div className="header-line">
-                                <div className="header-logo">
-                                    <img src={`${ASSETS_BASE}/redLogo.png`} alt="sol_e"/>
-                                </div>
-                                <div className="header-btn">
-                                    <button onClick={() => alert('clicked!!')}>
-                                        <Menu/>
-                                    </button>
-                                </div>
-                            </div>
+                           <HeaderLine/>
                             {!hideBack &&
                                 <div className="back-container">
                                     <button onClick={previousStep}>
