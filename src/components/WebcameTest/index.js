@@ -8,8 +8,8 @@ import { init } from './Face-Detection-JavaScript-master/script'
 import './styles.scss';
 
 const videoConstraints = {
-    width: window.outerWidth,
-    height: window.outerHeight,
+    width: window.innerWidth,
+    height: window.innerHeight,
     facingMode: "user"
 };
 
@@ -46,11 +46,11 @@ const WebCamera = ({ onClick = noop}) => {
     );
 };
 
-const WebCameraHoc = ({ onStepChange = noop, isActive = true })=> {
+const WebCameraHoc = ({ nextStep = noop, isActive = true })=> {
     if(!isActive) {
         return null;
     }
-    return <WebCamera onClick={onStepChange}/>
+    return <WebCamera onClick={nextStep}/>
 }
 
 export default WebCameraHoc;

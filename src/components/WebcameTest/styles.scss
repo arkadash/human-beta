@@ -4,6 +4,7 @@
     position: relative;
 
     .camera-test {
+        box-sizing: border-box;
         position: absolute;
         left: calc(-100% - 80px);
         margin: 0;
@@ -17,6 +18,7 @@
 
         video {
             filter: grayscale(100%);
+            box-sizing: border-box;
         }
     }
 

@@ -36,7 +36,7 @@ const canvasData = (textLines = [], canvas) => {
   ctx.fillStyle = "red";
   ctx.textAlign = "left";
   textLines.forEach((text, index) => {
-    ctx.fillText(text, canvas.width / 2 - 1080 / 2 + 100, 240 + LINES_BREAK * index);
+    ctx.fillText(text, canvas.width / 2 - 1080 / 2 + 80, 240 + LINES_BREAK * index);
   });
 }
 
@@ -83,8 +83,15 @@ const loadPromise = Promise.all([
 ]);
 
 export const init = (video, parentEl) => {
+  let timeout;
   console.log('Init!');
-  let cleanUp = () => null;
+
+  const cleanUp = () => {
+    console.log('cleaning camera up!');
+    clearTimeout(timeout);
+    video.removeEventListener('play', detect);
+    canvasAdded = false;
+  };
 
   loadPromise.then(() => {
     console.log('Staring video!');
@@ -126,7 +133,6 @@ export const init = (video, parentEl) => {
       }
     };
 
-    let timeout;
     const triggerDraw = () => {
       timeout = setTimeout(() => {
         draw().then(triggerDraw);
@@ -134,13 +140,6 @@ export const init = (video, parentEl) => {
     }
 
     triggerDraw();
-
-    cleanUp = () => {
-      console.log('cleaning camera up!');
-      clearTimeout(timeout);
-      video.removeEventListener('play', detect);
-      canvasAdded = false;
-    };
   };
 
   return cleanUp;
