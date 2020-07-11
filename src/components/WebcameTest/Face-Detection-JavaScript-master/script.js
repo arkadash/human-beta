@@ -131,7 +131,8 @@ export const init = (video, parentEl) => {
     return () => {
       console.log('cleaning camera up!');
       clearTimeout(timeout);
-      video.removeEventListener('play', detect)
+      video.removeEventListener('play', detect);
+      canvasAdded = false;
     };
   };
 
