@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
-import HeaderLine from '../BaseComponent/HeaderLine';
 import Cursor from '../Cursor';
 import './styles.scss';
 
@@ -17,9 +16,17 @@ const videoConstraints = {
 const Intro = ({ onClick = noop}) => {
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
+    const introRef = React.createRef();
+
+    useEffect(() => {
+        introRef.current.addEventListener('mousemove', () => {
+            onClick();
+            console.log('intro move!');
+        }, { once: true } )
+    }, [])
 
     return (
-        <div className="intro-container">
+        <div className="intro-container" ref={introRef}>
             <Cursor difference={false}/>
             <div className="intro-camera" ref={cameraRef} style={{
                 right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
