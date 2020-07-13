@@ -1,0 +1,92 @@
+$color: #FF0000;
+
+.loading-screen {
+    padding: 80px 80px 30px 80px;
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+    width: 1080px;
+    box-sizing: border-box;
+
+    header {
+        width: 100%;
+    }
+
+    .loading-component-body {
+        position: relative;
+        top: 50vh;
+        padding: 0 180px;
+
+        .MuiLinearProgress-colorPrimary,
+        .MuiLinearProgress-barColorPrimary {
+            background-color: white;
+        }
+
+        .MuiLinearProgress-colorPrimary {
+            background-color: gray;
+        }
+
+        .loading-num {
+            font-family: Roboto Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            text-align: center;
+            color: #FFFFFF;
+            padding-top: 40px;
+        }
+    }
+
+    footer {
+        position: relative;
+        top: 80vh;
+        width: 100%;
+
+        .loading-footer-container {
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .loading-version-container,
+            .loading-creator-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .intro-creator {
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: white;
+            }
+
+            .intro-version {
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                display: flex;
+                align-items: flex-end;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+
+    }
+}
+
+.loading-screen-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #FF0000;
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
