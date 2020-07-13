@@ -1,0 +1,90 @@
+.intro-login-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .intro-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%);
+            box-sizing: border-box;
+        }
+    }
+
+    .login-header-container {
+        position: absolute;
+        width: 100%;
+
+        .header-line {
+            padding: 80px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    .intro-body-container {
+        position: absolute;
+        top: 420px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 80px;
+        box-sizing: border-box;
+
+        .login-description {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 60px;
+            letter-spacing: 0.02em;
+            color: #FF0000;
+            padding-right: 20px;
+        }
+        .login-title {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 96px;
+            line-height: 144px;
+            display: flex;
+            align-items: center;
+            color: #FF0000;
+            margin-bottom: 40px;
+        }
+
+    }
+
+    .intro-footer-container {
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0 80px;
+
+       .login-buttons-container {
+           .login-google {
+               margin-bottom: 42px;
+           }
+       }
+
+       .login-terms {
+           display: inline-flex;
+           margin-left: 10%;
+           margin-top: 100px;
+       }
+
+    }
+}
