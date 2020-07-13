@@ -1,0 +1,74 @@
+.intro-start-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .intro-loading-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%);
+            box-sizing: border-box;
+        }
+    }
+
+    .intro-body-container {
+        position: absolute;
+        top: 180px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+
+            .astr-img {
+                width: 428px;
+            }
+        }
+        .logo-text {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            opacity: 0.5;
+            margin-left: -60px;
+            box-sizing: border-box;
+        }
+
+    }
+
+    .intro-footer-container {
+        position: absolute;
+        bottom: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .intro-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                width: 440px;
+            }
+        }
+
+
+    }
+}
