@@ -1,0 +1,65 @@
+.intro-loading-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .intro-loading-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%);
+            box-sizing: border-box;
+        }
+    }
+
+    .intro-body-container {
+        position: absolute;
+        top: 50%;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+
+        .astr-img {
+            width: 300px;
+            height: 300px;
+            opacity: 0.7;
+        }
+
+        .intro-astr-overlay {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: red;
+        }
+    }
+
+    .intro-footer-container {
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .intro-loading-number {
+            padding-left: 80px;
+            font-family: Roboto Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+        }
+
+
+    }
+}
