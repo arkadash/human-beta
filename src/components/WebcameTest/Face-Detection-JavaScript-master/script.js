@@ -89,7 +89,7 @@ const loadPromise = Promise.all([
   faceapi.nets.faceRecognitionNet.loadFromUri(MODULES_BASE),
   faceapi.nets.faceExpressionNet.loadFromUri(MODULES_BASE),
   faceapi.nets.ageGenderNet.loadFromUri(MODULES_BASE)
-]);
+]).then(()=> console.log('All models loaded!'));
 
 export const init = (video, parentEl, onLoad) => {
   let timeout;

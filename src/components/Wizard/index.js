@@ -46,8 +46,8 @@ const Wizard = () => {
             <Kill/>
             <Loyal/>
             <Steal/>
-            <Rich/>
             <Lie/>
+            <Rich/>
         </StepWizard>
     );
 };
