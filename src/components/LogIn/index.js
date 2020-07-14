@@ -58,11 +58,9 @@ const LogIn = ({ onClick = noop}) => {
     );
 };
 
-const IntroHoc = ({ nextStep = noop, isActive = true })=> {
+export default ({ nextStep = noop, isActive = true })=> {
     if(!isActive) {
         return null;
     }
     return <LogIn onClick={nextStep}/>
 }
-
-export default IntroHoc;

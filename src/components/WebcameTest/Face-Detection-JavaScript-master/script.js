@@ -40,12 +40,13 @@ const canvasData = (textLines = [], canvas) => {
   });
 }
 
-const drawFaceSquare = (canvas, resizedDetections) => {
+const drawFaceSquare = (canvas, resizedDetections, drawCircle) => {
   resizedDetections.forEach((detected) => {
     const box = detected.detection.box;
     const LINE_SIZE = Math.min(box.width, box.height) / 6;
     const ctx = canvas.getContext('2d');
     ctx.beginPath();
+    drawCircle(ctx, box);
     // ctx.rect(box.x, box.y, box.width, box.height);
     // TOP LEFT
     ctx.moveTo(box.x - LINE_WIDTH/2, box.y);
@@ -72,7 +73,15 @@ const drawFaceSquare = (canvas, resizedDetections) => {
     ctx.lineWidth = LINE_WIDTH;
     ctx.stroke();
   })
-}
+};
+
+const drawRecordingCircle = (context, box) => {
+    const padding = 50;
+
+    context.arc(box.x + box.width - padding, box.y + padding, 14, 0, 2 * Math.PI, false);
+    context.fillStyle = 'red';
+    context.fill();
+};
 
 const loadPromise = Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri(MODULES_BASE),
@@ -82,9 +91,10 @@ const loadPromise = Promise.all([
   faceapi.nets.ageGenderNet.loadFromUri(MODULES_BASE)
 ]);
 
-export const init = (video, parentEl) => {
+export const init = (video, parentEl, onLoad) => {
   let timeout;
   console.log('Init!');
+  let drawCircle = () => null;
 
   const cleanUp = () => {
     console.log('cleaning camera up!');
@@ -94,11 +104,20 @@ export const init = (video, parentEl) => {
   };
 
   loadPromise.then(() => {
-    console.log('Staring video!');
+    console.log('All models loaded, Staring video!');
     startVideo(video);
   }).then(() => {
     video.addEventListener('play', detect);
   });
+
+  const fiveSecPromise = new Promise((resolve) => {
+    setTimeout(resolve, 5000);
+  });
+  Promise.all([loadPromise, fiveSecPromise])
+      .then(onLoad)
+      .then(() => {
+        drawCircle = drawRecordingCircle;
+      });
 
   const detect = () => {
     if(canvasAdded) {
@@ -120,7 +139,7 @@ export const init = (video, parentEl) => {
       // faceapi.draw.drawDetections(canvas, resizedDetections)
 
       if(resizedDetections.length > 0) {
-        drawFaceSquare(canvas, resizedDetections);
+        drawFaceSquare(canvas, resizedDetections, drawCircle);
         const expressionText = [
           `Mode: ${nameCapitalized(getMaxKeyByValue(resizedDetections[0].expressions))}`,
           `Age: ${Math.round(resizedDetections[0].age)}`,

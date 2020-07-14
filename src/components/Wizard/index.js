@@ -12,6 +12,11 @@ import Steal from '../Steal';
 import Rich from '../Rich';
 import Lie from '../Lie';
 import WebCamera from '../WebcameTest';
+import IntroHoc from '../Intro';
+import Loading from '../Loading';
+import IntroLoadingHoc from '../IntroLoading';
+import IntroStartHoc from '../IntroStart';
+import Login from '../LogIn';
 
 const ANIMATE = 'animate__animated animate__pulse';
 
@@ -25,7 +30,12 @@ const transitions = {
 const Wizard = () => {
     return (
         <StepWizard isLazyMount transitions={transitions}>
+            <IntroHoc/>
+            <IntroLoadingHoc/>
+            <IntroStartHoc/>
+            <Login/>
             <WebCamera/>
+            <Loading/>
             <Believe/>
             <Worship/>
             <Promise/>

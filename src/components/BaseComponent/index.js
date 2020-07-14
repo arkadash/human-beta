@@ -16,7 +16,8 @@ const BaseComponent = ({
     currentStep = 1,
     totalSteps = 1,
     hideBack = false,
-    hideWaves = false
+    hideWaves = false,
+    folder = true
 }) => {
 
     const stageNum = currentStep > 9 ? currentStep : `0${currentStep}`;
@@ -25,7 +26,8 @@ const BaseComponent = ({
     return (
         <>
             <Cursor/>
-            <div className={classNames('base-component', 'bg-color-black', className)}>
+            <div className="base-component-folder-overlay"/>
+            <div className={classNames('base-component', 'bg-color-black', className, { 'bg-folder': folder })}>
                 {isActive &&
                     <div className="base-component-wrapper">
                         <header>

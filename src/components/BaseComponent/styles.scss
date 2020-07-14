@@ -94,3 +94,14 @@ $color: #FF0000;
     position: absolute;
     bottom: 0;
 }
+
+.base-component-folder-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url('../../localAssets/texture.png');
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 1;
+}

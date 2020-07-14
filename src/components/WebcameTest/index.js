@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
@@ -14,11 +14,14 @@ const videoConstraints = {
 };
 
 const WebCamera = ({ onClick = noop}) => {
+    const [ready, setReady] = useState(false);
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
 
+    const onLoad = () => setReady(true);
+
     useEffect(() => {
-        return init(webcamRef.current.video, cameraRef.current);
+        return init(webcamRef.current.video, cameraRef.current, onLoad);
     }, []);
 
     return (
@@ -34,13 +37,22 @@ const WebCamera = ({ onClick = noop}) => {
                 <HeaderLine/>
             </div>
             <div className="camera-footer-container">
-                <button className="camera-next-btn" onClick={onClick}>
-                    <img src={`${ASSETS_BASE}/camera/right.png`} alt="sol_e"/>
-                </button>
-                <p className="camera-next-text">
-                    Hold your position for a <br/>
-                    better selfie
-                </p>
+                {
+                    ready && <>
+                        <p className="camera-text-smile">
+                            DO NOT forget to <br/> SMILE:)
+                        </p>
+                        <button className="camera-next-btn" onClick={onClick}>
+                            <img src={`${ASSETS_BASE}/camera/button.png`} alt="sol_e"/>
+                        </button>
+                    </>
+                }
+                {
+                    !ready && <p className="camera-next-text">
+                        Hold your position for a <br/>
+                        better selfie
+                    </p>
+                }
             </div>
         </div>
     );
