@@ -29,7 +29,7 @@ const Promise = ({ ...rest}) => {
     };
 
     return (
-        <BaseComponent className="promise" {...rest}>
+        <BaseComponent className="promise" {...rest} num={3}>
             <div className="promise-container">
                 <div className={classNames('button-container', {'show-buttons': displaySelection})}>
                     <Answers/>

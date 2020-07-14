@@ -25,7 +25,7 @@ const Worship = ({ ...rest}) => {
     };
 
     return (
-        <BaseComponent className="worship" {...rest}>
+        <BaseComponent className="worship" {...rest} num={2}>
             <div className="worship-title">
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}

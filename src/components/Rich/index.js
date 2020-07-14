@@ -19,7 +19,7 @@ const Rich = ({...rest}) => {
     }
 
     return (
-        <BaseComponent className="rich" {...rest}>
+        <BaseComponent className="rich" {...rest} num={10}>
             <div className="rich-container">
                 <div className="rich-title">
                     <Typist cursor={{element: '_'}}

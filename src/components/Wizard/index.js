@@ -17,6 +17,7 @@ import Loading from '../Loading';
 import IntroLoadingHoc from '../IntroLoading';
 import IntroStartHoc from '../IntroStart';
 import Login from '../LogIn';
+import GoingTo from "../GoingTo";
 
 const ANIMATE = 'animate__animated animate__pulse';
 
@@ -36,6 +37,7 @@ const Wizard = () => {
             <Login/>
             <WebCamera/>
             <Loading/>
+            <GoingTo/>
             <Believe/>
             <Worship/>
             <Promise/>

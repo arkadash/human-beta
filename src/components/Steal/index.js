@@ -45,7 +45,7 @@ const Steal = ({...rest}) => {
 
     return (
         <>
-            <BaseComponent className="steal" {...rest}>
+            <BaseComponent className="steal" {...rest} num={8}>
                 <div className="steal-container">
                     <div className="steal-title">
                         {!firstBackSelection ?

@@ -27,7 +27,7 @@ const Idol = ({...rest}) => {
     };
 
     return (
-        <BaseComponent className="idol" {...rest}>
+        <BaseComponent className="idol" {...rest} num={5}>
             <div className="idol-container">
                 <div className="idol-title">
                     <Typist cursor={{element: '_'}}

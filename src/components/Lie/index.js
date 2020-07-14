@@ -46,7 +46,7 @@ const Lie = ({...rest}) => {
     const num = Math.round(selected / 10);
     return (
         <>
-            <BaseComponent className="lie" {...rest}>
+            <BaseComponent className="lie" {...rest} num={9}>
                 <div className="lie-container">
                     <div className="lie-title">
                         <Typist cursor={{element: '_'}}

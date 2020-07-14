@@ -21,7 +21,7 @@ const Loyal = ({...rest}) => {
     }
 
     return (
-        <BaseComponent className="loyal" {...rest}>
+        <BaseComponent className="loyal" {...rest} num={7}>
             <div className="loyal-container">
                 <div className="loyal-title">
                     <Typist cursor={{element: '_'}}

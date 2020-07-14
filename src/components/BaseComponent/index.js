@@ -13,20 +13,22 @@ const BaseComponent = ({
     children,
     className = '',
     isActive = true,
-    currentStep = 1,
     totalSteps = 1,
     hideBack = false,
     hideWaves = false,
-    folder = true
+    hideProgressBar = false,
+    folder = true,
+    displayNext = true,
+    num = 0
 }) => {
 
-    const stageNum = currentStep > 9 ? currentStep : `0${currentStep}`;
-    const progressWidth = Math.round((currentStep / totalSteps) * 100);
+    const stageNum = num > 9 ? num : `0${num}`;
+    const progressWidth = Math.round((num / 10) * 100);
 
     return (
         <>
             <Cursor/>
-            <div className="base-component-folder-overlay"/>
+            { folder && <div className="base-component-folder-overlay"/> }
             <div className={classNames('base-component', 'bg-color-black', className, { 'bg-folder': folder })}>
                 {isActive &&
                     <div className="base-component-wrapper">
@@ -46,16 +48,18 @@ const BaseComponent = ({
                         <footer className="base-component-footer">
                             <div className="footer-progress">
                                 <div className="progress-num">{stageNum}</div>
-                                <button className="footer-btn" onClick={nextStep}>
-                                    <span>Next</span><img src={`${ASSETS_BASE}/next.png`} alt="sol_e"/>
-                                </button>
+                                { displayNext &&
+                                    <button className="footer-btn" onClick={nextStep}>
+                                        <span>Next</span><img src={`${ASSETS_BASE}/next.png`} alt="sol_e"/>
+                                    </button>
+                                }
                             </div>
                         </footer>
                     </div>
                 }
             </div>
             {!hideWaves && <Waves/> }
-            <div className="progress-bar" style={{width: `${progressWidth}%`}}/>
+            {!hideProgressBar && <div className="progress-bar" style={{width: `${progressWidth}%`}}/> }
         </>
     );
 };

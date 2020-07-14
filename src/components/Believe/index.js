@@ -9,7 +9,7 @@ const Believe = ({ ...rest }) => {
     const [selected, setSelection] = useState('');
 
     return (
-        <BaseComponent className="believe" {...rest}>
+        <BaseComponent className="believe" {...rest} num={1}>
             <div className="believe-title">
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}

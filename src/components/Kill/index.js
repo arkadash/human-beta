@@ -42,7 +42,7 @@ const Kill = ({...rest}) => {
 
     return (
         <>
-            <BaseComponent className="kill" {...rest}>
+            <BaseComponent className="kill" {...rest} num={6}>
                 <div className="kill-container">
                     <div className="kill-title">
                         <Typist cursor={{element: '_'}}
