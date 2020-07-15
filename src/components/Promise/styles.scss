@@ -57,14 +57,14 @@
             box-sizing: border-box;
             border-radius: 0 100px 100px 0;
             transform: matrix(-1, 0, 0, 1, 0, 0);
-        }
 
-        &:hover {
-            background-color: rgba(255, 0, 0, 0.2);
-        }
+            &:hover {
+                background-color: rgba(255, 0, 0, 0.2);
+            }
 
-        &.btn-selected {
-            background-color: #FF0000 !important;
+            &.btn-selected {
+                background-color: #FF0000 !important;
+            }
         }
     }
 }
