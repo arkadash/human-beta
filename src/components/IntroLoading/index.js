@@ -34,7 +34,7 @@ const IntroLoading = ({ onClick = noop}) => {
 
     useEffect(() => {
         runNum(0);
-        setTimeout(onClick, 5 * 1000);
+        setTimeout(onClick, 6 * 1000);
     }, [])
 
     return (
