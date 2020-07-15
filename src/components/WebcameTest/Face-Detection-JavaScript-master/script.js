@@ -14,21 +14,6 @@ const startVideo = (video) => {
   )
 }
 
-const nameCapitalized = (name) => name.charAt(0).toUpperCase() + name.slice(1);
-
-const getMaxKeyByValue = (values) => {
-  let res;
-  let max = 0;
-
-  Object.keys(values).forEach((key) => {
-      if(values[key] > max) {
-        res = key;
-        max = values[key];
-      }
-  });
-  return res;
-}
-
 const canvasData = (textLines = [], canvas) => {
   const LINES_BREAK = 40;
   const ctx = canvas.getContext("2d");
@@ -91,7 +76,7 @@ const loadPromise = Promise.all([
   faceapi.nets.ageGenderNet.loadFromUri(MODULES_BASE)
 ]).then(()=> console.log('All models loaded!'));
 
-export const init = (video, parentEl, onLoad) => {
+export const init = (video, parentEl, onLoad, onDetect) => {
   let timeout;
   console.log('Init!');
   let drawCircle = () => null;
@@ -140,14 +125,8 @@ export const init = (video, parentEl, onLoad) => {
 
       if(resizedDetections.length > 0) {
         drawFaceSquare(canvas, resizedDetections, drawCircle);
-        const expressionText = [
-          `Mode: ${nameCapitalized(getMaxKeyByValue(resizedDetections[0].expressions))}`,
-          `Age: ${Math.round(resizedDetections[0].age)}`,
-          `Gender: ${nameCapitalized(resizedDetections[0].gender)}`
-        ];
-
-        canvasData(expressionText, canvas);
         faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+        onDetect(resizedDetections);
         // console.log('Time to render', Date.now() - start);
       }
     };
