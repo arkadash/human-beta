@@ -5,7 +5,7 @@ import {ASSETS_BASE} from '../../constants';
 import BaseComponent from '../BaseComponent';
 import './styles.scss';
 
-const Steal = ({...rest}) => {
+const Steal = ({nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [firstBackSelection, setFirstBackSelection] = useState(false);
     const [selected, setSelectionState] = useState('');
@@ -41,6 +41,7 @@ const Steal = ({...rest}) => {
         } else {
             setSelectionState(key);
         }
+        setTimeout(nextStep, 1000);
     }
 
     return (

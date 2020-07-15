@@ -10,7 +10,7 @@ import WorshipBtnName from './WorshipBtnName';
 import WorshipImg from './WorshipImg';
 import './styles.scss';
 
-const Worship = ({ ...rest}) => {
+const Worship = ({ nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelection] = useState('');
     const hiddenPrev = React.createRef();
@@ -22,10 +22,13 @@ const Worship = ({ ...rest}) => {
         } else {
             setSelection(key)
         }
+        setTimeout(() => {
+            nextStep();
+        }, 1000);
     };
 
     return (
-        <BaseComponent className="worship" {...rest} num={2}>
+        <BaseComponent className="worship" {...rest} num={2} displayNext={false}>
             <div className="worship-title">
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}

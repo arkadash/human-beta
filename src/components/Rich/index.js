@@ -6,7 +6,7 @@ import Hart from './hart';
 import BaseComponent from '../BaseComponent';
 import './styles.scss';
 
-const Rich = ({...rest}) => {
+const Rich = ({nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelectionState] = useState('');
 
@@ -16,6 +16,7 @@ const Rich = ({...rest}) => {
         } else {
             setSelectionState(key);
         }
+        setTimeout(nextStep, 1000);
     }
 
     return (

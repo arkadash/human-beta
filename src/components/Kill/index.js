@@ -5,7 +5,7 @@ import {ASSETS_BASE} from '../../constants';
 import BaseComponent from '../BaseComponent';
 import './styles.scss';
 
-const Kill = ({...rest}) => {
+const Kill = ({ nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelectionState] = useState('');
     const [position, setPosition] = useState('');
@@ -38,11 +38,12 @@ const Kill = ({...rest}) => {
         } else {
             setSelectionState(key);
         }
+        setTimeout(nextStep, 1000);
     }
 
     return (
         <>
-            <BaseComponent className="kill" {...rest} num={6}>
+            <BaseComponent className="kill" {...rest} num={6} displayNext={false}>
                 <div className="kill-container">
                     <div className="kill-title">
                         <Typist cursor={{element: '_'}}

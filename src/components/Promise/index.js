@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { noop } from  'lodash';
 import classNames from  'classnames';
 import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
@@ -16,7 +15,7 @@ const getSelectedClasses = (selected, key) => {
     return '';
 };
 
-const Promise = ({ ...rest}) => {
+const Promise = ({  nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setPronmiseSelection] = useState('');
 
@@ -26,13 +25,14 @@ const Promise = ({ ...rest}) => {
         } else {
             setPronmiseSelection(key);
         }
+        setTimeout(nextStep, 1000);
     };
 
     return (
-        <BaseComponent className="promise" {...rest} num={3}>
+        <BaseComponent className="promise" {...rest} num={3} displayNext={false}>
             <div className="promise-container">
                 <div className={classNames('button-container', {'show-buttons': displaySelection})}>
-                    <Answers/>
+                    <Answers onClick={setSelection} selected={selected}/>
                     {/*<button className={*/}
                     {/*    classNames('promise-button-take', getSelectedClasses(selected, 'take'))}*/}
                     {/*        onClick={() => setSelection('take')}>take</button>*/}

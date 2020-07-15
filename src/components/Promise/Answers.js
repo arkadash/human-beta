@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { config } from 'react-spring';
+import classNames from  'classnames';
 import VerticalCarousel from './slide/verticalCarousel';
 
 const slides = [
@@ -40,7 +41,8 @@ export default class Answers extends Component {
                     showNavigation={this.state.showNavigation}
                     animationConfig={this.state.config}
                 />
-                <div className="answers-border"/>
+                <div className={classNames('answers-border', {'btn-selected': this.props.selected})}
+                    onClick={this.props.onClick}/>
             </div>
         );
     }

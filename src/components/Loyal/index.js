@@ -5,7 +5,7 @@ import BaseComponent from '../BaseComponent';
 import LoyalBtn from './LoyalBtn';
 import './styles.scss';
 
-const Loyal = ({...rest}) => {
+const Loyal = ({nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelected] = useState(0);
 
@@ -17,11 +17,12 @@ const Loyal = ({...rest}) => {
             } else {
                 setSelected(value);
             }
+            setTimeout(nextStep, 1000);
         }
     }
 
     return (
-        <BaseComponent className="loyal" {...rest} num={7}>
+        <BaseComponent className="loyal" {...rest} num={7} displayNext={false}>
             <div className="loyal-container">
                 <div className="loyal-title">
                     <Typist cursor={{element: '_'}}
