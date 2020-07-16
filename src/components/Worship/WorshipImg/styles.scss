@@ -1,7 +1,18 @@
 .worship-img-container {
     display: block;
+    margin: auto;
 
-    img {
-        max-height: 650px;
+    &.worship-btn-instagram {
+        height: 574px;
+    }
+
+    &.worship-btn-twitter {
+        height: 754px;
+        width: 764px;
+    }
+    &.worship-btn-facebook {
+        height: 832px;
+        width: 1270px;
+        margin-top: -220px;
     }
 }

@@ -4,8 +4,9 @@ import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
 import HeaderLine from '../BaseComponent/HeaderLine';
 import Cursor from '../Cursor';
+import RoundButton from '../RoundfButton';
+import FolderOverlay from '../FolderOverlay';
 import './styles.scss';
-import RoundButton from "../RoundfButton";
 
 const SCREEN_WIDTH = 1080;
 
@@ -24,37 +25,40 @@ const LogIn = ({ onClick = noop}) => {
     }, [])
 
     return (
-        <div className="intro-login-container" ref={introRef}>
-            <Cursor difference={false}/>
-            <div className="intro-camera" ref={cameraRef} style={{
-                right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
-            }}>
-                <Webcam audio={false} height={videoConstraints.height}
-                    ref={webcamRef}
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={videoConstraints}/>
-            </div>
-            <div className="login-header-container">
-                <HeaderLine/>
-            </div>
-            <div className="intro-body-container">
-                <div className="login-title">
-                    Log in
+        <>
+            <FolderOverlay/>
+            <div className="intro-login-container" ref={introRef}>
+                <Cursor difference={false}/>
+                <div className="intro-camera" ref={cameraRef} style={{
+                    right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
+                }}>
+                    <Webcam audio={false} height={videoConstraints.height}
+                        ref={webcamRef}
+                        screenshotFormat="image/jpeg"
+                        videoConstraints={videoConstraints}/>
                 </div>
-                <div className="login-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis feugiat tincidunt nec nullam.
+                <div className="login-header-container">
+                    <HeaderLine/>
+                </div>
+                <div className="intro-body-container">
+                    <div className="login-title">
+                        Log in
+                    </div>
+                    <div className="login-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis feugiat tincidunt nec nullam.
+                    </div>
+                </div>
+                <div className="intro-footer-container">
+                    <div className="login-buttons-container">
+                        <RoundButton className="login-google" text="GOOGLE" onClick={onClick}/>
+                        <RoundButton className="login-facebook" text="FACEBOOK" onClick={onClick}/>
+                    </div>
+                    <div className="login-terms">
+                        <img src={`${ASSETS_BASE}/login/terms.png`} className="astr-img" alt=""/>
+                    </div>
                 </div>
             </div>
-            <div className="intro-footer-container">
-                <div className="login-buttons-container">
-                    <RoundButton className="login-google" text="GOOGLE" onClick={onClick}/>
-                    <RoundButton className="login-facebook" text="FACEBOOK" onClick={onClick}/>
-                </div>
-                <div className="login-terms">
-                    <img src={`${ASSETS_BASE}/login/terms.png`} className="astr-img" alt=""/>
-                </div>
-            </div>
-        </div>
+        </>
     );
 };
 

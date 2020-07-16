@@ -1,4 +1,17 @@
-.worship {
+.base-component.worship {
+    //padding: 0 0 30px 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    header {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+
+    footer {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
 
     .worship-title {
         font-family: Roboto Mono;
@@ -7,7 +20,7 @@
         font-size: 64px;
         line-height: 120%;
         color: #FFFFFF;
-        padding-bottom: 80px;
+        padding: 0 80px 80px 80px;
     }
 
     .worship-buttons-wrapper {
@@ -27,6 +40,10 @@
 
         .carousel-slider {
             display: inline-flex;
+        }
+
+        .worship-buttons-container {
+            padding: 80px 160px;
         }
     }
 }

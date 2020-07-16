@@ -40,6 +40,7 @@ const Worship = ({ nextStep, ...rest}) => {
             </div>
             <div className={classNames('worship-buttons-wrapper', {'show-buttons': displaySelection})}>
                 <Carousel
+                    className="worship-images"
                     infiniteLoop
                     showIndicators={false}
                     showStatus={false}
@@ -61,6 +62,7 @@ const Worship = ({ nextStep, ...rest}) => {
                 </Carousel>
 
                 <Carousel
+                    className="worship-buttons-container"
                     infiniteLoop
                     showIndicators={false}
                     showStatus={false}

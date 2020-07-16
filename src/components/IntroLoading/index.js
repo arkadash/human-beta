@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
+import FolderOverlay from '../FolderOverlay';
 import Cursor from '../Cursor';
 import './styles.scss';
 
@@ -38,26 +39,29 @@ const IntroLoading = ({ onClick = noop}) => {
     }, [])
 
     return (
-        <div className="intro-loading-container" ref={introRef}>
-            <Cursor difference={false}/>
-            <div className="intro-loading-camera" ref={cameraRef} style={{
-                right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
-            }}>
-                <Webcam audio={false} height={videoConstraints.height}
-                    ref={webcamRef}
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={videoConstraints}/>
-            </div>
-            <div className="intro-body-container">
-                {/*<div className="intro-astr-overlay"/>*/}
-                <img src={`${ASSETS_BASE}/loadingIntro/soly.gif`} className="astr-img" alt=""/>
-            </div>
-            <div className="intro-footer-container">
-                <div className="intro-loading-number">
-                    {numValue}%
+        <>
+            <FolderOverlay/>
+            <div className="intro-loading-container" ref={introRef}>
+                <Cursor difference={false}/>
+                <div className="intro-loading-camera" ref={cameraRef} style={{
+                    right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
+                }}>
+                    <Webcam audio={false} height={videoConstraints.height}
+                        ref={webcamRef}
+                        screenshotFormat="image/jpeg"
+                        videoConstraints={videoConstraints}/>
+                </div>
+                <div className="intro-body-container">
+                    {/*<div className="intro-astr-overlay"/>*/}
+                    <img src={`${ASSETS_BASE}/loadingIntro/soly.gif`} className="astr-img" alt=""/>
+                </div>
+                <div className="intro-footer-container">
+                    <div className="intro-loading-number">
+                        {numValue}%
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

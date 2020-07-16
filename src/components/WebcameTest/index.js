@@ -4,6 +4,7 @@ import {noop} from 'lodash';
 import classNames from 'classnames';
 import {ASSETS_BASE} from '../../constants';
 import HeaderLine from '../BaseComponent/HeaderLine';
+import FolderOverlay from '../FolderOverlay';
 import Cursor from '../Cursor';
 import { init } from './Face-Detection-JavaScript-master/script'
 import './styles.scss';
@@ -61,6 +62,7 @@ const WebCamera = ({ onClick = noop}) => {
 
     return (
         <>
+            <FolderOverlay/>
             <div className="camera-container">
                 <Cursor difference={false}/>
                     <div className="camera-test" ref={cameraRef} style={{

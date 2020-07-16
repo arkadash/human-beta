@@ -5,15 +5,15 @@ import './styles.scss';
 
 const IMAGES_KEY_MAP = {
     FACEBOOK: {
-        img: 'album.png',
+        img: 'album2.png',
         title: 'Facebook'
     },
     INSTAGRAM: {
-        img: 'history.png',
+        img: 'history2.png',
         title: 'Instagram'
     },
     TWITTER: {
-        img: 'bird-clipart.png',
+        img: 'bird2.png',
         title: 'Twitter'
     }
 };

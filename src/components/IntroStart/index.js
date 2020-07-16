@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
+import RoundButton from '../RoundfButton';
+import FolderOverlay from '../FolderOverlay';
 import Cursor from '../Cursor';
 import './styles.scss';
-import RoundButton from "../RoundfButton";
 
 const SCREEN_WIDTH = 1080;
 
@@ -23,7 +24,9 @@ const IntroStart = ({ onClick = noop}) => {
     }, [])
 
     return (
-        <div className="intro-start-container" ref={introRef}>
+        <>
+            <FolderOverlay/>
+            <div className="intro-start-container" ref={introRef}>
             <Cursor difference={false}/>
             <div className="intro-loading-camera" ref={cameraRef} style={{
                 right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
@@ -45,6 +48,7 @@ const IntroStart = ({ onClick = noop}) => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

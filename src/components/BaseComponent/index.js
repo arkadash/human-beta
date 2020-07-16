@@ -2,6 +2,7 @@ import React from 'react';
 import {noop} from 'lodash';
 import classNames from 'classnames';
 import {ASSETS_BASE} from '../../constants';
+import FolderOverlay from '../FolderOverlay';
 import Waves from './Waves';
 import Cursor from '../Cursor';
 import HeaderLine from './HeaderLine';
@@ -28,7 +29,7 @@ const BaseComponent = ({
     return (
         <>
             <Cursor/>
-            { folder && <div className="base-component-folder-overlay"/> }
+            { folder && <FolderOverlay/> }
             <div className={classNames('base-component', 'bg-color-black', className, { 'bg-folder': folder })}>
                 {isActive &&
                     <div className="base-component-wrapper">
