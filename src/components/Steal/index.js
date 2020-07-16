@@ -38,15 +38,16 @@ const Steal = ({nextStep, ...rest}) => {
             setFirstBackSelection(true);
         } else if(selected === key) {
             setSelectionState('');
+            setTimeout(nextStep, 1000);
         } else {
             setSelectionState(key);
+            setTimeout(nextStep, 1000);
         }
-        setTimeout(nextStep, 1000);
     }
 
     return (
         <>
-            <BaseComponent className="steal" {...rest} num={8}>
+            <BaseComponent className="steal" {...rest} num={8} displayNext={false}>
                 <div className="steal-container">
                     <div className="steal-title">
                         {!firstBackSelection ?

@@ -20,7 +20,7 @@ const Rich = ({nextStep, ...rest}) => {
     }
 
     return (
-        <BaseComponent className="rich" {...rest} num={10}>
+        <BaseComponent className="rich" {...rest} num={10} displayNext={false}>
             <div className="rich-container">
                 <div className="rich-title">
                     <Typist cursor={{element: '_'}}
