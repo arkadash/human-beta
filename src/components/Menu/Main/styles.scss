@@ -1,0 +1,59 @@
+.menu-main {
+    width: 1080px;
+    background-color: red;
+    height: 100%;
+    padding: 80px;
+    box-sizing: border-box;
+
+    .menu-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        color: #000000;
+        justify-content: space-between;
+
+        .menu-title-text {
+            opacity: 0.5;
+
+        }
+    }
+
+    .menu-links {
+        margin-top: 40%;
+
+        .menu-link {
+            margin-top: 40px;
+            opacity: 0.25;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 96px;
+            color: #000000;
+            width: 100%;
+            display: inline-flex;
+            background: transparent;
+            border: none;
+            justify-content: space-between;
+            transition: all 0.3s ease-in-out;
+
+            .menu-link-icon {
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+                margin-right: 240px;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                .menu-link-icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
