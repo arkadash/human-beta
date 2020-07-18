@@ -1,12 +1,19 @@
-import React from 'react';
-import {ASSETS_BASE} from "../../../constants";
+import React, {useState} from 'react';
+import { noop } from 'lodash';
+import {ASSETS_BASE} from '../../../constants';
+import Contact from '../Contact';
+import About from '../About';
 import './styles.scss';
 
-const MenuLink = ({ name }) => {
+export const STATES = {
+    main: 'MAIN',
+    contact: 'CONTACT',
+    about: 'ABOUT',
+}
+
+const MenuLink = ({ name, onClick = noop }) => {
     return (
-        <div className="menu-link" onClick={(event) => {
-            event.preventDefault();
-        }}>
+        <div className="menu-link" onClick={onClick}>
             {name}
             <div className="menu-link-icon">
                 <img src={`${ASSETS_BASE}/menu/right.svg`} alt="sol_e"/>
@@ -15,28 +22,53 @@ const MenuLink = ({ name }) => {
     );
 }
 
-export default ({ onClick = () => () => null }) => {
-
+const Initial = ({ onClick = noop, changeState = noop}) => {
     return (
         <div
-        className="menu-main"
-        role="presentation"
-        // onClick={}
-        // onKeyDown={onClick(false)}
-    >
+            className="menu-main"
+            role="presentation"
+            // onClick={}
+            // onKeyDown={onClick(false)}
+        >
+            <div className="menu-links">
+                <MenuLink name="ABOUT" onClick={() => changeState(STATES.about)}/>
+                <MenuLink name="CONTACT" onClick={() => changeState(STATES.contact)}/>
+                <MenuLink name="EXIT" onClick={() => {
+                    window.location.reload();
+                }}/>
+            </div>
+        </div>
+    )
+}
+
+export default ({ onClick = () => noop }) => {
+
+    const [currentState, setCurrentState] = useState(STATES.main);
+    const back = () => setCurrentState(STATES.main);
+
+    const getBody = () => {
+        if (currentState === STATES.main) {
+            return <Initial onClick={onClick(false)} changeState={setCurrentState}/>
+        }
+        if (currentState === STATES.contact) {
+            return <Contact onClick={onClick(false)} back={back}/>
+        }
+        if (currentState === STATES.about) {
+            return <About onClick={onClick(false)} back={back}/>
+        }
+        return null;
+    }
+    return (
+        <div className="menu-container">
             <div className="menu-title">
                 <div className="menu-title-text">
                     Menu
                 </div>
-                <div className="menu-close-btn" onClick={onClick(false)}>
+                <div className="menu-close-btn" onClick={onClick}>
                     <img src={`${ASSETS_BASE}/menu/close.svg`} alt="sol_e"/>
                 </div>
             </div>
-            <div className="menu-links">
-                <MenuLink name="ABOUT"/>
-                <MenuLink name="CONTACT"/>
-                <MenuLink name="EXIT"/>
-            </div>
-    </div>
-    );
+            { getBody() }
+        </div>
+    )
 }

@@ -1,0 +1,51 @@
+.menu-about {
+    .menu-about-data {
+        .menu-about-title {
+            margin-top: 20%;
+            margin-bottom: 15%;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 96px;
+            align-items: center;
+            color: #000000;
+        }
+
+        .menu-about-description {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: 0.02em;
+            color: #000000;
+            opacity: 0.5;
+            margin-top: 15%;
+        }
+
+        .menu-about-icon {
+            width: 120px;
+            height: 120px;
+            transform: rotate(225deg);
+        }
+    }
+
+    .menu-back {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        color: #000000;
+        opacity: 0.5;
+        background-color: transparent;
+        padding: 0;
+        margin-top: 10%;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        border: 1px solid transparent;
+        border-bottom-color: #000;
+    }
+}

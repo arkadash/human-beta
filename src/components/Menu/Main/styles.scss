@@ -1,32 +1,9 @@
 .menu-main {
-    width: 1080px;
-    background-color: red;
-    height: 100%;
-    padding: 80px;
-    box-sizing: border-box;
-
-    .menu-title {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 64px;
-        display: inline-flex;
-        align-items: center;
-        width: 100%;
-        color: #000000;
-        justify-content: space-between;
-
-        .menu-title-text {
-            opacity: 0.5;
-
-        }
-    }
-
     .menu-links {
-        margin-top: 40%;
+        margin-top: 30%;
 
         .menu-link {
-            margin-top: 40px;
+            margin-top: 80px;
             opacity: 0.25;
             font-family: Roboto;
             font-style: normal;
@@ -55,5 +32,29 @@
             }
         }
     }
+}
 
+.menu-container {
+    width: 1080px;
+    background-color: red;
+    height: 100%;
+    padding: 80px;
+    box-sizing: border-box;
+
+    .menu-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        color: #000000;
+        justify-content: space-between;
+
+        .menu-title-text {
+            opacity: 0.5;
+
+        }
+    }
 }
