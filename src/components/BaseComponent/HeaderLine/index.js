@@ -1,7 +1,5 @@
 import React from 'react';
-// import { noop } from 'lodash';
 import { ASSETS_BASE } from '../../../constants';
-// import Icon from '../../Menu/Icon';
 import Menu from '../../Menu';
 
 import './styles.scss';
@@ -14,9 +12,6 @@ const HeaderLine = () => {
             </div>
             <div className="header-btn">
                 <Menu/>
-                {/*<button onClick={() => alert('clicked!!')}>*/}
-                {/*    <Icon/>*/}
-                {/*</button>*/}
             </div>
         </div>
     );
