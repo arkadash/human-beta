@@ -20,6 +20,7 @@ const BaseComponent = ({
     hideProgressBar = false,
     folder = true,
     displayNext = true,
+    disableNext = false,
     num = 0
 }) => {
 
@@ -50,7 +51,7 @@ const BaseComponent = ({
                             <div className="footer-progress">
                                 <div className="progress-num">{stageNum}</div>
                                 { displayNext &&
-                                    <button className="footer-btn" onClick={nextStep}>
+                                    <button className="footer-btn" onClick={nextStep} disabled={disableNext}>
                                         <span>Next</span><img src={`${ASSETS_BASE}/next.png`} alt="sol_e"/>
                                     </button>
                                 }

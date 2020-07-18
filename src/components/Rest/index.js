@@ -29,7 +29,7 @@ const Rest = ({...rest}) => {
     };
 
     return (
-        <BaseComponent className="rest" {...rest} num={4}>
+        <BaseComponent className="rest" {...rest} num={4} disableNext={selected.length === 0}>
             <div className="rest-container">
                 <div className="rest-title">
                     <Typist cursor={{element: '_'}}

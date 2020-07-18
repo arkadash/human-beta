@@ -21,7 +21,7 @@
 
     .intro-body-container {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 130px);
         display: inline-flex;
         justify-content: center;
         width: 100%;

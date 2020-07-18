@@ -64,7 +64,7 @@ const WebCamera = ({ onClick = noop}) => {
         <>
             <FolderOverlay/>
             <div className="camera-container">
-                <Cursor difference={false}/>
+                <Cursor/>
                     <div className="camera-test" ref={cameraRef} style={{
                         right: -((window.innerWidth + (SCREEN_WIDTH/1.3))/2)
                     }}>

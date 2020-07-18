@@ -125,7 +125,6 @@ export const init = (video, parentEl, onLoad, onDetect) => {
 
       if(resizedDetections.length > 0) {
         drawFaceSquare(canvas, resizedDetections, drawCircle);
-        console.log({resizedDetections});
         faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
         onDetect(resizedDetections);
         // console.log('Time to render', Date.now() - start);

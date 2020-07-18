@@ -64,7 +64,7 @@ export default ({ onClick = () => noop }) => {
                 <div className="menu-title-text">
                     Menu
                 </div>
-                <div className="menu-close-btn" onClick={onClick}>
+                <div className="menu-close-btn" onClick={onClick(false)}>
                     <img src={`${ASSETS_BASE}/menu/close.svg`} alt="sol_e"/>
                 </div>
             </div>

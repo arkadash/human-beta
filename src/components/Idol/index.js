@@ -9,13 +9,18 @@ const Idol = ({...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setIdolSelection] = useState([]);
 
+    const remove = (array, element) => {
+        const index = array.indexOf(element);
+        array.splice(index, 1);
+        return array;
+    }
+
     const setSelection = (key) => {
         if (selected.includes(key)) {
-            selected.splice(1, selected.indexOf(key));
-            setIdolSelection([...selected]);
+            setIdolSelection(remove([...selected], key));
+            // setIdolSelection(selected.filter((current) => current === key));
         } else {
-            selected.push(key);
-            setIdolSelection([...selected]);
+            setIdolSelection(selected.concat(key));
         }
     };
 
@@ -26,8 +31,10 @@ const Idol = ({...rest}) => {
         }
     };
 
+    console.log('selected', { len: selected.length, selected })
+
     return (
-        <BaseComponent className="idol" {...rest} num={5}>
+        <BaseComponent className="idol" {...rest} num={5} disableNext={selected.length === 0}>
             <div className="idol-container">
                 <div className="idol-title">
                     <Typist cursor={{element: '_'}}
