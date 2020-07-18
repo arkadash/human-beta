@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/human-beta/static/css/main.deec8795.chunk.css",
-    "main.js": "/human-beta/static/js/main.a1d7a83f.chunk.js",
-    "main.js.map": "/human-beta/static/js/main.a1d7a83f.chunk.js.map",
+    "main.css": "/human-beta/static/css/main.53178fda.chunk.css",
+    "main.js": "/human-beta/static/js/main.8b88ea3c.chunk.js",
+    "main.js.map": "/human-beta/static/js/main.8b88ea3c.chunk.js.map",
     "runtime-main.js": "/human-beta/static/js/runtime-main.9b9b33e6.js",
     "runtime-main.js.map": "/human-beta/static/js/runtime-main.9b9b33e6.js.map",
     "static/css/2.f33eb994.chunk.css": "/human-beta/static/css/2.f33eb994.chunk.css",
-    "static/js/2.5b12c303.chunk.js": "/human-beta/static/js/2.5b12c303.chunk.js",
-    "static/js/2.5b12c303.chunk.js.map": "/human-beta/static/js/2.5b12c303.chunk.js.map",
+    "static/js/2.04556ad2.chunk.js": "/human-beta/static/js/2.04556ad2.chunk.js",
+    "static/js/2.04556ad2.chunk.js.map": "/human-beta/static/js/2.04556ad2.chunk.js.map",
     "index.html": "/human-beta/index.html",
-    "precache-manifest.7510ed1c577cfc6b08d53541b554f4aa.js": "/human-beta/precache-manifest.7510ed1c577cfc6b08d53541b554f4aa.js",
+    "precache-manifest.c13cea54d888c9527a751c60a4586561.js": "/human-beta/precache-manifest.c13cea54d888c9527a751c60a4586561.js",
     "service-worker.js": "/human-beta/service-worker.js",
     "static/css/2.f33eb994.chunk.css.map": "/human-beta/static/css/2.f33eb994.chunk.css.map",
-    "static/css/main.deec8795.chunk.css.map": "/human-beta/static/css/main.deec8795.chunk.css.map",
-    "static/js/2.5b12c303.chunk.js.LICENSE.txt": "/human-beta/static/js/2.5b12c303.chunk.js.LICENSE.txt",
+    "static/css/main.53178fda.chunk.css.map": "/human-beta/static/css/main.53178fda.chunk.css.map",
+    "static/js/2.04556ad2.chunk.js.LICENSE.txt": "/human-beta/static/js/2.04556ad2.chunk.js.LICENSE.txt",
     "static/media/index.css": "/human-beta/static/media/roboto-mono-latin-700italic.b933305e.woff",
     "static/media/styles.scss": "/human-beta/static/media/wave-bot1.ee444153.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9b9b33e6.js",
     "static/css/2.f33eb994.chunk.css",
-    "static/js/2.5b12c303.chunk.js",
-    "static/css/main.deec8795.chunk.css",
-    "static/js/main.a1d7a83f.chunk.js"
+    "static/js/2.04556ad2.chunk.js",
+    "static/css/main.53178fda.chunk.css",
+    "static/js/main.8b88ea3c.chunk.js"
   ]
 }
