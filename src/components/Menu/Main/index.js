@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { noop } from 'lodash';
 import {ASSETS_BASE} from '../../../constants';
+import TVOverlay from '../../TVOverlay';
 import Contact from '../Contact';
 import About from '../About';
 import './styles.scss';
@@ -59,16 +60,19 @@ export default ({ onClick = () => noop }) => {
         return null;
     }
     return (
-        <div className="menu-container">
-            <div className="menu-title">
-                <div className="menu-title-text">
-                    Menu
+        <>
+            <TVOverlay/>
+            <div className="menu-container">
+                <div className="menu-title">
+                    <div className="menu-title-text">
+                        Menu
+                    </div>
+                    <div className="menu-close-btn" onClick={onClick(false)}>
+                        <img src={`${ASSETS_BASE}/menu/close.svg`} alt="sol_e"/>
+                    </div>
                 </div>
-                <div className="menu-close-btn" onClick={onClick(false)}>
-                    <img src={`${ASSETS_BASE}/menu/close.svg`} alt="sol_e"/>
-                </div>
+                { getBody() }
             </div>
-            { getBody() }
-        </div>
+        </>
     )
 }

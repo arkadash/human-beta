@@ -1,0 +1,14 @@
+.component-tv-overlay {
+    background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.2) 100%);
+    background-size: 100% 6px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    content: '';
+    left: 0;
+    right: 0;
+}

@@ -3,6 +3,7 @@ import {noop} from 'lodash';
 import classNames from 'classnames';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Cursor from '../Cursor';
+import TVOverlay from '../TVOverlay';
 import './styles.scss';
 import HeaderLine from "../BaseComponent/HeaderLine";
 
@@ -31,6 +32,7 @@ const Loading = ({
 
     return (
         <>
+            <TVOverlay/>
             <Cursor/>
             <div className={classNames('loading-screen', 'bg-color-black')}>
                 <header>

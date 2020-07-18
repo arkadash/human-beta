@@ -4,6 +4,7 @@ import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
 import RoundButton from '../RoundfButton';
 import FolderOverlay from '../FolderOverlay';
+import TVOverlay from '../TVOverlay';
 import Cursor from '../Cursor';
 import './styles.scss';
 
@@ -25,6 +26,7 @@ const IntroStart = ({ onClick = noop}) => {
 
     return (
         <>
+            <TVOverlay/>
             <FolderOverlay/>
             <div className="intro-start-container" ref={introRef}>
             <Cursor difference={false}/>

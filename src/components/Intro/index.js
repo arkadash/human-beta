@@ -4,6 +4,7 @@ import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
 import Cursor from '../Cursor';
 import FolderOverlay from '../FolderOverlay';
+import TVOverlay from '../TVOverlay';
 import './styles.scss';
 
 const SCREEN_WIDTH = 1080;
@@ -28,6 +29,7 @@ const Intro = ({ onClick = noop}) => {
 
     return (
         <>
+            <TVOverlay/>
             <FolderOverlay/>
             <div className="intro-container" ref={introRef}>
                 <Cursor difference={false}/>

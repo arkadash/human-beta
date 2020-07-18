@@ -3,6 +3,7 @@ import Webcam from 'react-webcam';
 import {noop} from 'lodash';
 import {ASSETS_BASE} from '../../constants';
 import FolderOverlay from '../FolderOverlay';
+import TVOverlay from '../TVOverlay';
 import Cursor from '../Cursor';
 import './styles.scss';
 
@@ -40,6 +41,7 @@ const IntroLoading = ({ onClick = noop}) => {
 
     return (
         <>
+            <TVOverlay/>
             <FolderOverlay/>
             <div className="intro-loading-container" ref={introRef}>
                 <Cursor difference={false}/>

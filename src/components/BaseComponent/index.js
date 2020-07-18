@@ -3,6 +3,7 @@ import {noop} from 'lodash';
 import classNames from 'classnames';
 import {ASSETS_BASE} from '../../constants';
 import FolderOverlay from '../FolderOverlay';
+import TVOverlay from '../TVOverlay';
 import Waves from './Waves';
 import Cursor from '../Cursor';
 import HeaderLine from './HeaderLine';
@@ -19,6 +20,7 @@ const BaseComponent = ({
     hideWaves = false,
     hideProgressBar = false,
     folder = true,
+    tv = true,
     displayNext = true,
     disableNext = false,
     num = 0
@@ -31,6 +33,7 @@ const BaseComponent = ({
         <>
             <Cursor/>
             { folder && <FolderOverlay/> }
+            { tv && <TVOverlay/> }
             <div className={classNames('base-component', 'bg-color-black', className, { 'bg-folder': folder })}>
                 {isActive &&
                     <div className="base-component-wrapper">

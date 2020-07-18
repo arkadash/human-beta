@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import {ASSETS_BASE} from '../../constants';
 import HeaderLine from '../BaseComponent/HeaderLine';
 import FolderOverlay from '../FolderOverlay';
+import TVOverlay from '../TVOverlay';
 import Cursor from '../Cursor';
 import { init } from './Face-Detection-JavaScript-master/script'
 import './styles.scss';
@@ -62,6 +63,7 @@ const WebCamera = ({ onClick = noop}) => {
 
     return (
         <>
+            <TVOverlay/>
             <FolderOverlay/>
             <div className="camera-container">
                 <Cursor/>
