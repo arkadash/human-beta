@@ -29,7 +29,7 @@ const IntroStart = ({ onClick = noop}) => {
             <TVOverlay/>
             <FolderOverlay/>
             <div className="intro-start-container" ref={introRef}>
-            <Cursor difference={false}/>
+            <Cursor/>
             <div className="intro-loading-camera" ref={cameraRef} style={{
                 right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
             }}>

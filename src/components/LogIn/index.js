@@ -30,7 +30,7 @@ const LogIn = ({ onClick = noop}) => {
             <TVOverlay/>
             <FolderOverlay/>
             <div className="intro-login-container" ref={introRef}>
-                <Cursor difference={false}/>
+                <Cursor/>
                 <div className="intro-camera" ref={cameraRef} style={{
                     right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
                 }}>
