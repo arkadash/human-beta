@@ -34,7 +34,7 @@ const Initial = ({ onClick = noop, changeState = noop}) => {
             <div className="menu-links">
                 <MenuLink name="ABOUT" onClick={() => changeState(STATES.about)}/>
                 <MenuLink name="CONTACT" onClick={() => changeState(STATES.contact)}/>
-                <MenuLink name="EXIT" onClick={() => {
+                <MenuLink name="RESTART" onClick={() => {
                     window.location.reload();
                 }}/>
             </div>
