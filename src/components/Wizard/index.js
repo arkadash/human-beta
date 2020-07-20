@@ -17,7 +17,8 @@ import Loading from '../Loading';
 import IntroLoadingHoc from '../IntroLoading';
 import IntroStartHoc from '../IntroStart';
 import Login from '../LogIn';
-import GoingTo from "../GoingTo";
+import GoingTo from '../GoingTo';
+import SummaryMain from '../Summary/Main';
 
 const ANIMATE = 'animate__animated animate__pulse';
 
@@ -48,6 +49,7 @@ const Wizard = () => {
             <Steal/>
             <Lie/>
             <Rich/>
+            <SummaryMain/>
         </StepWizard>
     );
 };
