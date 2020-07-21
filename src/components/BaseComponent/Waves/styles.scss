@@ -1,4 +1,4 @@
-$bottom: 80px;
+$bottom: 110px;
 
 @keyframes move_wave {
     0% {
@@ -52,6 +52,7 @@ $bottom: 80px;
         background-repeat: repeat no-repeat;
         background-position: 0 bottom;
         transform-origin: center bottom;
+        pointer-events: none;
     }
     .waveAnimation {
         .waveTop {
@@ -80,5 +81,6 @@ $bottom: 80px;
         right: 0;
         bottom: $bottom + 4px;
         mix-blend-mode: soft-light;
+        pointer-events: none;
     }
 }

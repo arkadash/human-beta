@@ -20,7 +20,7 @@ import Login from '../LogIn';
 import GoingTo from '../GoingTo';
 import SummaryMain from '../Summary/Main';
 
-const ANIMATE = 'animate__animated animate__pulse';
+const ANIMATE = 'animate__animated';
 
 const transitions = {
     enterRight: ANIMATE,

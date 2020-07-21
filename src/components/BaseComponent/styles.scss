@@ -10,7 +10,7 @@ $color: #FF0000;
 
     .base-component-wrapper {
         position: relative;
-        min-height: 94vh;
+        min-height: 93vh;
         height: 100%;
 
         header,
@@ -94,7 +94,7 @@ $color: #FF0000;
 }
 
 .progress-bar {
-    height: 10px;
+    height: 46px;
     background-color: $color;
     position: absolute;
     bottom: 0;
