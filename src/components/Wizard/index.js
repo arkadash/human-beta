@@ -33,9 +33,9 @@ const Wizard = () => {
     return (
         <StepWizard isLazyMount transitions={transitions}>
             <IntroHoc/>
-            <IntroLoadingHoc/>
             <IntroStartHoc/>
             <Login/>
+            <IntroLoadingHoc/>
             <WebCamera/>
             <Loading/>
             <GoingTo/>

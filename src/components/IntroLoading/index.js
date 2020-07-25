@@ -23,7 +23,7 @@ const IntroLoading = ({ onClick = noop}) => {
 
     const runNum = (num) => {
         if(num < 100) {
-            const added = Math.random() * 3;
+            const added = Math.random() * 4;
             if(num + added > 100) {
                 setNumValue(100);
             } else {
