@@ -1,0 +1,43 @@
+$color: #FF0000;
+
+.summary-header-line {
+
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    button {
+        font-weight: 500;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        color: $color;
+        border: none;
+        padding: 0 0 8px 0;
+    }
+
+    .header-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        margin-right: 36px;
+    }
+
+    .header-logo {
+        padding: 0;
+        margin-left: -20px;
+    }
+
+    .header-btn {
+        margin: auto 0;
+        padding-top: 16px;
+    }
+}

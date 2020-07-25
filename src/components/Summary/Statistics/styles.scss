@@ -1,0 +1,123 @@
+.summary-statistics-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .summary-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%) blur(16px);
+            opacity: 0.3;
+            box-sizing: border-box;
+        }
+    }
+
+    .summary-header-container {
+        position: absolute;
+        width: 100%;
+        padding: 80px;
+        box-sizing: border-box;
+
+        .header-line {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .summary-personal-container {
+
+           .summary-personal-title-container {
+               font-family: Roboto;
+               font-style: normal;
+               font-weight: normal;
+               font-size: 96px;
+               line-height: 136px;
+               display: flex;
+               align-items: center;
+               letter-spacing: 0.32em;
+               color: #FFFFFF;
+               margin-top: 80px;
+               margin-bottom: 80px;
+           }
+
+           .summary-data-container {
+               display: inline-flex;
+               justify-content: space-between;
+               width: 100%;
+               margin-bottom: 60px;
+
+               .summary-data-name {
+                   font-family: Roboto Mono;
+                   font-style: normal;
+                   font-weight: 300;
+                   font-size: 64px;
+                   display: flex;
+                   align-items: center;
+                   color: #FF0000;
+                   opacity: 0.5;
+               }
+
+               .summary-data-plus {
+                   font-family: Roboto;
+                   font-style: normal;
+                   font-weight: normal;
+                   font-size: 40px;
+                   display: flex;
+                   align-items: center;
+                   text-align: right;
+                   letter-spacing: 0.1em;
+                   color: #FFFFFF;
+
+                   .red-plus {
+                       color: #FF0000;
+                   }
+               }
+           }
+        }
+    }
+
+    .summary-main {
+        opacity: 0;
+        transition: all 1.2s ease-in-out;
+        padding-top: 60px;
+
+        &.display-main {
+            opacity: 1;
+        }
+
+        .summary-statistics-data {
+            position: relative;
+
+            .perform-btn {
+                position: absolute;
+                top: 30px;
+                right: 40px;
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .summary-statistics-title {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            padding-bottom: 60px;
+        }
+
+        .summary-key {
+            margin-top: 40px;
+        }
+    }
+}
+
