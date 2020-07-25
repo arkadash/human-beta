@@ -1,13 +1,13 @@
 import React, {useEffect } from 'react';
-import SummaryStatistics from '..';
+import SummaryStatistics from '../base';
 
-export default ({}) => {
+export default ({ onBack, onChar }) => {
     useEffect(() => {
     }, [])
 
     return (
         <>
-            <SummaryStatistics/>
+            <SummaryStatistics onBack={onBack} onSwitch={onChar}/>
         </>
     );
 };

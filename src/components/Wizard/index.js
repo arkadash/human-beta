@@ -18,7 +18,7 @@ import IntroLoadingHoc from '../IntroLoading';
 import IntroStartHoc from '../IntroStart';
 import Login from '../LogIn';
 import GoingTo from '../GoingTo';
-import SummaryMain from '../Summary/Main';
+import Summary from '../Summary';
 
 const ANIMATE = 'animate__animated';
 
@@ -49,7 +49,7 @@ const Wizard = () => {
             <Steal/>
             <Lie/>
             <Rich/>
-            <SummaryMain/>
+            <Summary/>
         </StepWizard>
     );
 };

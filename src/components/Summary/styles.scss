@@ -1,0 +1,31 @@
+.summary-statistics-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .summary-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%) blur(16px);
+            opacity: 0.3;
+            box-sizing: border-box;
+        }
+    }
+
+    .main-container {
+        display: none;
+
+        &.display-main {
+            display: block;
+        }
+    }
+}
+
