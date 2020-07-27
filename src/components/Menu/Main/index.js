@@ -25,20 +25,23 @@ const MenuLink = ({ name, onClick = noop }) => {
 
 const Initial = ({ onClick = noop, changeState = noop}) => {
     return (
-        <div
-            className="menu-main"
-            role="presentation"
-            // onClick={}
-            // onKeyDown={onClick(false)}
-        >
-            <div className="menu-links">
-                <MenuLink name="ABOUT" onClick={() => changeState(STATES.about)}/>
-                <MenuLink name="CONTACT" onClick={() => changeState(STATES.contact)}/>
-                <MenuLink name="RESTART" onClick={() => {
-                    window.location.reload();
-                }}/>
+        <>
+            <div
+                className="menu-main"
+                role="presentation"
+                // onClick={}
+                // onKeyDown={onClick(false)}
+            >
+                <div className="menu-links">
+                    <MenuLink name="ABOUT" onClick={() => changeState(STATES.about)}/>
+                    <MenuLink name="CONTACT" onClick={() => changeState(STATES.contact)}/>
+                    <MenuLink name="RESTART" onClick={() => {
+                        window.location.reload();
+                    }}/>
+                </div>
             </div>
-        </div>
+            <div className="menu-diff-overlay"/>
+        </>
     )
 }
 

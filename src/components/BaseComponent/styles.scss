@@ -51,6 +51,7 @@ $color: #FF0000;
                 }
             }
         }
+
         footer {
             position: absolute;
             bottom: 0;
@@ -74,7 +75,7 @@ $color: #FF0000;
                 color: $color;
             }
 
-            .footer-btn{
+            .footer-btn {
                 padding: 0;
 
                 display: inline-flex;
@@ -89,6 +90,29 @@ $color: #FF0000;
                 }
 
             }
+        }
+    }
+}
+
+.base-camera-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+
+    .intro-loading-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%);
+            box-sizing: border-box;
+            opacity: 0.2;
         }
     }
 }

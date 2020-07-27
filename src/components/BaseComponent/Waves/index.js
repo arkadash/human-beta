@@ -16,7 +16,7 @@ const Waves = () => {
                     <div className="wave waveBottom"/>
                 </div>
             </div>
-            <div className="waves-overlay"/>
+            {/*<div className="waves-overlay"/>*/}
         </div>
     )
 };

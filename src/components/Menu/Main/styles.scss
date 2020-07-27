@@ -4,7 +4,7 @@
 
         .menu-link {
             margin-top: 80px;
-            opacity: 0.25;
+            opacity: 1;
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
@@ -53,8 +53,37 @@
         justify-content: space-between;
 
         .menu-title-text {
-            opacity: 0.5;
+            opacity: 1;
 
+        }
+    }
+}
+
+
+.menu-camera-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    .intro-loading-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        margin-top: -80px;
+        margin-left: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%);
+            box-sizing: border-box;
+            opacity: 0.2;
         }
     }
 }

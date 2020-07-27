@@ -57,17 +57,17 @@ $bottom: 110px;
     .waveAnimation {
         .waveTop {
             background-size: 50% 100px;
-            background-image: url('../../../localAssets/wave-bot1.png');
+            background-image: url('../../../localAssets/wave-bot4.png');
             animation: move_wave 17s linear infinite;
         }
         .waveMiddle {
             background-size: 50% 120px;
-            background-image: url('../../../localAssets/wave-bot1.png');
+            background-image: url('../../../localAssets/wave-bot4.png');
             animation: move_wave_reverse 5s linear infinite;
         }
         .waveBottom {
             background-size: 50% 100px;
-            background-image: url('../../../localAssets/wave-bot1.png');
+            background-image: url('../../../localAssets/wave-bot4.png');
             animation: move_wave 7s linear infinite;
         }
 

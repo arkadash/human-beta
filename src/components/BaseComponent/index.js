@@ -8,6 +8,15 @@ import Waves from './Waves';
 import Cursor from '../Cursor';
 import HeaderLine from './HeaderLine';
 import './styles.scss';
+import Webcam from "react-webcam";
+
+const SCREEN_WIDTH = 1080;
+
+const videoConstraints = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+    facingMode: "environment"
+};
 
 const BaseComponent = ({
     nextStep = noop,
@@ -23,8 +32,13 @@ const BaseComponent = ({
     tv = true,
     displayNext = true,
     disableNext = false,
+    camera = true,
     num = 0
 }) => {
+
+    const cameraRef = React.createRef();
+    const webcamRef = React.createRef();
+    const introRef = React.createRef();
 
     const stageNum = num > 9 ? num : `0${num}`;
     const progressWidth = Math.round((num / 10) * 100);
@@ -34,7 +48,19 @@ const BaseComponent = ({
             <Cursor/>
             { folder && <FolderOverlay/> }
             { tv && <TVOverlay/> }
-            <div className={classNames('base-component', 'bg-color-black', className, { 'bg-folder': folder })}>
+            {camera &&
+                <div className="base-camera-container" ref={introRef}>
+                    <div className="intro-loading-camera" ref={cameraRef} style={{
+                        right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
+                    }}>
+                        <Webcam audio={false} height={videoConstraints.height}
+                                ref={webcamRef}
+                                screenshotFormat="image/jpeg"
+                                videoConstraints={videoConstraints}/>
+                    </div>
+                </div>
+            }
+            <div className={classNames('base-component', className)}>
                 {isActive &&
                     <div className="base-component-wrapper">
                         <header>
