@@ -30,25 +30,29 @@ export default () => {
 
     return (
         <>
-            {stateOpen &&
-                <div className="menu-camera-container" ref={introRef}>
-                    <div className="intro-loading-camera" ref={cameraRef} style={{
-                        right: -((window.innerWidth + (SCREEN_WIDTH / 2)) / 2)
-                    }}>
-                        <Webcam audio={false} height={videoConstraints.height}
-                                ref={webcamRef}
-                                screenshotFormat="image/jpeg"
-                                videoConstraints={videoConstraints}/>
-                    </div>
-                </div>
-            }
             <div>
                 <button onClick={toggleDrawer(true)}>
                     <Icon/>
                 </button>
                 <Drawer anchor="right" open={stateOpen}
                     onClose={toggleDrawer(false)}>
-                    <Main onClick={toggleDrawer}/>
+                    <>
+                        { stateOpen &&
+                            <div className="menu-camera-container" ref={introRef}>
+                                <div className="intro-loading-camera" ref={cameraRef} style={{
+                                    right: -((window.innerWidth + (SCREEN_WIDTH / 2)) / 2)
+                                }}>
+                                    <Webcam audio={false} height={videoConstraints.height}
+                                            ref={webcamRef}
+                                            screenshotFormat="image/jpeg"
+                                            videoConstraints={videoConstraints}/>
+                                    {/*<div className="menu-diff-overlay"/>*/}
+                                </div>
+                            </div>
+                        }
+                        <Main onClick={toggleDrawer}/>
+                        {/*<div className="menu-diff-overlay"/>*/}
+                    </>
                 </Drawer>
             </div>
         </>

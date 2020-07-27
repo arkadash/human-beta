@@ -40,7 +40,6 @@ const Initial = ({ onClick = noop, changeState = noop}) => {
                     }}/>
                 </div>
             </div>
-            <div className="menu-diff-overlay"/>
         </>
     )
 }
