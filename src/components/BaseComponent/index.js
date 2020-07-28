@@ -56,7 +56,8 @@ const BaseComponent = ({
                         <Webcam audio={false} height={videoConstraints.height}
                                 ref={webcamRef}
                                 screenshotFormat="image/jpeg"
-                                videoConstraints={videoConstraints}/>
+                                videoConstraints={videoConstraints}
+                        mirrored/>
                     </div>
                 </div>
             }

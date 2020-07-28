@@ -209,10 +209,10 @@ $size_half: 85px;
                 cursor: none;
                 height: $size;
                 width: $size;
-                background-color: black;
+                background-color: transparent;
                 margin-top: -$size_half;
                 margin-left: -$size_half;
-                border: 1px solid #FF0000;
+                border: 4px solid #FF0000;
 
                 &:focus,
                 &:hover,

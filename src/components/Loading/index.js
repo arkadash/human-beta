@@ -22,7 +22,7 @@ const Loading = ({
                 const diff = Math.random() * 3;
                 return Math.min(oldProgress + diff, 100);
             });
-        }, 100);
+        }, 200);
 
         return () => {
             clearInterval(timer);
