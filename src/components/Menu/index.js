@@ -3,6 +3,7 @@ import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import Icon from './Icon';
 import Main from './Main';
+import Cursor from "../Cursor";
 
 const SCREEN_WIDTH = 1080;
 
@@ -30,6 +31,7 @@ export default () => {
 
     return (
         <>
+            <Cursor/>
             <div>
                 <button onClick={toggleDrawer(true)}>
                     <Icon/>

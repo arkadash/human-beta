@@ -19,10 +19,10 @@ const Loading = ({
                     clearInterval(timer);
                     nextStep();
                 }
-                const diff = Math.random() * 3;
+                const diff = Math.random() * 2;
                 return Math.min(oldProgress + diff, 100);
             });
-        }, 200);
+        }, 100);
 
         return () => {
             clearInterval(timer);
