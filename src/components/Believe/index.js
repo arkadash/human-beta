@@ -25,9 +25,9 @@ const Believe = ({ nextStep, ...rest }) => {
             </div>
             <div className={classNames('believe-buttons-wrapper', {'show-buttons': displaySelection})}>
                 <button className={classNames('believe-button-yes', {'btn-selected': selected === 'yes'})}
-                    onClick={() => setSelection('yes')}>Yes</button>
+                    onClick={() => setSelection('yes')}>YES</button>
                 <button className={classNames('believe-button-no', {'btn-selected': selected === 'no'})}
-                        onClick={() => setSelection('no')}>No</button>
+                        onClick={() => setSelection('no')}>NO</button>
             </div>
         </BaseComponent>
     );

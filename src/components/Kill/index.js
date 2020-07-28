@@ -63,9 +63,9 @@ const Kill = ({ nextStep, ...rest}) => {
                     </div>
                     <div className={classNames('kill-buttons-wrapper', {'show-buttons': displaySelection})}>
                         <button className={classNames('kill-button-love', {'btn-selected': selected === 'love'})}
-                                onClick={() => setSelection('love')}>LOVE</button>
+                                onClick={() => setSelection('love')}>LIKE</button>
                         <button className={classNames('kill-button-hate', {'btn-selected': selected === 'hate'})}
-                                onClick={() => setSelection('hate')}>HATE</button>
+                                onClick={() => setSelection('hate')}>DISLIKE</button>
                     </div>
                 </div>
             </BaseComponent>

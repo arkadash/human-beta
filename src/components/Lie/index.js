@@ -10,9 +10,9 @@ const IMAGES_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Move = ({ num }) => (
     <div className="lie-number-wrapper">
-        <div className="lie-number lie-number-3">{num}</div>
+        {/*<div className="lie-number lie-number-3">{num}</div>*/}
         <div className="lie-number lie-number-2">{num}</div>
-        <div className="lie-number lie-number-1">{num}</div>
+        {/*<div className="lie-number lie-number-1">{num}</div>*/}
     </div>
 );
 
