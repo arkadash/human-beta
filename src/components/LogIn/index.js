@@ -1,15 +1,13 @@
 import React, {useEffect} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
-import {ASSETS_BASE} from '../../constants';
+import {ASSETS_BASE, getCameraWidth} from '../../constants';
 import HeaderLine from '../BaseComponent/HeaderLine';
 import Cursor from '../Cursor';
 import RoundButton from '../RoundfButton';
 import FolderOverlay from '../FolderOverlay';
 import TVOverlay from '../TVOverlay';
 import './styles.scss';
-
-const SCREEN_WIDTH = 1080;
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -32,12 +30,14 @@ const LogIn = ({ onClick = noop}) => {
             <div className="intro-login-container" ref={introRef}>
                 <Cursor/>
                 <div className="intro-camera" ref={cameraRef} style={{
-                    right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
+                    right: getCameraWidth()
                 }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        videoConstraints={videoConstraints}/>
+                        videoConstraints={videoConstraints}
+                        mirrored
+                    />
                 </div>
                 <div className="login-header-container">
                     <HeaderLine/>
