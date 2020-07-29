@@ -2,15 +2,13 @@ import React, {useEffect, useState} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
 import classNames from 'classnames';
-import {ASSETS_BASE} from '../../constants';
+import {getCameraWidth, ASSETS_BASE} from '../../constants';
 import HeaderLine from '../BaseComponent/HeaderLine';
 import FolderOverlay from '../FolderOverlay';
 import TVOverlay from '../TVOverlay';
 import Cursor from '../Cursor';
 import { init } from './Face-Detection-JavaScript-master/script'
 import './styles.scss';
-
-const SCREEN_WIDTH = 1080;
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -68,7 +66,7 @@ const WebCamera = ({ onClick = noop}) => {
             <div className="camera-container">
                 <Cursor/>
                     <div className="camera-test" ref={cameraRef} style={{
-                        right: -((window.innerWidth + (SCREEN_WIDTH/1.3))/2)
+                        right: getCameraWidth()
                     }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
