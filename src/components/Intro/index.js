@@ -39,7 +39,9 @@ const Intro = ({ onClick = noop}) => {
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        videoConstraints={videoConstraints}/>
+                        videoConstraints={videoConstraints}
+                        mirrored
+                    />
                 </div>
                 <div className="intro-body-container">
                    <img src={`${ASSETS_BASE}/intro/logo.png`} alt="sol_e"/>

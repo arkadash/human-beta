@@ -4,14 +4,14 @@ import Menu from '../../Menu';
 
 import './styles.scss';
 
-const HeaderLine = ({ onBack }) => {
+const HeaderLine = ({ onBack, text = "Statistics" }) => {
     return (
         <div className="summary-header-line">
             <div className="header-logo">
                 <img src={`${ASSETS_BASE}/summary/arrow-left.png`} alt="sol_e" onClick={onBack}/>
             </div>
             <div className="header-title">
-                Statistics
+                {text}
             </div>
             <div className="header-btn">
                 <Menu/>

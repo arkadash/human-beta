@@ -9,9 +9,9 @@ import './styles.scss';
 const data = 'P<ISRANGEL<<USER<<<<<<<<<<<<<<<<<<< NO.000666<+972<5884022<+++<<<<<<<<<';
 const cursor = {element: '_', hideWhenDone: true, hideWhenDoneDelay: 0};
 
-const delay = 50;
+const delay = 10;
 
-const SummaryMain = ({ onFlow, onChar }) => {
+const SummaryMain = ({ onFlow, onChar, onImprove, onCertificate }) => {
     const [displayMain, setDisplayMain] = useState(false);
     const [displaySummaryName, setSummaryName] = useState(false);
     const [displaySummaryData, setSummaryData] = useState([]);
@@ -145,7 +145,11 @@ const SummaryMain = ({ onFlow, onChar }) => {
                                          onChar()
                                      }}
                                 />
-                                <img src={`${ASSETS_BASE}/summary/preserve Default.png`} alt="" className="preserve"/>
+                                <img src={`${ASSETS_BASE}/summary/preserve Default.png`} alt="" className="preserve"
+                                    onClick={() => {
+                                        onCertificate()
+                                    }}
+                                />
                             </div>
                             <div className="summary-line-2">
                                 <img src={`${ASSETS_BASE}/summary/SNAKE Default.png`}
@@ -154,7 +158,10 @@ const SummaryMain = ({ onFlow, onChar }) => {
                                          onFlow()
                                      }}
                                 />
-                                <img src={`${ASSETS_BASE}/summary/IMPROVE Default.png`} alt="" className="improve"/>
+                                <img src={`${ASSETS_BASE}/summary/IMPROVE Default.png`} alt="" className="improve"
+                                     onClick={() => {
+                                         onImprove()
+                                     }}/>
                             </div>
                         </div>
                     </div>

@@ -31,7 +31,6 @@ export default () => {
 
     return (
         <>
-            <Cursor/>
             <div>
                 <button onClick={toggleDrawer(true)}>
                     <Icon/>
@@ -39,6 +38,7 @@ export default () => {
                 <Drawer anchor="right" open={stateOpen}
                     onClose={toggleDrawer(false)}>
                     <>
+                        <Cursor/>
                         { stateOpen &&
                             <div className="menu-camera-container" ref={introRef}>
                                 <div className="intro-loading-camera" ref={cameraRef} style={{

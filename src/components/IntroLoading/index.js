@@ -23,7 +23,7 @@ const IntroLoading = ({ onClick = noop}) => {
 
     const runNum = (num) => {
         if(num < 100) {
-            const added = Math.random() * 4;
+            const added = Math.random() * 2;
             if(num + added > 100) {
                 setNumValue(100);
             } else {
@@ -36,7 +36,7 @@ const IntroLoading = ({ onClick = noop}) => {
 
     useEffect(() => {
         runNum(0);
-        setTimeout(onClick, 6 * 1000);
+        setTimeout(onClick, 9 * 1000);
     }, [])
 
     return (
@@ -51,7 +51,9 @@ const IntroLoading = ({ onClick = noop}) => {
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        videoConstraints={videoConstraints}/>
+                        videoConstraints={videoConstraints}
+                        mirrored
+                    />
                 </div>
                 <div className="intro-body-container">
                     {/*<div className="intro-astr-overlay"/>*/}

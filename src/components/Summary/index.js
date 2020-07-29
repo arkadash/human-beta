@@ -7,6 +7,8 @@ import TVOverlay from '../TVOverlay';
 import SummaryMain from './Main';
 import SummaryFlow from './Statistics/flow';
 import SummaryChar from './Statistics/character';
+import Improve from './Statistics/improve';
+import Preserve from './Statistics/preserve';
 import './styles.scss';
 
 const SCREEN_WIDTH = 1080;
@@ -20,10 +22,12 @@ const videoConstraints = {
 const STAGE = {
     main: 'MAIN',
     flow: 'FLOW',
-    char: 'CHAR'
+    char: 'CHAR',
+    certificate: 'PRESERVE',
+    improve: 'IMPROVE'
 }
 
-const SummaryStatistics = ({  }) => {
+const SummaryStatistics = () => {
     const [stage, setStage] = useState(STAGE.main);
 
     const cameraRef = React.createRef();
@@ -49,6 +53,8 @@ const SummaryStatistics = ({  }) => {
                 <span className={classNames('main-container', { 'display-main': stage === STAGE.main })}>
                     <SummaryMain onFlow={() => {setStage(STAGE.flow)}}
                         onChar={() => {setStage(STAGE.char)}}
+                        onImprove={() => {setStage(STAGE.improve)}}
+                        onCertificate={() => {setStage(STAGE.certificate)}}
                     />
                 </span>
                 {
@@ -60,6 +66,14 @@ const SummaryStatistics = ({  }) => {
                     stage === STAGE.char &&
                         <SummaryChar onBack={() => {setStage(STAGE.main)}}
                             onFlow={() => {setStage(STAGE.flow)}}/>
+                }
+                {
+                    stage === STAGE.improve &&
+                    <Improve onBack={() => {setStage(STAGE.main)}}/>
+                }
+                {
+                    stage === STAGE.certificate &&
+                    <Preserve onBack={() => {setStage(STAGE.main)}}/>
                 }
             </div>
         </>
