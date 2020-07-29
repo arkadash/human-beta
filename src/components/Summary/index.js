@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Webcam from 'react-webcam';
 import classNames from 'classnames';
-import {ASSETS_BASE} from '../../constants';
+import {getCameraWidth} from '../../constants';
 import Cursor from '../Cursor';
 import TVOverlay from '../TVOverlay';
 import SummaryMain from './Main';
@@ -10,8 +10,6 @@ import SummaryChar from './Statistics/character';
 import Improve from './Statistics/improve';
 import Preserve from './Statistics/preserve';
 import './styles.scss';
-
-const SCREEN_WIDTH = 1080;
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -43,7 +41,7 @@ const SummaryStatistics = () => {
             <div className="summary-statistics-container" ref={introRef}>
                 <Cursor/>
                 <div className="summary-camera" ref={cameraRef} style={{
-                    right: -((window.innerWidth + (SCREEN_WIDTH / 2)) / 2)
+                    right: getCameraWidth()
                 }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}

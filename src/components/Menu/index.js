@@ -1,11 +1,10 @@
 import Webcam from 'react-webcam';
 import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
+import {getCameraWidth} from '../../constants';
 import Icon from './Icon';
 import Main from './Main';
-import Cursor from "../Cursor";
-
-const SCREEN_WIDTH = 1080;
+import Cursor from '../Cursor';
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -42,12 +41,14 @@ export default () => {
                         { stateOpen &&
                             <div className="menu-camera-container" ref={introRef}>
                                 <div className="intro-loading-camera" ref={cameraRef} style={{
-                                    right: -((window.innerWidth + (SCREEN_WIDTH / 2)) / 2)
+                                    right: getCameraWidth()
                                 }}>
                                     <Webcam audio={false} height={videoConstraints.height}
                                             ref={webcamRef}
                                             screenshotFormat="image/jpeg"
-                                            videoConstraints={videoConstraints}/>
+                                            videoConstraints={videoConstraints}
+                                            mirrored
+                                    />
                                     {/*<div className="menu-diff-overlay"/>*/}
                                 </div>
                             </div>

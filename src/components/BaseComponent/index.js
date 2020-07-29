@@ -1,7 +1,7 @@
 import React from 'react';
 import {noop} from 'lodash';
 import classNames from 'classnames';
-import {ASSETS_BASE} from '../../constants';
+import {getCameraWidth, ASSETS_BASE} from '../../constants';
 import FolderOverlay from '../FolderOverlay';
 import TVOverlay from '../TVOverlay';
 import Waves from './Waves';
@@ -9,8 +9,6 @@ import Cursor from '../Cursor';
 import HeaderLine from './HeaderLine';
 import './styles.scss';
 import Webcam from "react-webcam";
-
-const SCREEN_WIDTH = 1080;
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -51,7 +49,7 @@ const BaseComponent = ({
             {camera &&
                 <div className="base-camera-container" ref={introRef}>
                     <div className="intro-loading-camera" ref={cameraRef} style={{
-                        right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
+                        right: getCameraWidth()
                     }}>
                         <Webcam audio={false} height={videoConstraints.height}
                                 ref={webcamRef}

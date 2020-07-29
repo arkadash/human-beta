@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import Webcam from 'react-webcam';
 import {noop} from 'lodash';
-import {ASSETS_BASE} from '../../constants';
+import {getCameraWidth, ASSETS_BASE} from '../../constants';
 import Cursor from '../Cursor';
 import FolderOverlay from '../FolderOverlay';
 import TVOverlay from '../TVOverlay';
@@ -34,7 +34,7 @@ const Intro = ({ onClick = noop}) => {
             <div className="intro-container" ref={introRef}>
                 <Cursor difference={false}/>
                 <div className="intro-camera" ref={cameraRef} style={{
-                    right: -((window.innerWidth + (SCREEN_WIDTH/2))/2)
+                    right: getCameraWidth()
                 }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
