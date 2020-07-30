@@ -5,8 +5,6 @@ import {getCameraWidth} from '../../constants';
 import Cursor from '../Cursor';
 import TVOverlay from '../TVOverlay';
 import SummaryMain from './Main';
-import SummaryFlow from './Statistics/flow';
-import SummaryChar from './Statistics/character';
 import Improve from './Statistics/improve';
 import Preserve from './Statistics/preserve';
 import './styles.scss';
@@ -19,8 +17,6 @@ const videoConstraints = {
 
 const STAGE = {
     main: 'MAIN',
-    flow: 'FLOW',
-    char: 'CHAR',
     certificate: 'PRESERVE',
     improve: 'IMPROVE'
 }
@@ -46,7 +42,9 @@ const SummaryStatistics = () => {
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        videoConstraints={videoConstraints}/>
+                        videoConstraints={videoConstraints}
+                        mirrored
+                    />
                 </div>
                 <span className={classNames('main-container', { 'display-main': stage === STAGE.main })}>
                     <SummaryMain onFlow={() => {setStage(STAGE.flow)}}
@@ -55,16 +53,6 @@ const SummaryStatistics = () => {
                         onCertificate={() => {setStage(STAGE.certificate)}}
                     />
                 </span>
-                {
-                    stage === STAGE.flow &&
-                        <SummaryFlow onBack={() => {setStage(STAGE.main)}}
-                            onChar={() => {setStage(STAGE.char)}}/>
-                }
-                {
-                    stage === STAGE.char &&
-                        <SummaryChar onBack={() => {setStage(STAGE.main)}}
-                            onFlow={() => {setStage(STAGE.flow)}}/>
-                }
                 {
                     stage === STAGE.improve &&
                     <Improve onBack={() => {setStage(STAGE.main)}}/>

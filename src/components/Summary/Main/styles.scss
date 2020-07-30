@@ -1,64 +1,11 @@
 .summary-statistics-main-container {
     position: absolute;
     width: 100%;
-    padding: 80px;
+    padding: 80px 72px;
     box-sizing: border-box;
 
-    .header-line {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .summary-personal-container {
-        display: inline-flex;
-        margin-bottom: 40px;
-
-        img {
-            border: 1px solid #FFFFFF;
-            box-sizing: border-box;
-            border-radius: 250px 250px 0 0;
-            opacity: 0.5;
-        }
-
-        .summary-data {
-            padding-left: 40px;
-            font-size: 40px;
-            color: #FFFFFF;
-
-            .summary-data-wrapper {
-                padding-bottom: 24px;
-
-                .summary-header-data {
-                    font-family: Roboto;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 40px;
-                    display: flex;
-                    align-items: center;
-                    color: #FFFFFF;
-                    flex: none;
-                    order: 1;
-                    align-self: center;
-                    margin: 0 25px;
-                }
-
-                .summary-header {
-                    font-family: Roboto;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 24px;
-                    display: flex;
-                    align-items: center;
-                    color: #FF0000;
-                    opacity: 0.5;
-                    flex: none;
-                    order: 0;
-                    align-self: center;
-                    margin: 0 25px;
-                    padding-bottom: 12px;
-                }
-            }
-        }
+    .header-main img {
+        transform: rotate(270deg);
     }
 
     .summary-name {
@@ -80,43 +27,37 @@
             opacity: 1;
         }
 
-        .divider {
-            margin-top: 80px;
+        .summary-statistics-flow,
+        .summary-statistics-character,
+        .summary-statistics-menu {
+            display: none;
         }
 
-        .summary-statistics {
-            margin-top: 40px;
-
-            .summary-statistics-title {
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 40px;
-                letter-spacing: 0.02em;
-                color: #FFFFFF;
+        &.display-stage-main {
+            .summary-statistics-menu {
+                display: block;
+                animation-name: opacityEffect;
+                animation-duration: 2s;
             }
-
-            .summary-statistics-data {
-                .summary-line-1,
-                .summary-line-2 {
-                    margin-top: 40px;
-                    display: flex;
-                    justify-content: space-between;
-
-                    img {
-                        border: 2px solid transparent;
-                        box-sizing: border-box;
-                        border-radius: 50px;
-
-                        &:hover {
-                            background: rgba(255, 0, 0, 0.1);
-                            border-color: #FF0000;
-                        }
-
-                    }
-                }
+        }
+        &.display-stage-char {
+            .summary-statistics-character {
+                display: block;
+                animation-name: opacityEffect;
+                animation-duration: 2s;
+            }
+        }
+        &.display-stage-flow {
+            .summary-statistics-flow {
+                display: block;
+                animation-name: opacityEffect;
+                animation-duration: 2s;
             }
         }
     }
 }
 
+@keyframes opacityEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

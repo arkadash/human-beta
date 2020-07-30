@@ -1,0 +1,37 @@
+.summary-statistics-character {
+    margin-top: 60px;
+
+    .summary-statistics-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+    }
+
+    .summary-statistics-data {
+        margin-top: 40px;
+
+        img.character {
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 50px;
+        }
+
+        img.character-chips {
+            margin-top: 40px;
+        }
+
+        .summary-data-images {
+            position: relative;
+
+            .data-btn {
+                position: absolute;
+                top: 50px;
+                right: 40px;
+            }
+        }
+    }
+}
+
