@@ -28,7 +28,7 @@ export default ({...rest}) => {
                                 avgTypingDelay={100}
                                 onTypingDone={() => setDisplaySelection(true)}>
                             <Typist.Delay ms={2500}/>
-                            How many<br/>loyal are you?
+                            How<br/>loyal are you?
                         </Typist>
                     </div>
                     <div className={classNames('lie-slider-wrapper', {'show-buttons': displaySelection})}>
