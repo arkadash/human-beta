@@ -1,47 +1,52 @@
 import React, {useState} from 'react';
-import classNames from  'classnames';
+import classNames from 'classnames';
 import Typist from 'react-typist';
+import {ASSETS_BASE} from '../../constants';
 import BaseComponent from '../BaseComponent';
-import LoyalBtn from './LoyalBtn';
+import LieSlider from '../LieSlider';
 import './styles.scss';
 
-const Loyal = ({nextStep, ...rest}) => {
+const MIN = 1;
+const MAX = 99;
+
+export default ({...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
-    const [selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState(50);
 
-    const btnProps = {
-        selectedFunc: (value) => value === selected,
-        onClick: (value) => {
-            if(value === selected) {
-                setSelected(0);
-            } else {
-                setSelected(value);
-            }
-            setTimeout(nextStep, 1000);
-        }
+
+    const onChange = (value) => {
+        let num = Math.min(MAX, value);
+        num =  Math.max(MIN, num);
+        setSelected(num);
     }
-
     return (
-        <BaseComponent className="loyal" {...rest} num={7} displayNext={false}>
-            <div className="loyal-container">
-                <div className="loyal-title">
-                    <Typist cursor={{element: '_'}}
-                        avgTypingDelay={100}
-                        onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={2500}/>
-                        How<br/>loyal are you?
-                    </Typist>
+        <>
+            <BaseComponent className="loyal-new" {...rest} num={9}>
+                <div className="lie-container">
+                    <div className="lie-title">
+                        <Typist cursor={{element: '_'}}
+                                avgTypingDelay={100}
+                                onTypingDone={() => setDisplaySelection(true)}>
+                            <Typist.Delay ms={2500}/>
+                            How many<br/>loyal are you?
+                        </Typist>
+                    </div>
+                    <div className={classNames('lie-slider-wrapper', {'show-buttons': displaySelection})}>
+                        <div className={classNames('main-image', {
+                            'show-image': displaySelection
+                        })}>
+                        <div className="lie-number-wrapper">
+                            <div className="lie-number">{selected}<span>%</span></div>
+                        </div>
+                        </div>
+                        <div className="slider-container">
+                            <div className="slider-indication">LOW</div>
+                            <LieSlider onChange={onChange}/>
+                            <div className="slider-indication">HIGH</div>
+                        </div>
+                    </div>
                 </div>
-                <div className={classNames('loyal-buttons-wrapper', {'show-buttons': displaySelection})}>
-                    <LoyalBtn value={1} {...btnProps} title="LOW"/>
-                    <LoyalBtn value={2} {...btnProps}/>
-                    <LoyalBtn value={3} {...btnProps}/>
-                    <LoyalBtn value={4} {...btnProps}/>
-                    <LoyalBtn value={5} {...btnProps} title="HIGH"/>
-                </div>
-            </div>
-        </BaseComponent>
+            </BaseComponent>
+        </>
     );
 };
-
-export default Loyal;

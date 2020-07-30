@@ -2,7 +2,7 @@ import React from 'react';
 import 'typeface-roboto';
 import 'typeface-roboto-mono';
 import Lie from '.';
-import LoyalSlider from './LieSlider';
+import LoyalSlider from '../LieSlider';
 import '../../styles.scss';
 
 export default {

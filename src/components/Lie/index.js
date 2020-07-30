@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Typist from 'react-typist';
 import {ASSETS_BASE} from '../../constants';
 import BaseComponent from '../BaseComponent';
-import LieSlider from './LieSlider';
+import LieSlider from '../LieSlider';
 import './styles.scss';
 
 const IMAGES_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -64,7 +64,7 @@ const Lie = ({...rest}) => {
                                 IMAGES_IDS.map((id) =>
                                     <img className={classNames('lie-slider-hand-red', `lie-slider-hand-${id}`,
                                         {'displayHand': num >= id})}
-                                         src={`${ASSETS_BASE}/lie/handRed.svg`} alt="sol_e"/>
+                                         src={`${ASSETS_BASE}/lie/handWHITE.svg`} alt="sol_e"/>
                                 )
                             }
                             { firstMove && num < 10 && <Move num={num}/>}
@@ -74,7 +74,9 @@ const Lie = ({...rest}) => {
                             }
                         </div>
                         <div className="slider-container">
+                            <div className="slider-indication">LESS</div>
                             <LieSlider onChange={onChange}/>
+                            <div className="slider-indication">MORE</div>
                         </div>
                     </div>
                 </div>

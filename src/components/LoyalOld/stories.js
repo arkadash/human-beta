@@ -1,28 +1,28 @@
 import React from 'react';
 import 'typeface-roboto';
 import 'typeface-roboto-mono';
+import LoyalBtn from './LoyalBtn';
 import Loyal from '.';
-import LoyalSlider from '../LieSlider';
 import '../../styles.scss';
 
 export default {
-    title: 'Loyal',
+    title: 'LoyalOLD',
     component: Loyal,
 };
 
 export const ToStorybook = () => <div className="sol-e"><Loyal/></div>;
-export const LieSliderStorybook = () => (
-    <div className="sol-e" style={{'background-color': '#000', padding: '250px'}}>
-        <LoyalSlider/>
+
+export const LoyalBtnStorybook = () => (
+    <div className="sol-e" style={{'background-color': '#000', padding: '50px'}}>
+        <LoyalBtn onClick={() => alert('Clicked!')}/>
     </div>
 );
-
 
 
 ToStorybook.story = {
     name: 'page',
 };
 
-LieSliderStorybook.story = {
-    name: 'Loyal Slider'
+LoyalBtnStorybook.story = {
+    name: 'LoyalOLD Button'
 };
