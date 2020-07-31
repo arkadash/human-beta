@@ -9,6 +9,7 @@ import './styles.scss';
 const Rich = ({nextStep, ...rest}) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setSelectionState] = useState('');
+    const [hoverBtnHappy, setHoverBtnHappy] = useState(false);
 
     const setSelection = (key) => {
         if(selected === key) {
@@ -33,14 +34,18 @@ const Rich = ({nextStep, ...rest}) => {
                 <div className={classNames('main-image', {
                     'show-image': displaySelection,
                     'selected-rich': selected === 'rich',
-                    'selected-happy': selected === 'happy'
+                    'selected-happy': selected === 'happy',
+                    'hover-selected-happy': hoverBtnHappy
                 })}>
-                    <img src={`${ASSETS_BASE}/rich/jewellery-white 1.png`} alt="sol_e"/>
+                    <img src={`${ASSETS_BASE}/rich/ring.png`} alt="sol_e"/>
                     <Hart/>
                 </div>
                 <div className={classNames('rich-buttons-wrapper', {'show-buttons': displaySelection})}>
                     <button className={classNames('rich-button-happy', {'btn-selected': selected === 'happy'})}
-                            onClick={() => setSelection('happy')}>LOVE</button>
+                        onClick={() => setSelection('happy')}
+                        onMouseOver={() => setHoverBtnHappy(true)}
+                        onMouseOut={() => setHoverBtnHappy(false)}
+                    >LOVE</button>
                     <button className={classNames('rich-button-rich', {'btn-selected': selected === 'rich'})}
                             onClick={() => setSelection('rich')}>RICH</button>
                 </div>

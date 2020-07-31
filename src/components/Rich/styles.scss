@@ -82,8 +82,9 @@
             height: 568px;
             transition: all 0.7s ease-in-out;
         }
-        &:hover,
-        &.selected-happy {
+
+        &.selected-happy,
+        &.hover-selected-happy {
             svg {
                 width: 580px;
                 height: 500px;
