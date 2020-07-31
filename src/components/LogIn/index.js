@@ -47,7 +47,7 @@ const LogIn = ({ onClick = noop}) => {
                         Log in
                     </div>
                     <div className="login-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis feugiat tincidunt nec nullam.
+                        Enter with your personal account to access drive history, favorites, and other points on all your devices.
                     </div>
                 </div>
                 <div className="intro-footer-container">
