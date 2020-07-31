@@ -40,7 +40,7 @@ const IntroStart = ({ onClick = noop}) => {
             </div>
             <div className="intro-body-container">
                 <div className="logo-container">
-                    <img src={`${ASSETS_BASE}/introStart/logo.png`} className="astr-img" alt=""/>
+                    <img src={`${ASSETS_BASE}/intro/logo2.png`} className="astr-img" alt=""/>
                 </div>
                 <div className="logo-text">Explore your best.</div>
             </div>
@@ -48,7 +48,20 @@ const IntroStart = ({ onClick = noop}) => {
                 <div className="intro-button-container">
                     <RoundButton onClick={onClick} text="START"/>
                 </div>
+                <div className="intro-footer-version-container">
+                    <div className="intro-creator-container">
+                        <div className="intro-creator">
+                            Created by the creator
+                        </div>
+                    </div>
+                    <div className="intro-version-container">
+                        <p className="intro-version">
+                            Version number 1.8.3
+                        </p>
+                    </div>
+                </div>
             </div>
+
         </div>
         </>
     );

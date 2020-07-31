@@ -16,6 +16,7 @@
         video {
             filter: grayscale(100%);
             box-sizing: border-box;
+            opacity: 0.2;
         }
     }
 
@@ -34,13 +35,13 @@
 
             .astr-img {
                 width: 428px;
-                margin-left: 76px;
+                margin-left: 40px;
             }
         }
         .logo-text {
             font-family: Roboto;
             font-style: normal;
-            font-weight: 500;
+            font-weight: normal;
             font-size: 40px;
             line-height: 150%;
             text-align: center;
@@ -55,7 +56,7 @@
 
     .intro-footer-container {
         position: absolute;
-        bottom: 300px;
+        bottom: 160px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -71,6 +72,41 @@
             }
         }
 
+        .intro-footer-version-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 160px;
 
+            .intro-version-container,
+            .intro-creator-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .intro-creator {
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #FF0000;
+            }
+
+            .intro-version {
+                font-family: Roboto Mono;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                display: flex;
+                align-items: flex-end;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
     }
 }
