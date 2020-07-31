@@ -66,7 +66,7 @@ const WebCamera = ({ onClick = noop}) => {
             <div className="camera-container">
                 <Cursor/>
                     <div className="camera-test" ref={cameraRef} style={{
-                        right: getCameraWidth()
+                        right: getCameraWidth() - 200
                     }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
