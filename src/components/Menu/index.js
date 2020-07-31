@@ -39,6 +39,7 @@ export default () => {
                     <>
                         <Cursor/>
                         { stateOpen &&
+                            <>
                             <div className="menu-camera-container" ref={introRef}>
                                 <div className="intro-loading-camera" ref={cameraRef} style={{
                                     right: getCameraWidth()
@@ -52,9 +53,10 @@ export default () => {
                                     {/*<div className="menu-diff-overlay"/>*/}
                                 </div>
                             </div>
+                            {/*<div className="menu-diff-overlay"/>*/}
+                            </>
                         }
                         <Main onClick={toggleDrawer}/>
-                        {/*<div className="menu-diff-overlay"/>*/}
                     </>
                 </Drawer>
             </div>

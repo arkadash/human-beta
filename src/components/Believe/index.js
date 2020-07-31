@@ -14,7 +14,7 @@ const Believe = ({ nextStep, ...rest }) => {
     }
 
     return (
-        <BaseComponent className="believe" {...rest} num={1} displayNext={false}>
+        <BaseComponent className="believe" {...rest} num={1} displayNext={false} disableBack={true}>
             <div className="believe-title">
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}

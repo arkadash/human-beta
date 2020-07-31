@@ -48,6 +48,10 @@ $color: #FF0000;
                     &:hover {
                         opacity: 0.8;
                     }
+
+                    &:disabled {
+                        opacity: 0.25 !important;
+                    }
                 }
             }
         }
@@ -88,7 +92,6 @@ $color: #FF0000;
                 &:disabled {
                     opacity: 0.25;
                 }
-
             }
         }
     }

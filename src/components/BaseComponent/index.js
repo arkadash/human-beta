@@ -30,6 +30,7 @@ const BaseComponent = ({
     tv = true,
     displayNext = true,
     disableNext = false,
+    disableBack = false,
     camera = true,
     num = 0
 }) => {
@@ -66,7 +67,7 @@ const BaseComponent = ({
                            <HeaderLine/>
                             {!hideBack &&
                                 <div className="back-container">
-                                    <button onClick={previousStep}>
+                                    <button onClick={previousStep} disabled={disableBack}>
                                         Back
                                     </button>
                                 </div>
