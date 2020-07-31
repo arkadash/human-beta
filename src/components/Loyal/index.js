@@ -21,7 +21,7 @@ export default ({...rest}) => {
     }
     return (
         <>
-            <BaseComponent className="loyal-new" {...rest} num={9}>
+            <BaseComponent className="loyal-new" {...rest} num={7}>
                 <div className="lie-container">
                     <div className="lie-title">
                         <Typist cursor={{element: '_'}}
