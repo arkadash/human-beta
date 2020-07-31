@@ -3,15 +3,18 @@
     margin: auto;
 
     &.worship-btn-instagram {
-        height: 574px;
+        img {
+            width: 830px;
+        }
     }
 
     &.worship-btn-twitter {
-        height: 754px;
-        width: 764px;
+        img {
+            width: 764px;
+        }
     }
     &.worship-btn-facebook {
         width: 1080px;
-        margin-top: -170px;
+        margin-top: 0;
     }
 }

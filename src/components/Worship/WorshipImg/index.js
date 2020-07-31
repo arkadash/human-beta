@@ -7,15 +7,15 @@ const ASSETS_BASE = 'assets';
 
 const IMAGES_KEY_MAP = {
     FACEBOOK: {
-        img: 'album.png',
+        img: 'facebook.png',
         title: 'Facebook'
     },
     INSTAGRAM: {
-        img: 'history.png',
+        img: 'instagram.png',
         title: 'Instagram'
     },
     TWITTER: {
-        img: 'bird-clipart.png',
+        img: 'twitter.png',
         title: 'Twitter'
     }
 };

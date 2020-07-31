@@ -87,9 +87,13 @@ const Worship = ({ nextStep, ...rest}) => {
                             </button>
                         )
                     }>
-                    <WorshipBtnName onClick={onClick} selected={selected === "FACEBOOK"} srcKey="FACEBOOK"/>
-                    <WorshipBtnName onClick={onClick} selected={selected === "TWITTER"} srcKey="TWITTER"/>
-                    <WorshipBtnName onClick={onClick} selected={selected === "INSTAGRAM"} srcKey="INSTAGRAM"/>
+                    <WorshipBtnName
+                        onClick={onClick} selected={selected === "FACEBOOK"} srcKey="FACEBOOK"
+                    />
+                    <WorshipBtnName
+                        onClick={onClick} selected={selected === "TWITTER"} srcKey="TWITTER"/>
+                    <WorshipBtnName
+                        onClick={onClick} selected={selected === "INSTAGRAM"} srcKey="INSTAGRAM"/>
                 </Carousel>
             </div>
         </BaseComponent>
