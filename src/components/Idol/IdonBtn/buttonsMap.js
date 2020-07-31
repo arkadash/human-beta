@@ -3,80 +3,80 @@ const ASSETS_BASE_GS = 'assets/idolimages/Filter/Greyscale';
 
 export default {
     KING_JAMES: {
-        title: 'kingjames',
+        title: '#Kingjames',
         img: `${ASSETS_BASE_GS}/kingjames.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/kingjames.jpg`
 
     },
     KIN_KARDASHIAN: {
-        title: 'kim kardashian',
+        title: '#Kimkardashian',
         img: `${ASSETS_BASE_GS}/kimkardashian.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/kimkardeshian.jpg`
     },
     BUDDHA: {
-        title: 'Buddha',
+        title: '#Buddha',
         img: `${ASSETS_BASE_GS}/buddha.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/Buddha.jpg`
     },
     JUSTIN_BIEBER: {
-        title: 'justinbieber',
+        title: '#Justinbieber',
         img: `${ASSETS_BASE_GS}/justinbieber.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/justinbieber.jpg`
     },
     ADOLF_HITLER: {
-        title: 'Adolf Hitler',
+        title: '#Adolfhitler',
         img: `${ASSETS_BASE_GS}/adolfhitler.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/Adolf Hitler.jpg`
     },
     KELLY_JENNER: {
-        title: 'kyliejenner',
+        title: '#Kyliejenner',
         img: `${ASSETS_BASE_GS}/kyliejenner.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/kyliejenner.jpg`
     },
     CRISTIANO: {
-        title: 'cristiano',
+        title: '#Cristiano',
         img: `${ASSETS_BASE_GS}/cristiano.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/cristiano.jpg`
     },
     DONALD_TRUMP: {
-        title: 'donaldtrump',
+        title: '#Donaldtrump',
         img: `${ASSETS_BASE_GS}/donalndtrumph.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/DonaldTrump.jpg`
     },
     ARIANA_GRANDE: {
-        title: 'arianagrande',
+        title: '#Arianagrande',
         img: `${ASSETS_BASE_GS}/arianagrande.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/arianagrande.jpg`
     },
     ALBERT_EINSTEIN: {
-        title: 'Albert Einstein',
+        title: '#Alberteinstein',
         img: `${ASSETS_BASE_GS}/alberteinstein.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/AlbertEinstein.jpg`
     },
     THE_ROCK: {
-        title: 'therock',
+        title: '#Therock',
         img: `${ASSETS_BASE_GS}/therock.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/therock.jpg`
     },
     LEO_MESSI: {
-        title: 'leomessi',
+        title: '#Leomessi',
         img: `${ASSETS_BASE_GS}/leomessi.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/leomessi.jpg`
     },
     BEYONCE: {
-        title: 'beyonce',
+        title: '#Beyonce',
         img: `${ASSETS_BASE_GS}/beyonce.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/beyonce-insta.jpg`
     },
     ZUCK: {
-        title: 'zuck',
+        title: '#Zuck',
         img: `${ASSETS_BASE_GS}/zuck.jpg`,
         imgClicked: `${ASSETS_BASE_DIFFERENCE}/zuck.jpg`
     },
     FATHER: {
-        title: 'Father'
+        title: '#Father'
     },
     MOTHER: {
-        title: 'Mother'
+        title: '#Mother'
     }
 }
