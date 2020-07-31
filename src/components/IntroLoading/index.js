@@ -45,7 +45,7 @@ const IntroLoading = ({ onClick = noop}) => {
             <TVOverlay/>
             <FolderOverlay/>
             <div className="intro-loading-container" ref={introRef}>
-                <Cursor difference={false}/>
+                <Cursor/>
                 <div className="intro-loading-camera" ref={cameraRef} style={{
                     right: getCameraWidth()
                 }}>
