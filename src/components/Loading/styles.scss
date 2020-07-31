@@ -8,6 +8,23 @@ $color: #FF0000;
     width: 1080px;
     box-sizing: border-box;
 
+    .loading-camera {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            filter: grayscale(100%);
+            box-sizing: border-box;
+            opacity: 0.2;
+        }
+    }
+
     header {
         width: 100%;
     }

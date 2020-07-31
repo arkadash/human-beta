@@ -6,11 +6,21 @@ import Cursor from '../Cursor';
 import TVOverlay from '../TVOverlay';
 import './styles.scss';
 import HeaderLine from "../BaseComponent/HeaderLine";
+import {getCameraWidth} from "../../constants";
+import Webcam from "react-webcam";
+
+const videoConstraints = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+    facingMode: "environment"
+};
 
 const Loading = ({
     nextStep = noop,
 }) => {
     const [progress, setProgress] = React.useState(0);
+    const cameraRef = React.createRef();
+    const webcamRef = React.createRef();
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -35,6 +45,16 @@ const Loading = ({
             <TVOverlay/>
             <Cursor/>
             <div className={classNames('loading-screen', 'bg-color-black')}>
+                <div className="loading-camera" ref={cameraRef} style={{
+                    right: getCameraWidth()
+                }}>
+                    <Webcam audio={false} height={videoConstraints.height}
+                            ref={webcamRef}
+                            screenshotFormat="image/jpeg"
+                            videoConstraints={videoConstraints}
+                            mirrored
+                    />
+                </div>
                 <header>
                     <HeaderLine/>
                 </header>
