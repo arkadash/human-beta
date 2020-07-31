@@ -45,20 +45,20 @@ const Intro = ({ onClick = noop}) => {
                 </div>
                 <div className="intro-body-container">
                    <img src={`${ASSETS_BASE}/intro/logo.png`} alt="sol_e"/>
-                   <img src={`${ASSETS_BASE}/intro/astr.png`} className="astr-img" alt=""/>
+                   {/*<img src={`${ASSETS_BASE}/intro/astr.png`} className="astr-img" alt=""/>*/}
                 </div>
-                <div className="intro-footer-container">
-                    <div className="intro-creator-container">
-                        <div className="intro-creator">
-                            Created by the creator
-                        </div>
-                    </div>
-                    <div className="intro-version-container">
-                        <p className="intro-version">
-                            Version number 1.8.3
-                        </p>
-                    </div>
-                </div>
+                {/*<div className="intro-footer-container">*/}
+                {/*    <div className="intro-creator-container">*/}
+                {/*        <div className="intro-creator">*/}
+                {/*            Created by the creator*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    <div className="intro-version-container">*/}
+                {/*        <p className="intro-version">*/}
+                {/*            Version number 1.8.3*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </>
     );

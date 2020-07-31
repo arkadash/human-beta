@@ -16,12 +16,13 @@
         video {
             filter: grayscale(100%);
             box-sizing: border-box;
+            opacity: 0.2;
         }
     }
 
     .intro-body-container {
         position: absolute;
-        top: 900px;
+        top: 890px;
         display: inline-flex;
         justify-content: center;
         width: 100%;
