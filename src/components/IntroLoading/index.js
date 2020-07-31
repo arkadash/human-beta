@@ -6,6 +6,7 @@ import FolderOverlay from '../FolderOverlay';
 import TVOverlay from '../TVOverlay';
 import Cursor from '../Cursor';
 import './styles.scss';
+import HeaderLine from "../BaseComponent/HeaderLine";
 
 const SCREEN_WIDTH = 1080;
 
@@ -55,9 +56,13 @@ const IntroLoading = ({ onClick = noop}) => {
                         mirrored
                     />
                 </div>
+                <div className="intro-header-container">
+                    <HeaderLine/>
+                </div>
                 <div className="intro-body-container">
                     {/*<div className="intro-astr-overlay"/>*/}
                     <img src={`${ASSETS_BASE}/loadingIntro/soly.gif`} className="astr-img" alt=""/>
+                    <div className="logging-in">Logging In...</div>
                 </div>
                 <div className="intro-footer-container">
                     <div className="intro-loading-number">
@@ -65,6 +70,7 @@ const IntroLoading = ({ onClick = noop}) => {
                     </div>
                 </div>
             </div>
+            <div className="red-diff-overlay"/>
         </>
     );
 };
