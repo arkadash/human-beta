@@ -1,5 +1,5 @@
 import * as faceapi from 'face-api.js';
-import {MODULES_BASE} from '../../../constants';
+import {ASSETS_BASE, MODULES_BASE} from '../../../constants';
 
 // const LINE_SIZE = 170;
 const LINE_WIDTH = 8;
@@ -25,7 +25,7 @@ const canvasData = (textLines = [], canvas) => {
   });
 }
 
-const drawFaceSquare = (canvas, resizedDetections, drawCircle) => {
+const drawFaceSquare2 = (canvas, resizedDetections, drawCircle) => {
   resizedDetections.forEach((detected) => {
     const box = detected.detection.box;
     const LINE_SIZE = Math.min(box.width, box.height) / 6;
@@ -57,6 +57,27 @@ const drawFaceSquare = (canvas, resizedDetections, drawCircle) => {
     ctx.strokeStyle = 'red';
     ctx.lineWidth = LINE_WIDTH;
     ctx.stroke();
+  })
+};
+
+const base_image = new Image();
+base_image.src = `${ASSETS_BASE}/camera/camera.svg`;
+
+const drawFaceSquare = (canvas, resizedDetections, drawCircle) => {
+  resizedDetections.forEach((detected) => {
+    const box = detected.detection.box;
+    // const LINE_SIZE = Math.min(box.width, box.height) / 6;
+    const ctx = canvas.getContext('2d');
+    // ctx.beginPath();
+    drawCircle(ctx, box);
+
+    // base_image.onload = function(){
+      ctx.drawImage(base_image, box.x, box.y, box.width, box.height);
+    // }
+
+    // ctx.strokeStyle = 'red';
+    // ctx.lineWidth = LINE_WIDTH;
+    // ctx.stroke();
   })
 };
 
