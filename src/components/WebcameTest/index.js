@@ -33,7 +33,9 @@ const getMaxKeyByValue = (values) => {
 const WebCamera = ({ onClick = noop}) => {
     const [imgTaken, setImgTaken] = useState(false);
     const [ready, setReady] = useState(false);
-    const [detected, setDetected] = useState([]);
+    const [detected, setDetected] = useState({ text: [], box: {
+        x: 0, y:0, width: 0, height: 0
+    },  factorX: 0, factorY: 0 });
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
 
@@ -52,13 +54,19 @@ const WebCamera = ({ onClick = noop}) => {
             `Gender: ${nameCapitalized(resizedDetections[0].gender)}`
         ];
 
-        setDetected(expressionText);
+        setDetected({
+            text: expressionText,
+            box: resizedDetections[0].detection.box,
+            factorX: resizedDetections[0].alignedRect.imageWidth / 1080,
+            factorY: resizedDetections[0].alignedRect.imageHeight / 1920
+        });
     }
 
     useEffect(() => {
         return init(webcamRef.current.video, cameraRef.current, onLoad, onDetect);
     }, []);
 
+    const cameraWidth = getCameraWidth();
     return (
         <>
             <TVOverlay/>
@@ -66,7 +74,7 @@ const WebCamera = ({ onClick = noop}) => {
             <div className="camera-container">
                 <Cursor/>
                     <div className="camera-test" ref={cameraRef} style={{
-                        right: getCameraWidth() - 200
+                        right: cameraWidth - 200
                     }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
@@ -79,7 +87,7 @@ const WebCamera = ({ onClick = noop}) => {
                 </div>
                 <div className="detected-data">
                     {
-                        detected.map((line, index) => {
+                        detected.text.map((line, index) => {
                             return (
                                 <div key={index}>{line}</div>
                             );
@@ -107,6 +115,12 @@ const WebCamera = ({ onClick = noop}) => {
                      </>
                 </div>
             </div>
+            <div className={classNames('camera-face-overlay')} style={{
+                'top': `${detected.box.y * detected.factorY}px`,
+                'left': `${(detected.box.x) - 1080 - 100}px`,
+                'width': `${detected.box.width - 16}px`,
+                'height': `${detected.box.height - 16}px`,
+            }} />
             <div className={classNames('camera-overlay', { 'take-img': imgTaken})} />
         </>
     );
