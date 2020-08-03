@@ -61,7 +61,7 @@ const drawFaceSquare2 = (canvas, resizedDetections, drawCircle) => {
 };
 
 const base_image = new Image();
-base_image.src = `${ASSETS_BASE}/camera/camera.svg`;
+base_image.src = `${ASSETS_BASE}/camera/camera overlay3.svg`;
 
 const drawFaceSquare = (canvas, resizedDetections, drawCircle) => {
   resizedDetections.forEach((detected) => {
@@ -69,7 +69,7 @@ const drawFaceSquare = (canvas, resizedDetections, drawCircle) => {
     // const LINE_SIZE = Math.min(box.width, box.height) / 6;
     const ctx = canvas.getContext('2d');
     // ctx.beginPath();
-    drawCircle(ctx, box);
+    // drawCircle(ctx, box);
 
     // base_image.onload = function(){
       ctx.drawImage(base_image, box.x, box.y, box.width, box.height);

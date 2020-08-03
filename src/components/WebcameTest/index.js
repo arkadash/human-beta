@@ -87,22 +87,24 @@ const WebCamera = ({ onClick = noop}) => {
                     }
                 </div>
                 <div className="camera-footer-container">
-                    {
-                        !imgTaken && ready && <>
-                            <p className="camera-text-smile">
-                                DO NOT forget to <br/> SMILE:)
-                            </p>
-                            <button className="camera-next-btn" onClick={takePic}>
-                                <img src={`${ASSETS_BASE}/camera/button.png`} alt="sol_e"/>
-                            </button>
-                        </>
-                    }
-                    {
-                        !ready && <p className="camera-next-text">
-                            Hold your position for a <br/>
-                            better selfie
-                        </p>
-                    }
+                     <>
+                         <p className={classNames('camera-text-smile', { 'display-text': !imgTaken && ready})}>
+                             DO NOT forget to <br/> SMILE:)
+                         </p>
+                         <p className="camera-scan">{!imgTaken ? 'Scan': 'Scanning...'}</p>
+                         <p className="camera-scan-details">
+                              Hold your position for a better selfie.<br/> It can take a few seconds.
+                         </p>
+                         <div className="camera-next-btn-container">
+                             <button className="camera-next-btn" onClick={takePic}>
+                                 {/*<img src={`${ASSETS_BASE}/camera/button.svg`} alt="sol_e"/>*/}
+                                 <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <circle cx="69.9998" cy="70.0001" r="57.6471" fill="#FF0000"/>
+                                     <circle opacity="0.5" cx="70" cy="70" r="66" stroke="#FF0000" stroke-width="8"/>
+                                 </svg>
+                             </button>
+                         </div>
+                     </>
                 </div>
             </div>
             <div className={classNames('camera-overlay', { 'take-img': imgTaken})} />

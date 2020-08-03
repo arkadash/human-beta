@@ -52,18 +52,27 @@
 
     .camera-footer-container {
         position: absolute;
-        top: 1300px;
+        top: 50vh;
         width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
 
-        button {
-            border: none;
+        .camera-next-btn-container {
+            margin-top: 80px;
+            display: inline-flex;
+            justify-content: center;
 
-            img {
-                width: 264px;
-                height: 264px;
+            button {
+                border: none;
+                width: 140px;
+                height: 140px;
+
+                &:hover {
+                    circle {
+                        opacity: 1;
+                    }
+                }
             }
         }
 
@@ -81,27 +90,40 @@
         }
 
         .camera-text-smile {
+            margin-top: 160px;
             font-family: Roboto Mono;
             font-style: normal;
-            font-weight: 500;
-            font-size: 40px;
+            font-weight: normal;
+            font-size: 24px;
             line-height: 48px;
             letter-spacing: 0.02em;
             color: #FF0000;
+            opacity: 0.6;
             box-sizing: border-box;
             padding-left: 80px;
         }
-    }
-}
+        .camera-scan {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 0.87;
+        }
 
-body {
-    //margin: 0;
-    //padding: 0;
-    //width: 100vw;
-    //height: 100vh;
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
+        .camera-scan-details {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 150%;
+            text-align: center;
+            color: #FF0000;
+            opacity: 0.6;
+        }
+    }
 }
 
 canvas {

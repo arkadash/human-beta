@@ -7,8 +7,6 @@ import FolderOverlay from '../FolderOverlay';
 import TVOverlay from '../TVOverlay';
 import './styles.scss';
 
-const SCREEN_WIDTH = 1080;
-
 const videoConstraints = {
     width: window.innerWidth,
     height: window.innerHeight,
