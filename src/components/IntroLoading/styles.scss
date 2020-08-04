@@ -16,7 +16,7 @@
         video {
             filter: grayscale(100%);
             box-sizing: border-box;
-            opacity: 0.2;
+            opacity: 0.4;
         }
     }
 
@@ -33,7 +33,7 @@
 
     .intro-body-container {
         position: absolute;
-        top: calc(50% - 128px);
+        top: calc(50% - 150px);
         justify-content: center;
         width: 100%;
         display: flex;

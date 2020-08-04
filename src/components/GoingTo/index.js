@@ -33,7 +33,7 @@ const GoingTo = ({ nextStep, ...rest }) => {
                      <RoundButton className={classNames('going-button-enter')}
                         onClick={() => {
                             setTimeout(nextStep, 0);
-                        }} text="ENTER"/>
+                        }} text="START"/>
                 </div>
             </BaseComponent>
             <div className={classNames('going-to-overlay')}/>

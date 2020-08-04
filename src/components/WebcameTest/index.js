@@ -108,7 +108,7 @@ const WebCamera = ({ onClick = noop}) => {
                                  {/*<img src={`${ASSETS_BASE}/camera/button.svg`} alt="sol_e"/>*/}
                                  <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                                      <circle cx="69.9998" cy="70.0001" r="57.6471" fill="#FF0000"/>
-                                     <circle opacity="0.5" cx="70" cy="70" r="66" stroke="#FF0000" stroke-width="8"/>
+                                     <circle opacity="0.2" cx="70" cy="70" r="66" stroke="#FF0000" stroke-width="8"/>
                                  </svg>
                              </button>
                          </div>

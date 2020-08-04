@@ -115,13 +115,13 @@ $color: #FF0000;
         video {
             filter: grayscale(100%);
             box-sizing: border-box;
-            opacity: 0.2;
+            opacity: 0.5;
         }
     }
 }
 
 .progress-bar {
-    height: 46px;
+    height: 40px;
     background-color: $color;
     position: absolute;
     bottom: 0;
@@ -133,7 +133,7 @@ $color: #FF0000;
     position: absolute;
     top: 0;
     background-image: url('../../localAssets/texture.png');
-    mix-blend-mode: screen;
+    mix-blend-mode: difference;
     pointer-events: none;
     z-index: 1;
 }

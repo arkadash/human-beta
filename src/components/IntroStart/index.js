@@ -46,7 +46,7 @@ const IntroStart = ({ onClick = noop}) => {
             </div>
             <div className="intro-footer-container">
                 <div className="intro-button-container">
-                    <RoundButton onClick={onClick} text="START"/>
+                    <RoundButton onClick={onClick} text="ENTER"/>
                 </div>
                 <div className="intro-footer-version-container">
                     <div className="intro-creator-container">
@@ -56,7 +56,7 @@ const IntroStart = ({ onClick = noop}) => {
                     </div>
                     <div className="intro-version-container">
                         <p className="intro-version">
-                            Version number 1.8.3
+                            Version number 6.1.3
                         </p>
                     </div>
                 </div>
