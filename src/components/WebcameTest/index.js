@@ -74,7 +74,7 @@ const WebCamera = ({ onClick = noop}) => {
             <div className="camera-container">
                 <Cursor/>
                     <div className="camera-test" ref={cameraRef} style={{
-                        right: cameraWidth - 200
+                        right: cameraWidth * 2
                     }}>
                     <Webcam audio={false} height={videoConstraints.height}
                         ref={webcamRef}
@@ -115,12 +115,12 @@ const WebCamera = ({ onClick = noop}) => {
                      </>
                 </div>
             </div>
-            <div className={classNames('camera-face-overlay')} style={{
-                'top': `${detected.box.y * detected.factorY}px`,
-                'left': `${(detected.box.x) - 1080 - 100}px`,
-                'width': `${detected.box.width - 16}px`,
-                'height': `${detected.box.height - 16}px`,
-            }} />
+            {/*<div className={classNames('camera-face-overlay')} style={{*/}
+            {/*    'top': `${detected.box.y * detected.factorY}px`,*/}
+            {/*    'left': `${(detected.box.x) - 1080 - 100}px`,*/}
+            {/*    'width': `${detected.box.width - 16}px`,*/}
+            {/*    'height': `${detected.box.height - 16}px`,*/}
+            {/*}} />*/}
             <div className={classNames('camera-overlay', { 'take-img': imgTaken})} />
         </>
     );

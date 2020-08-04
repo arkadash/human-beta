@@ -50,7 +50,7 @@ const BaseComponent = ({
             {camera &&
                 <div className="base-camera-container" ref={introRef}>
                     <div className="intro-loading-camera" ref={cameraRef} style={{
-                        right: getCameraWidth()
+                        right: `${getCameraWidth()}px`
                     }}>
                         <Webcam audio={false} height={videoConstraints.height}
                                 ref={webcamRef}
