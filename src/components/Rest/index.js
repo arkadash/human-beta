@@ -35,7 +35,7 @@ const Rest = ({...rest}) => {
                     <Typist cursor={{element: '_'}}
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={2500}/>
+                        <Typist.Delay ms={1500}/>
                         Who rest<br/> on the 7th day?
                     </Typist>
                 </div>

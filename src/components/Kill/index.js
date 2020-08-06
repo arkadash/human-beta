@@ -38,7 +38,7 @@ const Kill = ({ nextStep, ...rest}) => {
         } else {
             setSelectionState(key);
         }
-        setTimeout(nextStep, 1000);
+        setTimeout(nextStep, 500);
     }
 
     return (
@@ -49,7 +49,7 @@ const Kill = ({ nextStep, ...rest}) => {
                         <Typist cursor={{element: '_'}}
                                 avgTypingDelay={100}
                                 onTypingDone={() => setDisplaySelection(true)}>
-                            <Typist.Delay ms={2500}/>
+                            <Typist.Delay ms={1500}/>
                             Have<br/>you murdered anyone?
                         </Typist>
                     </div>

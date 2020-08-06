@@ -25,7 +25,7 @@ const Promise = ({  nextStep, ...rest}) => {
         } else {
             setPronmiseSelection(key);
         }
-        setTimeout(nextStep, 1000);
+        setTimeout(nextStep, 500);
     };
 
     return (
@@ -45,7 +45,7 @@ const Promise = ({  nextStep, ...rest}) => {
                     <Typist cursor={{ element: '_' }}
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={2500}/>
+                        <Typist.Delay ms={1500}/>
                         Promises
                     </Typist>
                 </div>

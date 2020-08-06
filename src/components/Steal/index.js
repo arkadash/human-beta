@@ -38,10 +38,10 @@ const Steal = ({nextStep, ...rest}) => {
             setFirstBackSelection(true);
         } else if(selected === key) {
             setSelectionState('');
-            setTimeout(nextStep, 1000);
+            setTimeout(nextStep, 500);
         } else {
             setSelectionState(key);
-            setTimeout(nextStep, 1000);
+            setTimeout(nextStep, 500);
         }
     }
 
@@ -54,7 +54,7 @@ const Steal = ({nextStep, ...rest}) => {
                             <Typist cursor={{element: '_'}}
                                     avgTypingDelay={100}
                                     onTypingDone={() => setDisplaySelection(true)}>
-                                <Typist.Delay ms={2500}/>
+                                <Typist.Delay ms={1500}/>
                                 Will you<br/>return a 20$ purse?
                                 {firstBackSelection && <span>Some text</span>
 

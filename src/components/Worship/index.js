@@ -24,7 +24,7 @@ const Worship = ({ nextStep, ...rest}) => {
         }
         setTimeout(() => {
             nextStep();
-        }, 1000);
+        }, 500);
     };
 
     return (
@@ -33,7 +33,7 @@ const Worship = ({ nextStep, ...rest}) => {
                 <Typist cursor={{ element: '_' }}
                         avgTypingDelay={100}
                         onTypingDone={() => setDisplaySelection(true)}>
-                    <Typist.Delay ms={2500}/>
+                    <Typist.Delay ms={1500}/>
                     Who<br/>
                     do you worship?
                 </Typist>

@@ -17,7 +17,7 @@ const Rich = ({nextStep, ...rest}) => {
         } else {
             setSelectionState(key);
         }
-        setTimeout(nextStep, 1000);
+        setTimeout(nextStep, 500);
     }
 
     return (
@@ -27,7 +27,7 @@ const Rich = ({nextStep, ...rest}) => {
                     <Typist cursor={{element: '_'}}
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
-                        <Typist.Delay ms={2500}/>
+                        <Typist.Delay ms={1500}/>
                         What is<br/>your aspiration?
                     </Typist>
                 </div>
