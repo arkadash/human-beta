@@ -42,8 +42,9 @@ $color: #FF0000;
                     color: $color;
                     opacity: 0.5;
                     border: none;
-                    border-bottom: 2px solid $color;
+                    //border-bottom: 2px solid $color;
                     padding: 0 0 8px 0;
+                    position: relative;
 
                     &:hover {
                         opacity: 0.8;
@@ -51,6 +52,15 @@ $color: #FF0000;
 
                     &:disabled {
                         opacity: 0.25 !important;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 42px;
+                        bottom: 0;
+                        left: 0;
+                        border-bottom: 2px solid $color;
                     }
                 }
             }

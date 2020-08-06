@@ -73,7 +73,7 @@ const Worship = ({ nextStep, ...rest}) => {
                                 onClickHandler(...props);
                                 hiddenNext.current.click();
                             }} className="btn-next">
-                                <img src={`${ASSETS_BASE}/right.png`} alt="next" className="img-next"/>
+                                <img src={`${ASSETS_BASE}/worship/button.png`} alt="next" className="img-next"/>
                             </button>
                         )
                     }
@@ -83,7 +83,7 @@ const Worship = ({ nextStep, ...rest}) => {
                                 onClickHandler(...props);
                                 hiddenPrev.current.click();
                             }} className="btn-prev">
-                                <img src={`${ASSETS_BASE}/right.png`} alt="prev"/>
+                                <img src={`${ASSETS_BASE}/worship/button.png`} alt="prev"/>
                             </button>
                         )
                     }>

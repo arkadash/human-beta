@@ -22,7 +22,7 @@ export default ({onClick = () => null, back = () => null}) => {
                     <img src={`${ASSETS_BASE}/menu/right.svg`} alt="sol_e"/>
                 </div>
                 <p className="menu-about-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi cras amet facilisis adipiscing sit. Placerat sed vel euismod.
+                    An interactive social project on morality in the digital age. "Sol_e" is a digital platform, in which the user is given the opportunity to go through a testing process that includes a scan and a questionnaire while utilizing the personal database.
                 </p>
             </div>
         </div>
