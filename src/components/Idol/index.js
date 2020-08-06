@@ -41,7 +41,7 @@ const Idol = ({...rest}) => {
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
                         <Typist.Delay ms={2500}/>
-                        Who<br/>is your idol
+                        Who<br/>is your idol?
                     </Typist>
                 </div>
                 <div className={classNames('idol-btn-wrapper', {'show-buttons': displaySelection})}>

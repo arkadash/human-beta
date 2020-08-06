@@ -7,11 +7,12 @@
     .rich-title {
         font-family: Roboto Mono;
         font-style: normal;
-        font-weight: 500;
+        font-weight: normal;
         font-size: 64px;
-        line-height: 120%;
+        line-height: 150%;
         color: #FFFFFF;
-        margin-bottom: 80px;
+        margin-bottom: 170px;
+        opacity: 0.87;
     }
 
     .rich-buttons-wrapper {
@@ -29,8 +30,8 @@
             font-weight: 500;
             font-size: 48px;
             color: #FFFFFF;
-            padding-top: 46px;
-            padding-bottom: 46px;
+            padding-top: 0;
+            padding-bottom: 0;
             border: 2px solid #FF0000;
             box-sizing: border-box;
 
@@ -60,7 +61,7 @@
         display: inline-flex;
         opacity: 0;
         transition: all 0.7s ease-in-out;
-        margin-bottom: 220px;
+        margin-bottom: 120px;
         justify-content: center;
         position: relative;
         min-height: 580px;
@@ -72,29 +73,32 @@
         svg {
             transition: all 0.7s ease-in-out;
             position: absolute;
-            top: 54%;
+            top: 184px;
             width: 125px;
             height: 110px;
         }
 
         img {
-            width: 408px;
-            height: 568px;
+            //width: 408px;
+            //height: 568px;
+            margin-top: 14px;
+            width: 445px;
+            height: 467px;
             transition: all 0.7s ease-in-out;
         }
 
         &.selected-happy,
         &.hover-selected-happy {
             svg {
-                width: 580px;
-                height: 500px;
-                top: 10%;
+                width: 434px;
+                height: 498px;
+                top: 0;
             }
 
             img {
-                width: 120px;
-                height: 160px;
-                margin-top: 200px;
+                width: 80px;
+                height: 80px;
+                margin-top: 192px;
                 position: relative;
             }
         }

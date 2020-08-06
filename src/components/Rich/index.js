@@ -28,7 +28,7 @@ const Rich = ({nextStep, ...rest}) => {
                             avgTypingDelay={100}
                             onTypingDone={() => setDisplaySelection(true)}>
                         <Typist.Delay ms={2500}/>
-                        What<br/>is your ambition?
+                        What is<br/>your aspiration?
                     </Typist>
                 </div>
                 <div className={classNames('main-image', {
@@ -37,7 +37,7 @@ const Rich = ({nextStep, ...rest}) => {
                     'selected-happy': selected === 'happy',
                     'hover-selected-happy': hoverBtnHappy
                 })}>
-                    <img src={`${ASSETS_BASE}/rich/ring.png`} alt="sol_e"/>
+                    <img src={`${ASSETS_BASE}/rich/dimond.png`} alt="sol_e"/>
                     <Hart/>
                 </div>
                 <div className={classNames('rich-buttons-wrapper', {'show-buttons': displaySelection})}>
@@ -45,7 +45,7 @@ const Rich = ({nextStep, ...rest}) => {
                         onClick={() => setSelection('happy')}
                         onMouseOver={() => setHoverBtnHappy(true)}
                         onMouseOut={() => setHoverBtnHappy(false)}
-                    >LOVE</button>
+                    >HAPPY</button>
                     <button className={classNames('rich-button-rich', {'btn-selected': selected === 'rich'})}
                             onClick={() => setSelection('rich')}>RICH</button>
                 </div>

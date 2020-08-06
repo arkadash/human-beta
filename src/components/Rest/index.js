@@ -57,7 +57,7 @@ const Rest = ({...rest}) => {
                         setSwitchSelected(selectedState);
                     }}/>
                     <div className="rest-switch-text">
-                        {switchSelected ? 'Clean' : 'All'}
+                        {switchSelected ? 'Clear' : 'All'}
                     </div>
                 </div>
             </div>
