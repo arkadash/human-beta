@@ -58,17 +58,25 @@ const Kill = ({ nextStep, ...rest}) => {
                         'selected-love': selected === 'love',
                         'selected-hate': selected === 'hate'
                     })}>
-                        <img src={`${ASSETS_BASE}/kill/glock 1.png`} alt="sol_e"/>
+                        {/*<img src={`${ASSETS_BASE}/kill/glock 1.png`} alt="sol_e"/>*/}
                         { selected === 'rich' && <div className="img-selected-overlay"/> }
                     </div>
                     <div className={classNames('kill-buttons-wrapper', {'show-buttons': displaySelection})}>
                         <button className={classNames('kill-button-love', {'btn-selected': selected === 'love'})}
-                                onClick={() => setSelection('love')}>LIKE</button>
+                                onClick={() => setSelection('love')}>DISLIKE</button>
                         <button className={classNames('kill-button-hate', {'btn-selected': selected === 'hate'})}
-                                onClick={() => setSelection('hate')}>DISLIKE</button>
+                                onClick={() => setSelection('hate')}>LIKE</button>
                     </div>
                 </div>
             </BaseComponent>
+            <>
+                <img src={`${ASSETS_BASE}/kill/glockGifBase.png`} alt="sol_e"
+                     className={classNames('kill-gif', { 'display-gif': position !== 'love' && position !== 'hate'})}/>
+                <img src={`${ASSETS_BASE}/kill/KILL_DISLIKE.gif`} alt="sol_e"
+                     className={classNames('kill-gif', { 'display-gif': position === 'love'})}/>
+                <img src={`${ASSETS_BASE}/kill/KILL_LIKE.gif`} alt="sol_e"
+                     className={classNames('kill-gif', { 'display-gif': position === 'hate'})}/>
+            </>
             <div className={classNames('kill-selection-wrapper',
                 {
                     'kill-selection-love': (position === 'love' || selected === 'love') && selected !== 'hate',
