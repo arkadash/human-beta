@@ -147,7 +147,6 @@ const resizeCrop1 = ( src, width, height ) => {
 }
 
 const resizeCrop = ( src, width, height ) => {
-    debugger;
     let crop = width === 0 || height === 0;
     // not resize
     if(src.width <= width && height === 0) {
