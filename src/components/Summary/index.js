@@ -82,7 +82,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
                 </span>
                         {
                             stage === STAGE.improve &&
-                            <Improve onBack={() => {
+                            <Improve isAngel={isAngel} onBack={() => {
                                 setStage(STAGE.main)
                             }}
                             onChange={() => { setStage(STAGE.certificate) }}
@@ -90,7 +90,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
                         }
                         {
                             stage === STAGE.certificate &&
-                            <Preserve onChange={() => { setStage(STAGE.improve) }}
+                            <Preserve isAngel={isAngel} onChange={() => { setStage(STAGE.improve) }}
                             onBack={() => {
                                 setStage(STAGE.main)
                             }}/>
