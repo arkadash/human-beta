@@ -26,7 +26,6 @@ const STAGE = {
 }
 
 const SummaryStatistics = ({ userImage, isAngel }) => {
-    isAngel = false;
     const [stage, setStage] = useState(STAGE.welcome);
 
     const cameraRef = React.createRef();
