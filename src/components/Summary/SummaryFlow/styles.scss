@@ -45,5 +45,11 @@
         pointer-events: none;
         height: 890px;
     }
+
+    &.summary-statistics-flow-demon {
+        .summary-statistics-title {
+            color: #FF0000;
+        }
+    }
 }
 
