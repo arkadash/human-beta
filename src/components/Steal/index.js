@@ -63,9 +63,9 @@ const Steal = ({nextStep, ...rest}) => {
                             <span className="second-back-click">
                                   Will you<Typist cursor={{element: '_'}}
                                         avgTypingDelay={100}>
-                                    return a 20$ purse?
+                                    return a 20$ wallet?
                                     <Typist.Backspace count={10} delay={300}/>
-                                    2000$ purse?
+                                    2000$ wallet?
                                 </Typist>
                             </span>
                         }
