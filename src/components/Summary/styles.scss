@@ -37,7 +37,14 @@
 
 .summary-improve-data-btn {
     position: absolute;
-    top: 56%;
+    top: calc(50% + 115px);
     right: 10%;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
+.summary-tv-overlay {
+    opacity: 0.3;
+}

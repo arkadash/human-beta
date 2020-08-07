@@ -15,7 +15,7 @@ export default ({ onChar }) => {
                     <div className="summary-data-images">
                         <img src={`${ASSETS_BASE}/summary/cards/performanceMain.png`}
                             alt="" className="character"/>
-                        <img src={`${ASSETS_BASE}/summary/left.png`}
+                        <img src={`${ASSETS_BASE}/summary/left2.svg`}
                             alt="" className="data-btn"
                             onClick={() => {
                                 onChar()

@@ -11,7 +11,7 @@ export default ({ onBack, onChange = () => null }) => {
         <div className="statistics-certificate">
             <HeaderLine onBack={onBack}/>
             <img src={`${ASSETS_BASE}/summary/PRESERVE.png`} alt="" className="improve-img"/>
-            <img src={`${ASSETS_BASE}/summary/left.png`}
+            <img src={`${ASSETS_BASE}/summary/left2.svg`}
                  alt="" className="summary-improve-data-btn"
                  onClick={onChange}
             />
