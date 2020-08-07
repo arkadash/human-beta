@@ -9,31 +9,32 @@ export default ({ onFlow, onChar, onImprove, onCertificate }) => {
     return (
         <>
             <div className="summary-statistics-menu">
+                <img src={`${ASSETS_BASE}/summary/cards/stars.png`} alt="sol_e" className="summary-menu-stars"/>
                 <div className="summary-statistics-title">
                     Statistics.
                 </div>
                 <div className="summary-statistics-data">
                     <div className="summary-line-1">
-                        <img src={`${ASSETS_BASE}/summary/CHAR.png`}
+                        <img src={`${ASSETS_BASE}/summary/cards/charCard.png`}
                              alt="" className="character"
                              onClick={() => {
                                  onChar()
                              }}
                         />
-                        <img src={`${ASSETS_BASE}/summary/IMPROVE CARD.png`} alt="" className="improve"
+                        <img src={`${ASSETS_BASE}/summary/cards/improveCard.png`} alt="" className="improve"
                             onClick={() => {
                                 onImprove()
                             }}
                         />
                     </div>
                     <div className="summary-line-2">
-                        <img src={`${ASSETS_BASE}/summary/PERFORMANCE CARD.png`}
+                        <img src={`${ASSETS_BASE}/summary/cards/performanceCard.png`}
                              alt="" className="perform"
                              onClick={() => {
                                  onFlow()
                              }}
                         />
-                        <img src={`${ASSETS_BASE}/summary/PRESERVE CARD.png`} alt="" className="preserve"
+                        <img src={`${ASSETS_BASE}/summary/cards/preserveCard.png`} alt="" className="preserve"
                              onClick={() => {
                                  onCertificate()
                              }}/>

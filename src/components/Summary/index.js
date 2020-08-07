@@ -8,6 +8,7 @@ import SummaryMain from './Main';
 import Improve from './Statistics/improve';
 import Preserve from './Statistics/preserve';
 import './styles.scss';
+import FolderOverlay from "../FolderOverlay";
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -34,6 +35,7 @@ const SummaryStatistics = () => {
     return (
         <>
             <TVOverlay/>
+            <FolderOverlay/>
             <div className="summary-statistics-container" ref={introRef}>
                 <Cursor/>
                 <div className="summary-camera" ref={cameraRef} style={{

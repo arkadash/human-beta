@@ -1,6 +1,10 @@
 .summary-statistics-menu {
     margin-top: 60px;
 
+    .summary-menu-stars {
+
+    }
+
     .summary-statistics-title {
         font-family: Roboto;
         font-style: normal;
@@ -33,6 +37,12 @@
                 }
             }
         }
+    }
+
+    .summary-menu-stars {
+        position: absolute;
+        right: 40px;
+        top: calc(50% + 20px);
     }
 }
 

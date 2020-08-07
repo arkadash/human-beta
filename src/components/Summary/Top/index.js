@@ -3,7 +3,8 @@ import Typist from 'react-typist';
 import {ASSETS_BASE} from '../../../constants';
 import './styles.scss';
 
-const data = 'P<ISRANGEL<<USER<<<<<<<<<<<<<<<<<<< NO.000666<+972<5884022<+++<<<<<<<<<';
+const data1 = 'P<';
+const data2 = '<<USER<<<<<<<<<<<<<<<<<<<< NO.000666<+972<5884022<+++<<<<<<<<<';
 const cursor = {element: '_', hideWhenDone: true, hideWhenDoneDelay: 0};
 
 const delay = 10;
@@ -120,7 +121,7 @@ export default ({ onLoad }) => {
                 <div className="summary-name">
                     <Typist cursor={cursor} avgTypingDelay={delay}
                             onTypingDone={() => onLoad()}>
-                        {data}
+                        {data1}<span className="is-angel">ISANGEL</span>{data2}
                     </Typist>
                 </div>
             }
