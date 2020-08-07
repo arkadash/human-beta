@@ -45,5 +45,11 @@
         pointer-events: none;
         height: 920px;
     }
+
+    &.summary-statistics-menu-demon {
+        .summary-statistics-title {
+            color: #FF0000;
+        }
+    }
 }
 

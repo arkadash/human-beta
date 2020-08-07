@@ -13,7 +13,7 @@ const STAGE = {
     char: 'CHAR'
 }
 
-const SummaryMain = ({ onImprove, onCertificate, onWelcome, userImage }) => {
+const SummaryMain = ({ onImprove, onCertificate, onWelcome, userImage, isAngel = true }) => {
     const [displayMain, setDisplayMain] = useState(false);
     const [stage, setStage] = useState(STAGE.main);
 
@@ -23,17 +23,18 @@ const SummaryMain = ({ onImprove, onCertificate, onWelcome, userImage }) => {
     return (
         <>
             <div className="summary-statistics-main-container">
-                { stage === STAGE.main && <HeaderLine text="Profile." className="header-main"/> }
+                { stage === STAGE.main && <HeaderLine text="Profile." className="header-main" isAngel={isAngel}/> }
                 { stage !== STAGE.main && <HeaderLine text="Statistics." onBack={
                     () => setStage(STAGE.main)
-                }/> }
-                <Top onLoad={() => setDisplayMain(true)} onWelcome={onWelcome} userImage={userImage}/>
+                } isAngel={isAngel}/> }
+                <Top onLoad={() => setDisplayMain(true)} isAngel={isAngel} onWelcome={onWelcome} userImage={userImage}/>
                 <div className={classNames('summary-main', `display-stage-${stage.toLowerCase()}`,
                     { 'display-main': displayMain})}>
                     <SummaryMenu onCertificate={onCertificate}
                         onChar={() => setStage(STAGE.char)}
                         onFlow={() => setStage(STAGE.flow)}
                         onImprove={onImprove}
+                        isAngel={isAngel}
                     />
                     <SummaryChar onFlow={() => setStage(STAGE.flow)}/>
                     <SummaryFlow onChar={() => setStage(STAGE.char)}/>

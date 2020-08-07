@@ -26,6 +26,7 @@ const STAGE = {
 }
 
 const SummaryStatistics = ({ userImage, isAngel }) => {
+    isAngel = false;
     const [stage, setStage] = useState(STAGE.welcome);
 
     const cameraRef = React.createRef();
@@ -35,7 +36,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
     useEffect(() => {
         setTimeout(() => {
             setStage(STAGE.main)
-        }, 6000);
+        }, 0);
     }, [])
 
     const cameraBlur = stage !== STAGE.improve && stage !== STAGE.certificate && stage !== STAGE.welcome;
@@ -62,7 +63,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
                             />
                         </div>
                         <span className={classNames('main-container', {'display-main': stage === STAGE.main})}>
-                    <SummaryMain userImage={userImage} onFlow={() => {
+                    <SummaryMain isAngel={isAngel} userImage={userImage} onFlow={() => {
                         setStage(STAGE.flow)
                     }}
                      onWelcome={() => {

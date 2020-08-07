@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Typist from 'react-typist';
+import classNames from 'classnames';
 import {ASSETS_BASE} from '../../../constants';
 import './styles.scss';
-import AngelOverlay from "../AngelWingsOverlay";
 
 const data1 = 'P<';
 const data2 = '<<USER<<<<<<<<<<<<<<<<<<<< NO.000666<+972<5884022<+++<<<<<<<<<';
@@ -10,7 +10,7 @@ const cursor = {element: '_', hideWhenDone: true, hideWhenDoneDelay: 0};
 
 const delay = 10;
 
-export default ({ onLoad, onWelcome = () => null, userImage }) => {
+export default ({ onLoad, onWelcome = () => null, userImage, isAngel }) => {
     const [displaySummaryName, setSummaryName] = useState(false);
     const [displaySummaryData, setSummaryData] = useState([]);
 
@@ -19,7 +19,7 @@ export default ({ onLoad, onWelcome = () => null, userImage }) => {
 
     return (
         <>
-            <div className="summary-personal-container">
+            <div className={classNames('summary-personal-container', { 'summary-personal-demon': !isAngel })}>
                     <div className="summary-personal-image-container">
                         {/*<AngelOverlay/>*/}
                         <img src={userImage || `${ASSETS_BASE}/summary/placeholder.png`}
@@ -77,7 +77,7 @@ export default ({ onLoad, onWelcome = () => null, userImage }) => {
                                 {displaySummaryData.includes('ANGEL') &&
                                 <Typist cursor={cursor} avgTypingDelay={delay}
                                         onTypingDone={() => setSummaryData([...displaySummaryData, 'DATE'])}>
-                                    ANGEL
+                                    {isAngel? 'ANGEL': 'DEMON'}
                                 </Typist>
                                 }
                             </div>
@@ -121,10 +121,12 @@ export default ({ onLoad, onWelcome = () => null, userImage }) => {
                     </div>
                 </div>
             {displaySummaryName &&
-                <div className="summary-name">
+                <div className={classNames('summary-name', {'is-demon': !isAngel})}>
                     <Typist cursor={cursor} avgTypingDelay={delay}
                             onTypingDone={() => onLoad()}>
-                        {data1}<span className="is-angel">ISANGEL</span>{data2}
+                        {data1}<span className="is-angel">
+                            {isAngel? 'ISANGEL': 'ISDEMON'}
+                        </span>{data2}
                     </Typist>
                 </div>
             }

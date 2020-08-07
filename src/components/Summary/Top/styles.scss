@@ -71,6 +71,18 @@
             z-index: 9999;
         }
     }
+
+    &.summary-personal-demon {
+        .summary-data .summary-data-wrapper {
+
+            .summary-header {
+                color: #FFFFFF;
+            }
+            .summary-header-data {
+                color: #FF0000;
+            }
+        }
+    }
 }
 
 .summary-name {
@@ -87,6 +99,14 @@
     .is-angel {
         color:#FF0000;
         opacity: 1;
+    }
+
+    &.is-demon {
+        color: #FF0000 !important;
+
+        .is-angel {
+            color:#FFFFFF;
+        }
     }
 }
 
