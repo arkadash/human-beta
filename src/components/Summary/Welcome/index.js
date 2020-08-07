@@ -13,8 +13,7 @@ const videoConstraints = {
     facingMode: "environment"
 };
 
-export default ({ back = () => console.log('next')}) => {
-
+export default ({ back = () => console.log('next'), isAngel = true}) => {
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
 
@@ -34,10 +33,19 @@ export default ({ back = () => console.log('next')}) => {
                             mirrored
                     />
                 </div>
-                <HeaderLine text="Certificate." className="header-summary-welcome" onBack={back}/>
+                <HeaderLine text="Certificate."
+                    className="header-summary-welcome"
+                    isAngel={isAngel}
+                    onBack={back}/>
             </div>
-            <img src={`${ASSETS_BASE}/summary/welcomeAngel.png`} alt="" className="summary-animation-welcome-img"/>
-            <img src={`${ASSETS_BASE}/summary/animations/ARROWES-WHITE.gif`} alt="" className="summary-animation-welcome-img"/>
+            <img src={isAngel? `${ASSETS_BASE}/summary/welcomeAngel.png`: `${ASSETS_BASE}/summary/welcomeDemon.png`}
+                 alt=""
+                 className="summary-animation-welcome-img"/>
+            <img src={
+                isAngel?
+                `${ASSETS_BASE}/summary/animations/ARROWES-WHITE.gif`:
+                `${ASSETS_BASE}/summary/animations/ARROWES-RED.gif`
+            } alt="" className="summary-animation-welcome-img"/>
         </>
     );
 };

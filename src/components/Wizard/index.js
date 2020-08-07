@@ -32,6 +32,7 @@ const transitions = {
 
 const Wizard = () => {
     const [userImage, setUserImage] = useState();
+    const [isAngel, setIsAngel] = useState(true);
 
     const onCapture = (img) => {
         setUserImage(img)
@@ -56,7 +57,7 @@ const Wizard = () => {
             <Steal/>
             <Lie/>
             <Rich/>
-            <Summary userImage={userImage}/>
+            <Summary userImage={userImage} isAngel={isAngel}/>
         </StepWizard>
     );
 };

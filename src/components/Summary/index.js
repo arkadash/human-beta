@@ -25,7 +25,7 @@ const STAGE = {
     welcome: 'WELCOME'
 }
 
-const SummaryStatistics = ({ userImage }) => {
+const SummaryStatistics = ({ userImage, isAngel }) => {
     const [stage, setStage] = useState(STAGE.welcome);
 
     const cameraRef = React.createRef();
@@ -46,7 +46,7 @@ const SummaryStatistics = ({ userImage }) => {
             <FolderOverlay/>
             {
                 stage === STAGE.welcome ?
-                    <SummaryWelcome back={() => setStage(STAGE.main)}/> :
+                    <SummaryWelcome back={() => setStage(STAGE.main)} isAngel={isAngel}/> :
                     <div className="summary-statistics-container" ref={introRef}>
                         <Cursor/>
                         <div className={classNames('summary-camera',
