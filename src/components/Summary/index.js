@@ -10,6 +10,7 @@ import Preserve from './Statistics/preserve';
 import FolderOverlay from '../FolderOverlay';
 import SummaryWelcome from './Welcome';
 import './styles.scss';
+import AngelOverlay from "./AngelWingsOverlay";
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -95,6 +96,7 @@ const SummaryStatistics = () => {
                         }
                     </div>
             }
+            <AngelOverlay/>
         </>
     );
 };
