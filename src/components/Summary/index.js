@@ -97,7 +97,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
                         }
                     </div>
             }
-            <AngelOverlay blur={
+            <AngelOverlay isAngel={isAngel} blur={
                 stage === STAGE.main
             }/>
         </>
