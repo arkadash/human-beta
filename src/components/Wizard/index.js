@@ -19,6 +19,7 @@ import IntroStartHoc from '../IntroStart';
 import Login from '../LogIn';
 import GoingTo from '../GoingTo';
 import Summary from '../Summary';
+import SummaryWelcome from '../Summary/Welcome';
 
 const ANIMATE = 'animate__animated';
 
@@ -49,6 +50,7 @@ const Wizard = () => {
             <Steal/>
             <Lie/>
             <Rich/>
+            <SummaryWelcome/>
             <Summary/>
         </StepWizard>
     );
