@@ -12,7 +12,7 @@ const videoConstraints = {
     facingMode: "environment"
 };
 
-export default () => {
+export default ({ IconComponent = Icon }) => {
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
     const introRef = React.createRef();
@@ -32,7 +32,7 @@ export default () => {
         <>
             <div>
                 <button onClick={toggleDrawer(true)}>
-                    <Icon/>
+                    <IconComponent/>
                 </button>
                 <Drawer anchor="right" open={stateOpen}
                     onClose={toggleDrawer(false)}>

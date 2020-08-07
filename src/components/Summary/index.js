@@ -38,7 +38,9 @@ const SummaryStatistics = () => {
             <FolderOverlay/>
             <div className="summary-statistics-container" ref={introRef}>
                 <Cursor/>
-                <div className="summary-camera" ref={cameraRef} style={{
+                <div className={classNames('summary-camera',
+                    { 'camera-blur': (stage !== STAGE.improve && stage !== STAGE.certificate)})}
+                    ref={cameraRef} style={{
                     right: getCameraWidth()
                 }}>
                     <Webcam audio={false} height={videoConstraints.height}

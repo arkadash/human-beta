@@ -9,7 +9,7 @@ export default ({ onBack }) => {
 
     return (
         <div className="statistics-certificate">
-            <HeaderLine onBack={onBack} text="Certificate"/>
+            <HeaderLine onBack={onBack}/>
             <img src={`${ASSETS_BASE}/summary/CERTIFICATE.png`} alt=""/>
         </div>
     );

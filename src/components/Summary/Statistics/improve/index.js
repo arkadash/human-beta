@@ -9,8 +9,8 @@ export default ({ onBack }) => {
 
     return (
         <div className="statistics-improve">
-            <HeaderLine onBack={onBack} text="Improve"/>
-            <img src={`${ASSETS_BASE}/summary/IMPROVE.png`} alt="" className="improve-img"/>
+            <HeaderLine onBack={onBack}/>
+            <img src={`${ASSETS_BASE}/summary/IMPROVE2.png`} alt="" className="improve-img"/>
         </div>
     );
 };

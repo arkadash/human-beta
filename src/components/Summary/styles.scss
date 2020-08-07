@@ -14,9 +14,15 @@
         align-items: center;
 
         video {
-            filter: grayscale(100%) blur(16px);
+            filter: grayscale(100%);
             opacity: 0.3;
             box-sizing: border-box;
+        }
+
+        &.camera-blur {
+            video {
+                filter: grayscale(100%) blur(16px);
+            }
         }
     }
 

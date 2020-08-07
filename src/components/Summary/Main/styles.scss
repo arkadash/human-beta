@@ -5,8 +5,12 @@
     box-sizing: border-box;
 
     .header-main img {
-        transform: rotate(270deg);
+        transform: rotate(0deg);
     }
+
+    //.header-main img {
+    //    transform: rotate(0deg);
+    //}
 
     .summary-name {
         font-family: Roboto Mono;
