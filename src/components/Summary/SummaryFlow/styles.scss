@@ -33,5 +33,13 @@
             }
         }
     }
+
+    .summary-flow-stars {
+        position: absolute;
+        right: 40px;
+        top: calc(50% - 30px);
+        pointer-events: none;
+        height: 890px;
+    }
 }
 

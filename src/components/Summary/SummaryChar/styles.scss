@@ -8,6 +8,23 @@
         font-size: 40px;
         letter-spacing: 0.02em;
         color: #FFFFFF;
+
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .char-title-num {
+            position: absolute;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            text-align: right;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            opacity: 0.6;
+            right: 60px;
+        }
     }
 
     .summary-statistics-data {
@@ -32,6 +49,13 @@
                 right: 40px;
             }
         }
+    }
+
+    .summary-char-stars {
+        position: absolute;
+        right: 40px;
+        top: calc(50% - 90px);
+        pointer-events: none;
     }
 }
 

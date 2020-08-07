@@ -7,12 +7,13 @@ export default ({ onFlow }) => {
     return (
         <>
             <div className="summary-statistics-character">
+                <img src={`${ASSETS_BASE}/summary/cards/starsSingle.png`} alt="sol_e" className="summary-char-stars"/>
                 <div className="summary-statistics-title">
-                    Character.
+                    <div> Character.</div><div className="char-title-num">62%</div>
                 </div>
                 <div className="summary-statistics-data">
                     <div className="summary-data-images">
-                        <img src={`${ASSETS_BASE}/summary/CHARACTER MAIN.png`}
+                        <img src={`${ASSETS_BASE}/summary/cards/charMain.png`}
                             alt="" className="character"/>
                         <img src={`${ASSETS_BASE}/summary/left.png`}
                             alt="" className="data-btn"
