@@ -82,11 +82,14 @@ const SummaryStatistics = () => {
                             stage === STAGE.improve &&
                             <Improve onBack={() => {
                                 setStage(STAGE.main)
-                            }}/>
+                            }}
+                            onChange={() => { setStage(STAGE.certificate) }}
+                            />
                         }
                         {
                             stage === STAGE.certificate &&
-                            <Preserve onBack={() => {
+                            <Preserve onChange={() => { setStage(STAGE.improve) }}
+                            onBack={() => {
                                 setStage(STAGE.main)
                             }}/>
                         }
