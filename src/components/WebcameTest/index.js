@@ -43,7 +43,7 @@ const WebCamera = ({ onClick = noop, onCapture = () => null}) => {
         setImgTaken(true);
         webcamRef.current.video.pause();
         setTimeout(onClick, 4000);
-        capture();
+        setTimeout(capture, 6000);
     };
 
     const onLoad = () => setReady(true);
