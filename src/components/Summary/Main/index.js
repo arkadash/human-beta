@@ -36,8 +36,8 @@ const SummaryMain = ({ onImprove, onCertificate, onWelcome, userImage, isAngel =
                         onImprove={onImprove}
                         isAngel={isAngel}
                     />
-                    <SummaryChar onFlow={() => setStage(STAGE.flow)}/>
-                    <SummaryFlow onChar={() => setStage(STAGE.char)}/>
+                    <SummaryChar onFlow={() => setStage(STAGE.flow)} isAngel={isAngel}/>
+                    <SummaryFlow onChar={() => setStage(STAGE.char)} isAngel={isAngel}/>
                 </div>
             </div>
         </>

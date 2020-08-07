@@ -61,5 +61,12 @@
         top: calc(50% - 90px);
         pointer-events: none;
     }
+
+    &.summary-statistics-character-demon {
+        .char-title-num,
+        .summary-statistics-title {
+            color: #FF0000;
+        }
+    }
 }
 
