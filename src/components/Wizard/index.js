@@ -50,7 +50,6 @@ const Wizard = () => {
             <Steal/>
             <Lie/>
             <Rich/>
-            <SummaryWelcome/>
             <Summary/>
         </StepWizard>
     );

@@ -5,6 +5,7 @@ import './styles.scss';
 import TVOverlay from "../../TVOverlay";
 import Cursor from "../../Cursor";
 import FolderOverlay from "../../FolderOverlay";
+import HeaderLine from "../HeaderLine";
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -12,11 +13,7 @@ const videoConstraints = {
     facingMode: "environment"
 };
 
-export default ({ nextStep = () => console.log('next')}) => {
-
-    useEffect(() => {
-        setTimeout(nextStep, 6000);
-    }, []);
+export default ({ back = () => console.log('next')}) => {
 
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
@@ -37,6 +34,7 @@ export default ({ nextStep = () => console.log('next')}) => {
                             mirrored
                     />
                 </div>
+                <HeaderLine text="Certificate." className="header-summary-welcome" onBack={back}/>
             </div>
             <img src={`${ASSETS_BASE}/summary/welcomeAngel.png`} alt="" className="summary-animation-welcome-img"/>
             <img src={`${ASSETS_BASE}/summary/animations/ARROWES-WHITE.gif`} alt="" className="summary-animation-welcome-img"/>

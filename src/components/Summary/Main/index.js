@@ -13,7 +13,7 @@ const STAGE = {
     char: 'CHAR'
 }
 
-const SummaryMain = ({ onImprove, onCertificate }) => {
+const SummaryMain = ({ onImprove, onCertificate, onWelcome }) => {
     const [displayMain, setDisplayMain] = useState(false);
     const [stage, setStage] = useState(STAGE.main);
 
@@ -27,8 +27,7 @@ const SummaryMain = ({ onImprove, onCertificate }) => {
                 { stage !== STAGE.main && <HeaderLine text="Statistics." onBack={
                     () => setStage(STAGE.main)
                 }/> }
-
-                <Top onLoad={() => setDisplayMain(true)}/>
+                <Top onLoad={() => setDisplayMain(true)} onWelcome={onWelcome}/>
                 <div className={classNames('summary-main', `display-stage-${stage.toLowerCase()}`,
                     { 'display-main': displayMain})}>
                     <SummaryMenu onCertificate={onCertificate}

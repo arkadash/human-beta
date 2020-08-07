@@ -7,8 +7,9 @@ import TVOverlay from '../TVOverlay';
 import SummaryMain from './Main';
 import Improve from './Statistics/improve';
 import Preserve from './Statistics/preserve';
+import FolderOverlay from '../FolderOverlay';
+import SummaryWelcome from './Welcome';
 import './styles.scss';
-import FolderOverlay from "../FolderOverlay";
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -19,53 +20,78 @@ const videoConstraints = {
 const STAGE = {
     main: 'MAIN',
     certificate: 'PRESERVE',
-    improve: 'IMPROVE'
+    improve: 'IMPROVE',
+    welcome: 'WELCOME'
 }
 
 const SummaryStatistics = () => {
-    const [stage, setStage] = useState(STAGE.main);
+    const [stage, setStage] = useState(STAGE.welcome);
 
     const cameraRef = React.createRef();
     const webcamRef = React.createRef();
     const introRef = React.createRef();
 
     useEffect(() => {
+        setTimeout(() => {
+            setStage(STAGE.main)
+        }, 6000);
     }, [])
+
+    const cameraBlur = stage !== STAGE.improve && stage !== STAGE.certificate && stage !== STAGE.welcome;
 
     return (
         <>
             <TVOverlay/>
             <FolderOverlay/>
-            <div className="summary-statistics-container" ref={introRef}>
-                <Cursor/>
-                <div className={classNames('summary-camera',
-                    { 'camera-blur': (stage !== STAGE.improve && stage !== STAGE.certificate)})}
-                    ref={cameraRef} style={{
-                    right: getCameraWidth()
-                }}>
-                    <Webcam audio={false} height={videoConstraints.height}
-                        ref={webcamRef}
-                        screenshotFormat="image/jpeg"
-                        videoConstraints={videoConstraints}
-                        mirrored
-                    />
-                </div>
-                <span className={classNames('main-container', { 'display-main': stage === STAGE.main })}>
-                    <SummaryMain onFlow={() => {setStage(STAGE.flow)}}
-                        onChar={() => {setStage(STAGE.char)}}
-                        onImprove={() => {setStage(STAGE.improve)}}
-                        onCertificate={() => {setStage(STAGE.certificate)}}
+            {
+                stage === STAGE.welcome ?
+                    <SummaryWelcome back={() => setStage(STAGE.main)}/> :
+                    <div className="summary-statistics-container" ref={introRef}>
+                        <Cursor/>
+                        <div className={classNames('summary-camera',
+                            {'camera-blur': cameraBlur})}
+                             ref={cameraRef} style={{
+                            right: getCameraWidth()
+                        }}>
+                            <Webcam audio={false} height={videoConstraints.height}
+                                    ref={webcamRef}
+                                    screenshotFormat="image/jpeg"
+                                    videoConstraints={videoConstraints}
+                                    mirrored
+                            />
+                        </div>
+                        <span className={classNames('main-container', {'display-main': stage === STAGE.main})}>
+                    <SummaryMain onFlow={() => {
+                        setStage(STAGE.flow)
+                    }}
+                     onWelcome={() => {
+                         setStage(STAGE.welcome)
+                     }}
+                     onChar={() => {
+                         setStage(STAGE.char)
+                     }}
+                     onImprove={() => {
+                         setStage(STAGE.improve)
+                     }}
+                     onCertificate={() => {
+                         setStage(STAGE.certificate)
+                     }}
                     />
                 </span>
-                {
-                    stage === STAGE.improve &&
-                    <Improve onBack={() => {setStage(STAGE.main)}}/>
-                }
-                {
-                    stage === STAGE.certificate &&
-                    <Preserve onBack={() => {setStage(STAGE.main)}}/>
-                }
-            </div>
+                        {
+                            stage === STAGE.improve &&
+                            <Improve onBack={() => {
+                                setStage(STAGE.main)
+                            }}/>
+                        }
+                        {
+                            stage === STAGE.certificate &&
+                            <Preserve onBack={() => {
+                                setStage(STAGE.main)
+                            }}/>
+                        }
+                    </div>
+            }
         </>
     );
 };

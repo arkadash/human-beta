@@ -9,7 +9,7 @@ const cursor = {element: '_', hideWhenDone: true, hideWhenDoneDelay: 0};
 
 const delay = 10;
 
-export default ({ onLoad }) => {
+export default ({ onLoad, onWelcome = () => null }) => {
     const [displaySummaryName, setSummaryName] = useState(false);
     const [displaySummaryData, setSummaryData] = useState([]);
 
@@ -20,7 +20,8 @@ export default ({ onLoad }) => {
         <>
             <div className="summary-personal-container">
                     <div>
-                        <img src={`${ASSETS_BASE}/summary/placeholder.png`} className="placeholder-img" alt=""/>
+                        <img src={`${ASSETS_BASE}/summary/placeholder.png`}
+                             className="placeholder-img" alt="" onClick={onWelcome}/>
                     </div>
                     <div className="summary-data">
                         <div className="summary-data-wrapper">

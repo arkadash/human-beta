@@ -19,6 +19,11 @@
             box-sizing: border-box;
         }
     }
+
+    .header-summary-welcome {
+        padding: 72px;
+        box-sizing: border-box;
+    }
 }
 
 .summary-animation-welcome-img {
@@ -27,5 +32,6 @@
     height: 100%;
     top: 20px;
     mix-blend-mode: screen;
+    pointer-events: none;
 }
 
