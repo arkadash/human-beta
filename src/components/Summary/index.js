@@ -43,7 +43,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
 
     return (
         <>
-            <TVOverlay className="summary-tv-overlay"/>
+            <TVOverlay className={`summary-tv-overlay-${stage.toLowerCase()}`}/>
             <FolderOverlay/>
             {
                 stage === STAGE.welcome ?
