@@ -12,3 +12,17 @@
     left: 0;
     right: 0;
 }
+
+.component-tv-overlay-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: overlay;
+    opacity: 0.2;
+}

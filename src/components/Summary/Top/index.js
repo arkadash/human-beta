@@ -21,7 +21,7 @@ export default ({ onLoad, onWelcome = () => null, userImage }) => {
         <>
             <div className="summary-personal-container">
                     <div className="summary-personal-image-container">
-                        <AngelOverlay/>
+                        {/*<AngelOverlay/>*/}
                         <img src={userImage || `${ASSETS_BASE}/summary/placeholder.png`}
                              className="placeholder-img" alt="" onClick={onWelcome}/>
                     </div>
