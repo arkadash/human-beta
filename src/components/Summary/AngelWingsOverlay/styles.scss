@@ -6,4 +6,9 @@
     opacity: 0.5;
     pointer-events: none;
     margin-top: -60px;
+
+    &.is-blur {
+        filter: blur(8px);
+        opacity: 0.3;
+    }
 }

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Typist from 'react-typist';
 import {ASSETS_BASE} from '../../../constants';
 import './styles.scss';
+import AngelOverlay from "../AngelWingsOverlay";
 
 const data1 = 'P<';
 const data2 = '<<USER<<<<<<<<<<<<<<<<<<<< NO.000666<+972<5884022<+++<<<<<<<<<';
@@ -9,7 +10,7 @@ const cursor = {element: '_', hideWhenDone: true, hideWhenDoneDelay: 0};
 
 const delay = 10;
 
-export default ({ onLoad, onWelcome = () => null }) => {
+export default ({ onLoad, onWelcome = () => null, userImage }) => {
     const [displaySummaryName, setSummaryName] = useState(false);
     const [displaySummaryData, setSummaryData] = useState([]);
 
@@ -19,8 +20,9 @@ export default ({ onLoad, onWelcome = () => null }) => {
     return (
         <>
             <div className="summary-personal-container">
-                    <div>
-                        <img src={`${ASSETS_BASE}/summary/placeholder.png`}
+                    <div className="summary-personal-image-container">
+                        <AngelOverlay/>
+                        <img src={userImage || `${ASSETS_BASE}/summary/placeholder.png`}
                              className="placeholder-img" alt="" onClick={onWelcome}/>
                     </div>
                     <div className="summary-data">

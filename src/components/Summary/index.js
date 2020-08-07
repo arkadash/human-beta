@@ -25,7 +25,7 @@ const STAGE = {
     welcome: 'WELCOME'
 }
 
-const SummaryStatistics = () => {
+const SummaryStatistics = ({ userImage }) => {
     const [stage, setStage] = useState(STAGE.welcome);
 
     const cameraRef = React.createRef();
@@ -62,7 +62,7 @@ const SummaryStatistics = () => {
                             />
                         </div>
                         <span className={classNames('main-container', {'display-main': stage === STAGE.main})}>
-                    <SummaryMain onFlow={() => {
+                    <SummaryMain userImage={userImage} onFlow={() => {
                         setStage(STAGE.flow)
                     }}
                      onWelcome={() => {
@@ -96,7 +96,9 @@ const SummaryStatistics = () => {
                         }
                     </div>
             }
-            <AngelOverlay/>
+            <AngelOverlay blur={
+                stage === STAGE.main
+            }/>
         </>
     );
 };

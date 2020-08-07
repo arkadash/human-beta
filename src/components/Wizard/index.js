@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import StepWizard from 'react-step-wizard';
 import 'animate.css/animate.min.css';
 import Believe from '../Believe';
@@ -31,13 +31,19 @@ const transitions = {
 };
 
 const Wizard = () => {
+    const [userImage, setUserImage] = useState();
+
+    const onCapture = (img) => {
+        setUserImage(img)
+    }
+
     return (
         <StepWizard isLazyMount transitions={transitions}>
             <IntroHoc/>
             <IntroStartHoc/>
             <Login/>
             <IntroLoadingHoc/>
-            <WebCamera/>
+            <WebCamera onCapture={onCapture}/>
             <Loading/>
             <GoingTo/>
             <Believe/>
@@ -50,7 +56,7 @@ const Wizard = () => {
             <Steal/>
             <Lie/>
             <Rich/>
-            <Summary/>
+            <Summary userImage={userImage}/>
         </StepWizard>
     );
 };

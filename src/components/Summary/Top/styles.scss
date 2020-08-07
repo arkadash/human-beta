@@ -51,6 +51,19 @@
             }
         }
     }
+    .placeholder-img {
+        filter: grayscale(1);
+    }
+
+    .summary-personal-image-container {
+        position: relative;
+
+        .summary-angel-gif {
+            opacity: 1;
+            margin-top: 0;
+            z-index: 9999;
+        }
+    }
 }
 
 .summary-name {
