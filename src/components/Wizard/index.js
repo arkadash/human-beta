@@ -47,7 +47,11 @@ const Wizard = () => {
             <WebCamera onCapture={onCapture}/>
             <Loading/>
             <GoingTo/>
-            <Believe/>
+            <Believe onSetBelieveValue={(val) => {
+                if(val === 'no') {
+                    setIsAngel(false);
+                }
+            }}/>
             <Worship/>
             <Promise/>
             <Rest/>

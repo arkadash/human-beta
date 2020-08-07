@@ -4,11 +4,12 @@ import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
 import './styles.scss';
 
-const Believe = ({ nextStep, ...rest }) => {
+const Believe = ({ nextStep, onSetBelieveValue = () => null, ...rest }) => {
     const [displaySelection, setDisplaySelection] = useState(false);
     const [selected, setBtnSelection] = useState('');
 
     const setSelection = (state) => {
+        onSetBelieveValue(state)
         setBtnSelection(state);
         setTimeout(nextStep, 500);
     }
