@@ -4,9 +4,11 @@ import Typist from 'react-typist';
 import BaseComponent from '../BaseComponent';
 import RoundButton from '../RoundfButton';
 import './styles.scss';
+import {ASSETS_BASE} from '../../constants';
 
 const GoingTo = ({ nextStep, ...rest }) => {
     const [displaySelection, setDisplaySelection] = useState(false);
+    const glitz = <img src={`${ASSETS_BASE}/intro/QUIZ_INTRO.gif`} alt="failed!?"/>
 
     return (
         <>
@@ -27,7 +29,7 @@ const GoingTo = ({ nextStep, ...rest }) => {
                 </div>
                 <div className="heaven-button-wrapper">
                     <RoundButton className={classNames('going-button-heaven', {'show-btn': displaySelection})}
-                        text="HEAVEN?"/>
+                        text={glitz}/>
                 </div>
                 <div className={classNames('going-buttons-wrapper', {'show-buttons': displaySelection})}>
                      <RoundButton className={classNames('going-button-enter')}

@@ -55,7 +55,7 @@ const Steal = ({nextStep, ...rest}) => {
                                     avgTypingDelay={100}
                                     onTypingDone={() => setDisplaySelection(true)}>
                                 <Typist.Delay ms={1500}/>
-                                Will you<br/>return a 20$ purse?
+                                Will you<br/>return a 20$ wallet?
                                 {firstBackSelection && <span>Some text</span>
 
                                 }
@@ -64,8 +64,8 @@ const Steal = ({nextStep, ...rest}) => {
                                   Will you<Typist cursor={{element: '_'}}
                                         avgTypingDelay={100}>
                                     return a 20$ wallet?
-                                    <Typist.Backspace count={10} delay={300}/>
-                                    2000$ wallet?
+                                    <Typist.Backspace count={11} delay={300}/>
+                                    20000$ wallet?
                                 </Typist>
                             </span>
                         }
@@ -73,16 +73,18 @@ const Steal = ({nextStep, ...rest}) => {
                     <div className={classNames('main-image', {
                         'show-image': displaySelection,
                         'selected-back': selected === 'back',
-                        'selected-take': selected === 'take'
+                        'selected-take': selected === 'take',
+                        'position-back': position === 'back',
+                        'position-take': position === 'take'
                     })}>
                         <img src={`${ASSETS_BASE}/steal/wallet2.png`} alt="sol_e"/>
                         { selected === 'rich' && <div className="img-selected-overlay"/> }
                     </div>
                     <div className={classNames('steal-buttons-wrapper', {'show-buttons': displaySelection})}>
                         <button className={classNames('steal-button-back', {'btn-selected': selected === 'back'})}
-                                onClick={() => setSelection('back')}>BACK</button>
+                                onClick={() => setSelection('back')}>GIVE</button>
                         <button className={classNames('steal-button-take', {'btn-selected': selected === 'take'})}
-                                onClick={() => setSelection('take')}>TAKE</button>
+                                onClick={() => setSelection('take')}>KEEP</button>
                     </div>
                 </div>
             </BaseComponent>

@@ -77,7 +77,8 @@
 
             .camera-scan-arrow {
                 visibility: hidden;
-                margin-left: -112px;
+                margin-left: -224px;
+                padding-right: 112px;
 
                 &.camera-scan-arrow-display {
                     visibility: visible;

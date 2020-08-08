@@ -58,9 +58,9 @@ $color: #FF0000;
                         content: "";
                         position: absolute;
                         width: 42px;
-                        bottom: 0;
+                        bottom: -4px;
                         left: 0;
-                        border-bottom: 2px solid $color;
+                        border-bottom: 4px solid $color;
                     }
                 }
             }

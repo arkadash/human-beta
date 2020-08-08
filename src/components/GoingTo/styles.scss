@@ -28,9 +28,10 @@
             width: 440px;
             border: 8px solid white;
             font-size: 48px;
+            background-color: white;
 
             &:hover {
-                background-color: white !important;
+                background-color: transparent !important;
             }
             //
 
@@ -68,6 +69,11 @@
 
             &.show-btn {
                 opacity: 1;
+            }
+
+            img {
+                margin-left: -140px;
+                margin-top: -4px;
             }
         }
     }

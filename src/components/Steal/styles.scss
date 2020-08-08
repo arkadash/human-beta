@@ -66,6 +66,24 @@
         &.show-image {
             opacity: 1;
         }
+
+        img {
+            opacity: 0.5;
+        }
+
+        &.selected-take,
+        &.position-take {
+            img {
+                opacity: 0.2;
+            }
+        }
+
+        &.selected-back,
+        &.position-back {
+            img {
+                opacity: 0.7;
+            }
+        }
     }
 }
 
