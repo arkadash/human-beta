@@ -35,7 +35,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
     useEffect(() => {
         setTimeout(() => {
             setStage(STAGE.main)
-        }, 0);
+        }, 6000);
     }, [])
 
     const cameraBlur = stage !== STAGE.improve && stage !== STAGE.certificate && stage !== STAGE.welcome;
