@@ -28,7 +28,11 @@
             width: 440px;
             border: 8px solid white;
             font-size: 48px;
-            background-color: white !important;
+
+            &:hover {
+                background-color: white !important;
+            }
+            //
 
             //&.selected {
             //    background-color: white !important;

@@ -14,12 +14,14 @@
         .menu-about-description {
             font-family: Roboto;
             font-style: normal;
-            font-weight: 500;
+            font-weight: normal;
+            line-height: 150%;
             font-size: 40px;
             letter-spacing: 0.02em;
             color: #000000;
             opacity: 0.5;
             margin-top: 15%;
+            width: 90%;
         }
 
         .menu-about-icon {
