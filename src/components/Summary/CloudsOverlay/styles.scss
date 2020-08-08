@@ -1,0 +1,45 @@
+.summary-angel-clouds{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    //opacity: 0.5;
+    pointer-events: none;
+
+    &.is-blur {
+        filter: blur(8px);
+        opacity: 0.3;
+    }
+}
+
+.summary-demon-clouds {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    //opacity: 0.5;
+    pointer-events: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        //opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-blur {
+        filter: blur(8px);
+        opacity: 0.3;
+    }
+
+    .red-cloud-overlay {
+        mix-blend-mode: overlay;
+    }
+
+    .black-cloud-overlay {
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+    }
+}

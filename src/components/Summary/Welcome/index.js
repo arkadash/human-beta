@@ -19,8 +19,6 @@ export default ({ back = () => console.log('next'), isAngel = true}) => {
 
     return (
         <>
-            <TVOverlay/>
-            <FolderOverlay/>
             <div className="statistics-welcome-splash">
                 <Cursor/>
                 <div className="summary-camera" ref={cameraRef} style={{

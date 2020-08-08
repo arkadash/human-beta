@@ -11,6 +11,7 @@ import FolderOverlay from '../FolderOverlay';
 import SummaryWelcome from './Welcome';
 import './styles.scss';
 import AngelOverlay from "./AngelWingsOverlay";
+import CloudsOverlay from "./CloudsOverlay";
 
 const videoConstraints = {
     width: window.innerWidth,
@@ -43,6 +44,7 @@ const SummaryStatistics = ({ userImage, isAngel }) => {
     return (
         <>
             <TVOverlay className={`summary-tv-overlay-${stage.toLowerCase()}`}/>
+            <CloudsOverlay/>
             <FolderOverlay/>
             {
                 stage === STAGE.welcome ?
