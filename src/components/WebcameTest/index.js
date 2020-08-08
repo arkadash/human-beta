@@ -128,7 +128,7 @@ const WebCamera = ({ onClick = noop, onCapture = () => null}) => {
                          </p>
                          <div className="camera-next-btn-container">
                              <img className={
-                                 classNames('camera-scan-arrow', { 'camera-scan-arrow-display': cameraArrowDisplay })
+                                 classNames('camera-scan-arrow', { 'camera-scan-arrow-display': cameraArrowDisplay && !imgTaken })
                              } src={`${ASSETS_BASE}/camera/SCAN-ARROW.gif`} alt=""/>
                              <button className="camera-next-btn" onClick={takePic}>
                                  {/*<img src={`${ASSETS_BASE}/camera/button.svg`} alt="sol_e"/>*/}
