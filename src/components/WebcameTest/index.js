@@ -33,6 +33,7 @@ const getMaxKeyByValue = (values) => {
 const WebCamera = ({ onClick = noop, onCapture = () => null}) => {
     const [imgTaken, setImgTaken] = useState(false);
     const [ready, setReady] = useState(false);
+    const [cameraArrowDisplay, setCameraArrowDisplay] = useState(false);
     const [detected, setDetected] = useState({ text: [], box: {
         x: 0, y:0, width: 0, height: 0
     },  factorX: 0, factorY: 0 });
@@ -66,6 +67,12 @@ const WebCamera = ({ onClick = noop, onCapture = () => null}) => {
     useEffect(() => {
         return init(webcamRef.current.video, cameraRef.current, onLoad, onDetect);
     }, []);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCameraArrowDisplay(true);
+        }, 10 * 1000)
+    })
 
     const capture = React.useCallback(
         () => {
@@ -120,6 +127,9 @@ const WebCamera = ({ onClick = noop, onCapture = () => null}) => {
                               Hold your position for a better selfie.<br/> It can take a few seconds.
                          </p>
                          <div className="camera-next-btn-container">
+                             <img className={
+                                 classNames('camera-scan-arrow', { 'camera-scan-arrow-display': cameraArrowDisplay })
+                             } src={`${ASSETS_BASE}/camera/SCAN-ARROW.gif`} alt=""/>
                              <button className="camera-next-btn" onClick={takePic}>
                                  {/*<img src={`${ASSETS_BASE}/camera/button.svg`} alt="sol_e"/>*/}
                                  <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">

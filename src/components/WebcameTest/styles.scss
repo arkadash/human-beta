@@ -74,6 +74,15 @@
                     }
                 }
             }
+
+            .camera-scan-arrow {
+                visibility: hidden;
+                margin-left: -112px;
+
+                &.camera-scan-arrow-display {
+                    visibility: visible;
+                }
+            }
         }
 
         .camera-next-text {
