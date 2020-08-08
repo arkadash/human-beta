@@ -7,7 +7,7 @@ const CloudsOverlay = ({blur = false, isAngel = true}) => {
     return (
         <>
         {
-            isAngel ?
+            isAngel || true ?
                 <img
                     src={`${ASSETS_BASE}/summary/cloud/angel.png`}
                     alt=""
