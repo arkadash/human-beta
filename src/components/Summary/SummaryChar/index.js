@@ -12,7 +12,7 @@ export default ({ onFlow, isAngel = true }) => {
                      alt="sol_e" className="summary-char-stars"/>
                 <div className="summary-statistics-title">
                     <div> Character.</div><div className="char-title-num">
-                        {isAngel? '62%': '37.3%'}
+                        {isAngel? '62%': '37%'}
                     </div>
                 </div>
                 <div className="summary-statistics-data">
