@@ -1,11 +1,9 @@
-import React, {useEffect } from 'react';
+import React from 'react';
 import {ASSETS_BASE, getCameraWidth} from '../../../constants';
 import Webcam from 'react-webcam';
 import './styles.scss';
-import TVOverlay from "../../TVOverlay";
-import Cursor from "../../Cursor";
-import FolderOverlay from "../../FolderOverlay";
-import HeaderLine from "../HeaderLine";
+import Cursor from '../../Cursor';
+import HeaderLine from '../HeaderLine';
 
 const videoConstraints = {
     width: window.innerWidth,
